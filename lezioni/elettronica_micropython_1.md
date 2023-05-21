@@ -182,7 +182,7 @@ Note:
 
 ![Corso Dott. Carlini](media/atomo-corso-carlini.jpg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
 
-Cosa è carico elettricamente in questa immagine?
+Quali parti sono cariche elettricamente in questa immagine?
 
 Note:
 - Importante sottolineare che tutta la materia è fatta da atomi
@@ -193,40 +193,126 @@ Note:
 
 ### Definizione elettricità
 
-- Definizione classica come movimento di cariche (elettroni)
-- Direzione
-- Movimento + -
-- Ma ...elettricità scoperta prima degli elettroni… vanno in senso diversi
--- Scoperta come raggi catodici (immagine visibile degli elettroni)
+Dobbiamo fare un po' di storia
+
+- "Fluido elettrico" di Benjamin Franklin (1757)
+- Capì che esistevano cariche diverse (+ e -)
+- Decise che la corrente va dal + al -
+
+---
+
+- Benjamin Frankin è famoso per l'invenzione del parafulmine
+
+![Esperimento con il figlio](media/franklin.jpg)
+
+[comment]: # (!!! data-auto-animate)
+
+![Esperimento con il figlio](media/franklin.jpg)
+
+_Non è famoso per rispettare la sicurezza dei bambini_
+
+[comment]: # (!!! data-auto-animate)
+
+### Definizione elettricità
+
+Tutti pensavano allora che l'elettricità fosse una specie di liquido invisible
+
+- Scoperta dell'elettrone grazie ai "raggi catodici" (Thomson, 1897)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8Q5QuXh2XH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+Allora si capì che l'elettricità erano delle cariche in movimento
+
+![Movimento cariche](media/current-flow.gif)
+
+Note:
+- Perché non si muovono i protoni invece? 10.000 volte più pesanti degli elettroni.
+
+[comment]: # (!!! data-auto-animate)
+
+### Definizione elettricità
+
+*Elettricità = cariche in movimento*
+
+Ma in quale senso ?
+
+- Senso convenzionale della corrente in un circuito (Franklin)
+
+<iframe src="media/conventional-current.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 Note:
 - Si userà la convenzione usuale nel corso
 - Domande di verifica: cariche positive/negative, atomo
 
+[comment]: # (!!! data-auto-animate)
+### Esercizio di classe
+
+Analogia della corda
+1. Tutti i bambini tengono la corda senza stringerla
+2. Un bambino stringe leggermente la corda
+3. L'insegnante inizia a fare scorrere la corda fra le sue mani
+
+Note:
+- E' solo un'analogia della corrente, non è perfetto (ad es. la tensione è problematica)
+- Conservazione della carica <-> conservazione della corda che entra/esce, non si "consuma" la carica
+- Movimento delle cariche simultaneo della corda
+- Analogia della resistenza che scalda la mano ma non degli altri
+
 [comment]: # (!!!)
+
 ### Conduttori e isolanti
+
 - Teoria: Facilità a strappare elettroni
 - Materie diverse ma sono gli stessi elettroni (rimando corso chimica)
 - Verifica esperimentale con un tester di continuità e vari materiali, chi conduce bene e chi
 no (insegnante) (Eventualmente acqua / acqua salata e link con ioni di chimica)
 
-[comment]: # (!!!)
-### Misura dell’elettricità
-- Analogia della cascata (altezza = potenziale V, debito = corrente)
-- Oppure analogia della corda ? corrente = movimento della corda. Resistenza un alunno.
-- Le unità (Volt- Volta, Ampère)
-- Generatore di tensione ideale e pila
+Note:
+- Chi conduce bene l'elettricità? Metalli
+- I buoni conduttori hanno elettroni liberi di spostarsi
 
+[comment]: # (!!!)
+
+### Misura dell’elettricità
+
+Tante unità diverse per l'elettricità
+- L'unità di Alessandro Volta (inventore della pila)
+- L'unità di André-Marie Ampère 
+- L'unità di Georg Ohm
+- e molte altre (Watt, Farad, Henry, Coulomb)...
+
+---
+
+Secondo voi chi se l'è passata meglio fra i tre?
+
+(Volta divenne senatore e ebbe la sua villa a Como)
+(Ampère ha il suo nome inciso nella Torre Eiffel)
+(Ohm non fu creduto e rinuncio al posto in università)
+
+[comment]: # (!!!)
+
+### Misura dell’elettricità
+
+Ricordiamo 3 grandezze
+
+| Grandezza | Unità | Simbolo | Spiegazione |
+| -- | -- | -- | -- |
+| *Corrente* | Ampère | A | Flusso delle cariche elettriche |
+| *Tensione* | Volt   | V o U | Potenziale delle cariche elettriche |
+| *Resistenza* | Ohm | Ω | "Freno" alle cariche elettriche |
+ 
 Note:
 - La corda evita l'errore di pensare che le cariche vengono dalle batterie, sono già presenti
-- Conservazione della carica <-> conservazione della corda che entra/esce, non si "consuma" la carica
-- Movimento delle cariche simultaneo della corda
-- Analogia della resistenza che scalda la mano ma non degli altri
-- Non è un bel modello per spiegare la tensione però
 
 [comment]: # (!!!)
 ### Il multimetro
-- Come misurare la tensione (uso del multimetro, accensione, V, + e -)
+
+<img src="media/multimetro.jpg" width="200px" alt="Multimetro" />
+
+Com'è fatto? Come si accende ? Colori dei fili ?
 
 [comment]: # (!!!)
 ### Esperimento
@@ -235,100 +321,27 @@ Note:
 - Domanda aperta : cosa succede se metto due pile in serie? In parallelo?
 - Ipotesi di classe
 - Esperimenti a gruppo e raccolte misure
-- Conclusione: generatori di tensioni in serie producono una tensione = somma. In // la
-tensione rimane la stessa.
-- Terminologia: 
->circuito aperto/chiuso
+
+---
+
+### Conclusioni esperimento
+
+Generatori di tensioni in serie producono una tensione = somma. 
+| Configurazione | Valore misurato | Conclusione |
+|-|-|
+| Pile una dopo l'altra (serie) | ??? | ??? |
+| Pile di fianco (//) | ??? | ??? |
+
+---
+
+Abbiamo scoperto una legge dell'elettricità
 
 [comment]: # (!!!)
+
 ### Effetti dell’elettricità (slide finale)
 - Produce calore, luce (lampadine)
 - Movimento (motori)
 - Rischi (pericolo tensioni sul corpo umano)
-
-[comment]: # (!!!)
-
-## Lezione 2
-
-### Motori DC, resistenze, schemi elettrici
-
-[comment]: # (!!!)
-
-Riprendere tema effetti elettricità Sessione I
-Motore DC (Elettricità e magnetismo)
-Inizio con domanda/quesito : scopriamo un effetto nascosto dell’elettricità !
-
-come ? costruzione motore homopolo per illustrare collegamento con magnetismo
-
-Osservazioni dei vari gruppi sotto la guida dell’insegnante
-
-[comment]: # (!!!)
-Sfida alla classe: perché gira ?
-Formulazione ipotesi della classe
-(il magnete attrae/repelle)
-(ma perché solo con la pila?)
-(osservazione senso di rotazione della bobina)
-
-Test ipotesi:
-
-Togliere magnete, usare bobina isolata
-Cambio verso della pila ? (POLO ELETTRICO) – cambia senso
-Cambio verso del magnete? (POLO MAGNETICO) – cambia senso
-
-[comment]: # (!!!)
-Spiegazione (slide): la corrente circolando nella bobina crea un "magnete" che viene attratto o rimando dal magnete fisso e questo fa girare la bobina.
-
-Ma perché non rimangono i magneti all’equilibrio e va avanti a girare ?
-Trucco del filo conduttore solo a metà (si interrompe il magnete dopo mezzo giro per evitare questo)
-
-[comment]: # (!!!)
-Resistenze (2 slides)
-Simbolo elettrico e unità di misura
-Fanno "resistenza" - Rallentano il flusso e si riscaldano
->Legge di Ohm = Tensione = Corrente x Resistenza
-Misura delle resistenze con il multimetro
-
-[comment]: # (!!!)
-Schede di connessione senza fili (come funzionano) (1 slide)
-Collegamento verticale vs. orizzontali
-
-Esperimento 
-Sfida : Cosa succede se ne metto una dopo l’altra ? Una sopra l’altra? 
-
-Ipotesi della classe
-Misuriamo 
-
-Mettere 2 resistenze uguali in serie
-Mettere 2 resistenze uguali in parallelo
-
-Misure resistenze (di valori uguali possibilmente così abbiamo come risultato 2R ; 0.5R)
- valore ottenuto, R1//R2=(R1+R2)/(R1*R2)
-
-[comment]: # (!!!)
-Cenni su altri componenti (3 slides)
-
-Interruttori e simboli
-Bobina (induttore) e simbolo come "serbatoio di corrente" (in senso inverso...)
-Condensatori e simbolo come "serbatoio di tensione"
-
-[comment]: # (!!!)
-Conclusione : leggiamo uno schema elettrico assieme
-Riconoscere i simboli
-Seguire la corrente
-Qualche simbolo misterioso per la prossima lezione
-
-[comment]: # (!!!)
-
-
-```python [1-2|3|4]
-a = 1
-b = 2
-c = x => 1 + 2 + x
-c(3)
-```
-[comment]: # (!!!)
-
-## Imaggine
 
 [comment]: # (!!!)
 

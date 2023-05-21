@@ -150,3 +150,8 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+lezioni/elettronica_micropython_1
+lezioni/elettronica_micropython_2
+lezioni/elettronica_micropython_3
+lezioni/elettronica_micropython_4
+lezioni/elettronica_micropython_5
