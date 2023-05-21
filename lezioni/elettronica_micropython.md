@@ -3,7 +3,7 @@
 [comment]: # (Compile this presentation with the command below)
 [comment]: # (mdslides elettronica_micropython.md --include media)
 
-[comment]: # (THEME = sky)
+[comment]: # (THEME = league)
 [comment]: # (CODE_THEME = base16/zenburn)
 [comment]: # (controls: true)
 [comment]: # (keyboard: true)
@@ -12,6 +12,9 @@
 [comment]: # (respondToHashChanges: false)
 [comment]: # (slideNumber: true)
 
+<style>
+.reveal h1 { font-size: 2.5em; }
+</style>
 
 ## Elettronica con Micropython
 ![Micropython logo](media/micropython-logo.svg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
@@ -31,14 +34,19 @@ Note:
 
 ## Introduzione
 
-- Per capire l'elettronica ci vuole... la fisica
-- Per fare circuiti, robot, ci vuole ... la programmazione
-- Questo corso partirà dall'elettricità
-- per arrivare ai componenti elettronici ...
-- per arrivare ai microprocessori ...
-- per arrivare alla programmazione in Python sui microprocessori...
-- E dove vi fermerete ?
+Perché queste due parole assieme ? Cosa possono fare ?
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aXW4dqvjFx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+[comment]: # (!!!)
+## Introduzione
+
+1. Per programmare questi robot ci vuole ... Micropython
+2. Per capire i componenti elettronica ci vuole... un po' di fisica
+3. Inizieremo a capire l'elettricità nelle prossime lezioni
+
+Note:
+- Chiarire che non costruiremo un robot
 
 [comment]: # (!!!)
 
@@ -52,44 +60,79 @@ Note:
 
 [comment]: # (!!!)
 
-## Importanza dell’elettricità
+## Importanza dell’elettricità 1/2
 
-- ?
+- E' importante l'ettricità?
+
+![Blackout](media/blackout.png)
 
 Note:
 - Avete già avuto un black out a casa? Come vi siete sentiti ?
 - Chiedere a cosa serve l'elettricità?
+- Acqua potabile (pompe), Forno elettrico, luce, conservazione del cibo
 
 [comment]: # (!!! data-auto-animate)
 
-## Importanza dell’elettricità
+## Importanza dell’elettricità 2/2
 
-- ?
-- Motore della società moderna
+- "Motore" della società moderna
 
 Note:
 - Menzionare idrocarburi come secondo "motore"
 
+---
+
+E' sempre stato così?
+Perché è così comoda?
+
+Note:
+- Cosa usavamo prima ? carbone, legna.
+- Non inquina ed è facile da trasportare
+
 [comment]: # (!!! data-auto-animate)
 
+## Elettricità nel mondo 1/2
 
-## Importanza dell’elettricità
+- Elettricità nel mondo - tanta o poca?
 
-- ?
-- Motore della società moderna
+---
+![Domanda](media/iea-electricity.png)
+
+3000 TWh = 3.000.000.000.000.000 Watt-ora
+
+Ce ne vorrà di più in futuro ?
+
+[comment]: # (!!! data-auto-animate)
+## Elettricità nel mondo 2/2
+
 - Elettrificazione come motore della riduzione CO2
 
 Note:
+- Esempio delle macchine
 - Graduale sostituzione fossili con altre forme di energia e elettricità
 - Chiedere se l'hanno mai vista?
 
 [comment]: # (!!! data-auto-animate)
 
-## Elettricità che vediamo
+## L'elettricità visibile 1/2
 
-- In natura
+- In natura?...
+
+---
+
+![Fulmine](media/lightning.jpg) <!-- .element: style="height:400px; max-width:200vw; image-rendering: crisp-edges;" -->
+
+Scarica di elettricità fra la nuvola e il suolo
+
+[comment]: # (!!! data-auto-animate)
+
+## L'elettricità visibile 2/2
+
 - Elettricità statica
-- Ambra gialla in greco, 600 a.c.
+
+![Cat](media/cat.jpg)
+
+Cosa trattiene il polistirolo al gatto ?
 
 Note:
 - Dato che non si vede spesso, si sono voluti due milleni per iniziare a capirla. Noi abbiamo 4 ore
@@ -99,28 +142,52 @@ Note:
 
 ## Esperimento con palloni
 
+- A gruppi di due bambini, uno strofina il pallone sulla maglietta dell'altro
+
 - Cosa succede al pallone ? 
 - Cosa succede ai vostri cappelli ?
+
+---
+
 - [Spiegazione](https://phet.colorado.edu/sims/html/balloons-and-static-electricity/latest/balloons-and-static-electricity_en.html)
+- Il movimento "carica" positivamente il pallone e "negativamente" la maglietta
+- (???) Conservazione della carica elettrica
+
+Note:
+- Spiegazione cariche
+
 ---
 - Pallone con pezzi di carta
 
 Note:
 - https://www.stem.org.uk/resources/elibrary/resource/27020/electric-sausage
-
+- Forza elettrostatica (Legge di Coulomb)
 
 [comment]: # (!!!)
 
-### Definizione
+### Definizione elettricità
+
+- Il nome provviene dalla parola greca per l'ambra gialla in Greco
+
+![Ambra](media/ambra.jpg)
 
 - Ricordate l'atomo ? Com'è fatto ?
 
-[comment]: # (!!! data-auto-animate)
+Note:
+- Primo studioso dell'ettricità Talete (600 a.C) - lo stesso del teorema
+- 
+---
 
-### Definizione
+### Definizione elettricità
 
-- Ricordate l'atomo ? Com'è fatto ?
 ![Corso Dott. Carlini](media/atomo-corso-carlini.jpg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
+
+Cosa è carico elettricamente in questa immagine?
+
+Note:
+- Importante sottolineare che tutta la materia è fatta da atomi
+- Ci sono particelle cariche in ogni atomo
+- Le cariche elettriche sono dapertutto, non solo nell'elettricità
 
 [comment]: # (!!! data-auto-animate)
 
@@ -170,7 +237,8 @@ Note:
 - Esperimenti a gruppo e raccolte misure
 - Conclusione: generatori di tensioni in serie producono una tensione = somma. In // la
 tensione rimane la stessa.
-- Terminologia: circuito aperto/chiuso
+- Terminologia: 
+>circuito aperto/chiuso
 
 [comment]: # (!!!)
 ### Effetti dell’elettricità (slide finale)
@@ -217,7 +285,7 @@ Trucco del filo conduttore solo a metà (si interrompe il magnete dopo mezzo gir
 Resistenze (2 slides)
 Simbolo elettrico e unità di misura
 Fanno "resistenza" - Rallentano il flusso e si riscaldano
-Legge di Ohm = Tensione = Corrente x Resistenza
+>Legge di Ohm = Tensione = Corrente x Resistenza
 Misura delle resistenze con il multimetro
 
 [comment]: # (!!!)
@@ -269,3 +337,9 @@ c(3)
 ### STEM
 ### Python
 ### AISTAP Chimica Dott. Carlini
+### Sparkfun Creative commons
+- https://learn.sparkfun.com/tutorials/what-is-electricity/all
+### Images
+- "Ka-boom (lightning)" by Leszek.Leszczynski is licensed under CC BY 2.0.
+### Others
+- IEA, Global electricity demand by region in the Stated Policies Scenario, 2000-2040, IEA, Paris https://www.iea.org/data-and-statistics/charts/global-electricity-demand-by-region-in-the-stated-policies-scenario-2000-2040, IEA. Licence: CC BY 4.0
