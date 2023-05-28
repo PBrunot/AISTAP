@@ -12,6 +12,7 @@
 [comment]: # (respondToHashChanges: false)
 [comment]: # (slideNumber: true)
 [comment]: # (center: false)
+[comment]: # (showNotes: true)
 
 <style>
 .reveal h1 { font-size: 2.5em; }
@@ -28,13 +29,13 @@
 Pascal Brunot | AISTAP | July 2023
 
 Note:
-- Electricity concepts
-- The idea of electricity involving a ‘flow’ (of … something… see 3!)
-- The idea of a ‘complete circuit’ being necessary for the flow to occur (in a battery-powered circuit)
-- The idea of charge (what flows in circuits)
-- The idea of current (the rate of flow of charge)
-- The idea of potential difference (the cause of the flow – ideas about how PD links to transferred energy)
-- The idea of resistance (a measure of the ‘opposition’ to the flow of charge)
+- Obiettivi della lezione
+- Capire il concetto di carica (con elettricità statica)
+- L'elettricità come un flusso di cariche
+- Distinguere conduttori e isolanti
+- Necessità di un circuito chiuso per il flusso (corda)
+- Definizioni e unità di corrente, tensione, resistenza
+- Imparare a fare misure con il multimetro
 
 [comment]: # (!!!)
 
@@ -52,7 +53,7 @@ Perché queste due parole assieme ? Cosa possono fare ?
 3. Inizieremo a capire l'elettricità nelle prossime lezioni
 
 Note:
-- Chiarire che non costruiremo un robot
+- Chiarire che non costruiremo un robot ma qualcos'altro
 
 [comment]: # (!!!)
 
@@ -61,10 +62,11 @@ Note:
 Elettricità
 
 Note:
-- Oggi sarà la lezione più teorica di tutte perché dobbiamo imparare i concetti
-- Ma ci divertiremo anche facendo esperimenti
-- Materiali richiesti: palloni. pezzi di carta tagliati, piatto, corda 5-10m un po spessa
-- Il top sarebbero palloni di alluminio stile elio che si potrebbero scaricare
+- Oggi sarà la lezione più teorica di tutte perché dobbiamo imparare i concetti ma ci divertiremo anche facendo esperimenti
+- Materiali richiesti: palloni, pezzi di carta tagliati, piatto, corda 5-10m un po spessa
+- Pile elettriche 1.5 V (2 a bambino), fili, alluminio, scotch
+- Acqua / Acqua salata, monetine, ferro
+- Alcuni multimetri
 
 [comment]: # (!!!)
 
@@ -86,6 +88,7 @@ Note:
 - "Motore" della società moderna
 
 Note:
+- Guardate attorno a voi e ditemi cosa funziona con l'elettricità?
 - Menzionare idrocarburi come secondo "motore"
 
 ---
@@ -94,8 +97,9 @@ E' sempre stato così?
 Perché è così comoda?
 
 Note:
-- Cosa usavamo prima ? carbone, legna.
+- Cosa usavamo prima ? carbone, legna, animali
 - Non inquina ed è facile da trasportare
+- La generazione può essere pulita, spesso non lo è
 
 [comment]: # (!!! data-auto-animate)
 
@@ -111,22 +115,22 @@ Note:
 Ce ne vorrà di più in futuro ?
 
 Note:
-- Il Watt-ora è un'unità di misura dell'energia (J) 
-- Un calorifero di 500 W per 2 ore quanto consuma ?
-- 3000 TW sono circa 685 millioni di caloriferi di 500 W accessi per un anno
+- Un asciugacapelli di 2000 W accesso un'ora quanto consuma?
+- Accesso due ore? (1 anno=17.5MWh)
+- 3000 TWh sono 171 millioni di acciugacappelli accessi in permanenza
 
 [comment]: # (!!! data-auto-animate)
 ## Elettricità nel mondo 2/2
 
 - Elettrificazione come motore della riduzione CO2
-- Elettricità si trasporta e si consuma senza inquinamento
-- La sua produzione spesso inquina - conoscete fonti di energia?
-- Avete già visti serbatoi di elettricità ?
+- Elettronica sempra più potente e presente
+
+E' ora di guardarci da vicino
 
 Note:
-- Esempio delle automobili
+- Esempio delle macchine elettriche vs. a combustione
 - Graduale sostituzione fossili con altre forme di energia e elettricità
-- Chiedere se l'hanno mai vista?
+- Chiedere se l'hanno mai vista l'elettricità ?
 
 [comment]: # (!!! data-auto-animate)
 
@@ -148,6 +152,8 @@ Note:
 
 ## L'elettricità visibile 2/2
 
+- Elettricità statica
+
 ![Cat](media/cat.jpg)
 
 Cosa è successo in questa immagine ?
@@ -155,56 +161,35 @@ Cosa trattiene il polistirolo al gatto ?
 
 Note:
 - "ELETTRICITA' STATICA" è la parola
-- Dato che non si vede spesso, si sono voluti due milleni per iniziare a capirla. Noi abbiamo 4 ore
+- Dato che non si vede spesso, si sono voluti due milleni per iniziare a capirla. Noi abbiamo 5 lezioni
 
 [comment]: # (!!!)
 
-## Esperimento con palloni 1/3
+## Esperimento con palloni
 
-Ci sono dei palloni "non strisciati" disponibili
+A gruppi di due bambini, uno strofina il pallone sulla maglietta dell'altro
 
-A gruppi di due bambini (non umidi):
-- uno strofina il pallone sulla propria maglietta 
-- avvicina il pallone alla testa dell'altro bambino
+- Cosa succede al pallone ? 
+- Cosa succede ai vostri cappelli ?
+- E fra due palloni ?
 
-*Domanda scientifica*
-- Tutti i palloni fanno la stessa cosa ai cappelli ?
+---
 
-Che rapporto con il gatto di prima ?
+[Spiegazione](https://phet.colorado.edu/sims/html/balloons-and-static-electricity/latest/balloons-and-static-electricity_en.html)
 
-Note:
-- Prerequisito fondamentale bambini con vestiti secchi
-- Magari prendere lana/mettere in asciugatrice panni per la lezione
-
-[comment]: # (!!!)
-## Esperimento con palloni 2/4
-
-- [Spiegazione](https://phet.colorado.edu/sims/html/balloons-and-static-electricity/latest/balloons-and-static-electricity_en.html)
 - Il movimento "carica" positivamente il pallone e "negativamente" la maglietta
-- E' cambiato il numero di cariche + e - ?
-
-
-Note:
-- Attraverso l'animazione spiegare conservazione cariche
-- Fare dire che le dariche diverse si attragono
-- Come i poli magnetici
-
-[comment]: # (!!!)
-## Esperimento con palloni 3/4
-
-- Cosa succede se avvicino due palloni "strisciati" sospesi con un filo ?
+- Le cariche uguali si rispongono, le cariche opposte si attragono
 
 Note:
-- Spiegazione cariche uguali che si rispingono
-- Legge di Coulomb
+- Spiegazione cariche 
+- Forza elettrostatica (Legge di Coulomb)
 
-[comment]: # (!!!)
-## Esperimento con palloni 4/4
-
-Proviamo con una materia non carica
+---
+## Una carica può crearne un'altra
 
 - Pallone con pezzi di carta
-- Vengono lo stesso attrati
+
+![Pallone](media/dalle-balloon.png)
 
 Note:
 - Induzione elettrostatica
@@ -214,7 +199,7 @@ Note:
 
 ### Definizione elettricità
 
-- Il nome provviene dalla parola greca per l'ambra gialla in Greco
+Il nome provviene dalla parola greca per l'*ambra gialla* in Greco
 
 ![Ambra](media/ambra.jpg)
 
@@ -222,12 +207,13 @@ Note:
 
 Note:
 - Primo studioso dell'ettricità Talete (600 a.C) - lo stesso del teorema
-- 
+- Avevano visto che come il pallone l'ambra strofinata attraeva piccoli oggetti
+
 ---
 
-### Definizione elettricità 1/4
+### Definizione elettricità
 
-![Corso Dott. Carlini](media/atomo-corso-carlini.jpg) <!-- .element: style="height:350px; image-rendering: crisp-edges;" -->
+![Corso Dott. Carlini](media/atomo-corso-carlini.jpg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
 
 Quali parti sono cariche elettricamente in questa immagine?
 
@@ -238,17 +224,18 @@ Note:
 
 [comment]: # (!!! data-auto-animate)
 
-### Definizione elettricità 2/4
+### Definizione elettricità
 
 Dobbiamo fare un po' di storia
 
-- "Fluido elettrico" di Benjamin Franklin (1757)
+"Fluido elettrico" di Benjamin Franklin (1757)
+
 - Capì che esistevano cariche diverse (+ e -)
-- Decise che la corrente va dal + al -
+- Decise lui che la corrente va dal + al -
 
 ---
 
-- Benjamin Frankin è famoso per l'invenzione del parafulmine
+Benjamin Frankin è famoso per l'invenzione del parafulmine
 
 ![Esperimento con il figlio](media/franklin.jpg)
 
@@ -260,7 +247,7 @@ _Non è famoso per rispettare la sicurezza dei bambini_
 
 [comment]: # (!!! data-auto-animate)
 
-### Definizione elettricità 3/4
+### Definizione elettricità
 
 Tutti pensavano allora che l'elettricità fosse una specie di liquido invisible
 
@@ -276,15 +263,15 @@ Allora si capì che l'elettricità erano delle cariche in movimento
 
 Note:
 - Perché non si muovono i protoni invece? 10.000 volte più pesanti degli elettroni.
-- Perché si muovono ? Perché c'è una differenza di potenziale abbastanza forte.
 
 [comment]: # (!!! data-auto-animate)
 
-### Definizione elettricità 4/4
+### Definizione elettricità
 
-*Elettricità = cariche in movimento*
+Elettricità 
+: cariche in movimento
 
-Ma come si muovono ?
+Ma movimento in quale direzione ?
 
 - Senso convenzionale della corrente in un circuito (Franklin)
 
@@ -292,62 +279,53 @@ Ma come si muovono ?
 
 
 Note:
-- Si userà la convenzione usuale nel corso (dal + al -)
+- Si userà la convenzione usuale nel corso
 - Domande di verifica: cariche positive/negative, atomo
 
 [comment]: # (!!! data-auto-animate)
-### Come si muovono le cariche
+### Esercizio di classe
 
-![Illustrazione](media/rope.png) <!-- .element: style="height:350px; image-rendering: crisp-edges;" -->
+Analogia della corda
+1. Tutti i bambini tengono la corda senza stringerla
+2. Un bambino stringe leggermente la corda
+3. L'insegnante inizia a fare scorrere la corda fra le sue mani
 
-1. Tutti i bambini tengono la corda senza stringerla - "fili"
-2. Un bambino stringe leggermente la corda - "resistenza"
-3. Il prof fa scorrere la corda fra le sue mani - "pila"
-4. Com'è il movimento della corda? Che succede alla resistenza? 
+![Corda](media/rope.jpg)
 
 Note:
-- *Le cariche non vengono dalla pila*
+- E' solo un'analogia della corrente, non è perfetto (ad es. la tensione è problematica)
 - Conservazione della carica <-> conservazione della corda che entra/esce, non si "consuma" la carica
 - Movimento delle cariche simultaneo della corda
 - Analogia della resistenza che scalda la mano ma non degli altri
-- E' solo un'analogia della corrente, non è perfetto (ad es. la tensione è problematica)
 
 [comment]: # (!!!)
 
-### Conduttori e isolanti
+### Conduttori e isolanti #1
 
-- Teoria: Facilità a strappare elettroni
-- Le materie diverse ma... sono gli stessi elettroni
-- Alcuni "conducono bene" -> "conduttori"
-- Altri "non conducono bene" -> "isolanti"
-- Verifichiamo se è possibile riconoscerli
+- Altro esperimento
+
+Tester di continuità e vari materiali, chi conduce bene e chi no (insegnante)
+I bimbi portanno i materiali da testare all'istruttore con il tester
+
 
 Note:
-- Strappare elettroni = resistenza = quant'era stretta la corda
 - Chi conduce bene l'elettricità? Metalli
 - I buoni conduttori hanno elettroni liberi di spostarsi
-- E come chiamiamo quelli che se "tiriamo" abbastanza conducono, altrimenti no? Semi conduttori
 
----
-### Misura dell'elettricità
+[comment]: # (!!!)
 
-Proviamo i materiali seguenti
+### Conduttori e isolanti #2
 
-| Materiale | BEEP o NO? |
-| -- | -- |
-| Carta | ??? |
-| Alluminio | ??? |
-| Filo | ??? |
-| Plastica | ??? |
-| Acqua | ??? |
-| Acqua salata | ??? |
+- Teoria: Facilità a strappare elettroni
 
+[Simulazione](https://javalab.org/en/electric_current_en/)
+
+Alcuni atomi "si tengono stetti" i loro elettroni (isolanti)
+Altri li possono prestare (conduttori)
 
 [comment]: # (!!!)
 
 ### Misura dell’elettricità
-
-Abbiamo parlato in termini un po' generali
 
 Tante unità diverse per l'elettricità
 - L'unità di Alessandro Volta (inventore della pila)
@@ -355,20 +333,24 @@ Tante unità diverse per l'elettricità
 - L'unità di Georg Ohm
 - e molte altre (Watt, Farad, Henry, Coulomb)...
 
-Note:
-- A cosa servono le unità ?
-- Perché un scienzato deve creare delle unità ? 
 ---
-
-In questo corso vedremo le 3 unità più importanti
 
 Secondo voi chi se l'è passata meglio fra i tre?
 
-(Volta divenne senatore e ebbe la sua villa a Como)
+[comment]: # (!!! data-auto-animate)
+Volta divenne senatore e ebbe la sua villa a Como
 
-(Ampère ha il suo nome inciso nella Torre Eiffel)
+![Volta](media/volta.jpg)
 
-(Ohm non fu creduto e rinunciò al posto in università)
+[comment]: # (!!! data-auto-animate)
+Ampère ha il suo nome inciso nella Torre Eiffel
+
+![Ampère](media/ampere.jpg)
+
+[comment]: # (!!! data-auto-animate)
+Ohm non fu creduto e rinuncio al posto in università
+
+![Ohm](media/ohm.jpg)
 
 [comment]: # (!!!)
 
@@ -376,72 +358,83 @@ Secondo voi chi se l'è passata meglio fra i tre?
 
 Ricordiamo 3 grandezze
 
-| Grandezza (Abbr.) | Unità | Simbolo | Spiegazione |
+| Grandezza | Unità | Simbolo | Spiegazione |
 | -- | -- | -- | -- |
-| *Corrente* (I) | Ampère | A | Flusso delle cariche elettriche |
-| *Tensione* (U o V) | Volt   | V | Potenziale delle cariche elettriche |
-| *Resistenza* (R) | Ohm | Ω | "Freno" alle cariche elettriche |
+| *Corrente* | Ampère | A | Flusso delle cariche elettriche |
+| *Tensione* | Volt   | V o U | Potenziale delle cariche elettriche |
+| *Resistenza* | Ohm | Ω | "Freno" alle cariche elettriche |
  
 Note:
 - La corda evita l'errore di pensare che le cariche vengono dalle batterie, sono già presenti
-- Potenziale -> quello che spinge le cariche a muoversi, come la gravità che fa cadere le cose.
 
 [comment]: # (!!!)
 ### Il multimetro
 
-<img src="media/multimetro.jpg" width="350px" alt="Multimetro" />
+<img src="media/multimetro.jpg" width="200px" alt="Multimetro" />
 
-Com'è fatto? Come si accende ?
-Riconoscete delle unità ?
-Colori dei fili ?
+Com'è fatto? Come si accende ? Colori dei fili ?
 
 [comment]: # (!!!)
 ### Esperimento
 
-- Misurare tensione di una pila (generatore di tensione)
-- Domanda aperta : cosa succede se metto due pile in serie? In parallelo?
-- Ipotesi di classe 
-- Esperimenti a gruppo e raccolta delle misure
+- Misurare tensione di una pila ?
+- Di più pile ?
+
+![Schema](media/series.png)
+
+- Ipotesi di classe ?
+- Esperimenti a gruppo e raccolte misure
 
 ---
 
 ### Conclusioni esperimento
 
-Generatori di tensioni in serie producono una tensione = somma. 
-
 | Configurazione | Valore misurato | Conclusione |
 | -- | -- | -- |
+| 1 Pila | ??? | ??? |
 | Pile una dopo l'altra (serie) | ??? | ??? |
-| Pile di fianco (//) | ??? | ??? |
+| Pile connesse in parallelo (//) | ??? | ??? |
+| Pile che non si toccano | ??? | ??? |
 
----
-
-Abbiamo scoperto una legge dell'elettricità
-
-- Generatori di tensione uguali in serie = la tensione si somma
-- Generatori di tensione uguali in parallelo = la tensione rimane la stessa
+Note:
+- Generatori di tensione in serie si sommano
+- In parallelo, non si sommano (quando hanno la stessa tensione)
 
 [comment]: # (!!!)
 
-### Effetti dell’elettricità (slide finale)
+### Effetti dell’elettricità
+
 - Produce calore, luce (lampadine)
 - Movimento (motori)
 - Rischi (pericolo tensioni sul corpo umano)
 
+![Pericoli](media/pericoli.png)
+
+Note:
+- Insistere che non si gioca con l'elettricità 
+
 [comment]: # (!!!)
 
-## Fonti usate in questa presentazione
+### Riassunto finale
 
-<small>
-- STEM
+Elettricità
+: cariche in movimento
 
-- Python
+Conduttori e isolanti
 
-- AISTAP Chimica Dott. Carlini
+Unità di misura
+- Ampère per il flusso di cariche
+- Volt per il potenziale elettrico
+- Ohm per la resistenza al flusso di cariche
 
-- Sparkfun Creative commons https://learn.sparkfun.com/tutorials/what-is-electricity/all
+Note:
+- se c'è tempo elettrolisi acqua salata
 
-- Images "Ka-boom (lightning)" by Leszek.Leszczynski is licensed under CC BY 2.0.
-
-- Others : IEA, Global electricity demand by region in the Stated Policies Scenario, 2000-2040, IEA, Paris https://www.iea.org/data-and-statistics/charts/global-electricity-demand-by-region-in-the-stated-policies-scenario-2000-2040, IEA. Licence: CC BY 4.0
-</small>
+[comment]: # (
+    Fonti
+    STEM website
+    AISTAP Chimica Dott. Carlini
+    Sparkfun Creative commons https://learn.sparkfun.com/tutorials/what-is-electricity/all
+    "Ka-boom (lightning)" by Leszek.Leszczynski is licensed under CC BY 2.0.)
+    IEA, Global electricity demand by region in the Stated Policies Scenario, 2000-2040, IEA, Paris https://www.iea.org/data-and-statistics/charts/global-electricity-demand-by-region-in-the-stated-policies-scenario-2000-2040, IEA. Licence: CC BY 4.0
+    )
