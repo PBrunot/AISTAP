@@ -1,17 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Elettronica con Micropython</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/zenburn.min.css" id="highlight-theme"></head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section data-markdown  ><textarea data-template>
 [comment]: # (This presentation was made with markdown-slides)
 [comment]: # (This is a CommonMark compliant comment. It will not be included in the presentation.)
 [comment]: # (Compile this presentation with the command below)
 [comment]: # (mdslides elettronica_micropython.md --include media)
 
-[comment]: # (THEME = league)
-[comment]: # (CODE_THEME = base16/zenburn)
-[comment]: # (controls: true)
-[comment]: # (keyboard: true)
 [comment]: # (markdown: { smartypants: true })
-[comment]: # (hash: false)
-[comment]: # (respondToHashChanges: false)
-[comment]: # (slideNumber: true)
-[comment]: # (showNotes: true)
 
 <style>
 .reveal h1 { font-size: 2.5em; }
@@ -31,7 +39,8 @@ Note:
 - Definizioni e unità di corrente, tensione, resistenza
 - Imparare a fare misure con il multimetro
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ## Introduzione
 
@@ -39,7 +48,8 @@ Perché queste due parole assieme ? Cosa possono fare ?
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aXW4dqvjFx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 ## Introduzione
 
 1. Per programmare questi robot ci vuole ... Micropython
@@ -49,7 +59,8 @@ Perché queste due parole assieme ? Cosa possono fare ?
 Note:
 - Chiarire che non costruiremo un robot ma qualcos'altro
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 
 ## Lezione 1
@@ -61,7 +72,8 @@ Note:
 - Acqua / Acqua salata, monetine, ferro
 - Alcuni multimetri
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 
 ## Importanza dell’elettricità 1/2
 
@@ -74,7 +86,8 @@ Note:
 - Chiedere a cosa serve l'elettricità?
 - Acqua potabile (pompe), Forno elettrico, luce, conservazione del cibo
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 
 ## Importanza dell’elettricità 2/2
 
@@ -94,7 +107,8 @@ Note:
 - Non inquina ed è facile da trasportare
 - La generazione può essere pulita, spesso non lo è
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 
 ## Elettricità nel mondo 1/2
 
@@ -112,7 +126,8 @@ Note:
 - Accesso due ore? (1 anno=17.5MWh)
 - 3000 TWh sono 171 millioni di acciugacappelli accessi in permanenza
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 ## Elettricità nel mondo 2/2
 
 - Elettrificazione come motore della riduzione CO2
@@ -125,7 +140,8 @@ Note:
 - Graduale sostituzione fossili con altre forme di energia e elettricità
 - Chiedere se l'hanno mai vista l'elettricità ?
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 
 ## L'elettricità visibile 1/2
 
@@ -137,7 +153,8 @@ Note:
 
 Scarica di elettricità fra la nuvola e il suolo
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ## L'elettricità visibile 2/2
 
@@ -151,7 +168,8 @@ Note:
 - Dato che non si vede spesso, si sono voluti due milleni per iniziare a capirla. Noi abbiamo 5 lezioni
 - Elettricità come flusso di qualcosa
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ## Esperimento con palloni
 
@@ -183,7 +201,8 @@ Note:
 - Induzione elettrostatica
 - https://www.stem.org.uk/resources/elibrary/resource/27020/electric-sausage
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 
 ### Definizione elettricità
 
@@ -210,7 +229,8 @@ Note:
 - Ci sono particelle cariche in ogni atomo
 - Le cariche elettriche sono dapertutto, non solo nell'elettricità
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 
 ### Definizione elettricità
 
@@ -227,13 +247,15 @@ Benjamin Frankin è famoso per l'invenzione del parafulmine
 
 ![Esperimento con il figlio](media/franklin.jpg)
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 
 ![Esperimento con il figlio](media/franklin.jpg)
 
 _Non è famoso per rispettare la sicurezza dei bambini_
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 
 ### Definizione elettricità
 
@@ -252,7 +274,8 @@ Allora si capì che l'elettricità erano delle cariche in movimento
 Note:
 - Perché non si muovono i protoni invece? 10.000 volte più pesanti degli elettroni.
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 
 ### Definizione elettricità
 
@@ -270,7 +293,8 @@ Note:
 - Si userà la convenzione usuale nel corso
 - Domande di verifica: cariche positive/negative, atomo
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 ### Esercizio di classe
 
 Analogia della corda
@@ -286,7 +310,8 @@ Note:
 - Movimento delle cariche simultaneo della corda
 - Analogia della resistenza che scalda la mano ma non degli altri
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Conduttori e isolanti #1
 
@@ -300,7 +325,8 @@ Note:
 - Chi conduce bene l'elettricità? Metalli
 - I buoni conduttori hanno elettroni liberi di spostarsi
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 
 ### Conduttori e isolanti #2
 
@@ -323,22 +349,26 @@ Tante unità diverse per l'elettricità
 
 Secondo voi chi se l'è passata meglio fra i tre?
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 Volta divenne senatore e ebbe la sua villa a Como
 
 ![Volta](media/volta.jpg)
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
 Ampère ha il suo nome inciso nella Torre Eiffel
 
 ![Ampère](media/ampere.jpg)
 
-[comment]: # (!!! data-auto-animate)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 Ohm non fu creduto e rinuncio al posto in università
 
 ![Ohm](media/ohm.jpg)
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Misura dell’elettricità
 
@@ -353,14 +383,16 @@ Ricordiamo 3 grandezze
 Note:
 - La corda evita l'errore di pensare che le cariche vengono dalle batterie, sono già presenti
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 ### Il multimetro
 
 <img src="media/multimetro.jpg" width="200px" alt="Multimetro" />
 
 Com'è fatto? Come si accende ? Colori dei fili ?
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 ### Esperimento
 
 - Misurare tensione di una pila ?
@@ -386,7 +418,8 @@ Note:
 - Generatori di tensione in serie si sommano
 - In parallelo, non si sommano (quando hanno la stessa tensione)
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Effetti dell’elettricità
 
@@ -399,7 +432,8 @@ Note:
 Note:
 - Insistere che non si gioca con l'elettricità 
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown ><textarea data-template>
 
 ### Riassunto finale
 
@@ -423,4 +457,33 @@ Note:
     Sparkfun Creative commons https://learn.sparkfun.com/tutorials/what-is-electricity/all
     "Ka-boom (lightning)" by Leszek.Leszczynski is licensed under CC BY 2.0.)
     IEA, Global electricity demand by region in the Stated Policies Scenario, 2000-2040, IEA, Paris https://www.iea.org/data-and-statistics/charts/global-electricity-demand-by-region-in-the-stated-policies-scenario-2000-2040, IEA. Licence: CC BY 4.0
-    )
+    
+</textarea></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+Reveal.initialize({
+controls : false,
+markdown : {smartypants: true},
+controls : true,
+keyboard : true,
+hash : false,
+respondToHashChanges : false,
+slideNumber : true,
+showNotes : true,
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>

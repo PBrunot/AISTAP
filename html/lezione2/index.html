@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Elettronica con Micropython</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/zenburn.min.css" id="highlight-theme"></head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section data-markdown  ><textarea data-template>
+[comment]: # (This presentation was made with markdown-slides)
+[comment]: # (This is a CommonMark compliant comment. It will not be included in the presentation.)
+[comment]: # (Compile this presentation with the command below)
+[comment]: # (mdslides elettronica_micropython.md --include media)
+
+[comment]: # (markdown: { smartypants: true })
+
+<style>
+.reveal h1 { font-size: 2.5em; }
+</style>
+
+## Elettronica con Micropython
+![Micropython logo](media/micropython-logo.svg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
+
+Pascal Brunot | AISTAP | July 2023
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Lezione 2
+
+### Ripasso
+
+Elettricità è *movimento di cariche elettriche*
+
+| Grandezza | Unità | Simbolo | Spiegazione |
+| -- | -- | -- | -- |
+| *Corrente* | Ampère | A | Flusso delle cariche elettriche |
+| *Tensione* | Volt   | V o U | Potenziale delle cariche elettriche |
+| *Resistenza* | Ohm | Ω | "Freno" alle cariche elettriche |
+
+Componenti: Pile
+Strumenti: Voltmetro
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### La scoperta di Ørsted
+
+- Bussola e corrente elettrica (1820)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h5N2grjG8d8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Magnetismo e elettricità sono legati
+_vediamo come fare qualcosa di utile con tutti i due_
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Motori DC
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+Inizio con domanda/quesito : scopriamo un effetto nascosto dell’elettricità !
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Costruzione motore
+
+come ? costruzione motore homopolo per illustrare collegamento con magnetismo
+
+Osservazioni dei vari gruppi sotto la guida dell’insegnante
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Perché gira?
+
+Sfida alla classe: perché gira ?
+
+Formulazione ipotesi della classe
+(il magnete attrae/repelle)
+(ma perché solo con la pila?)
+(osservazione senso di rotazione della bobina)
+
+Test ipotesi:
+
+Togliere magnete, usare bobina isolata
+Cambio verso della pila ? (POLO ELETTRICO) – cambia senso
+Cambio verso del magnete? (POLO MAGNETICO) – cambia senso
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Spiegazione
+
+La corrente circolando nella bobina crea un "magnete" che viene attratto o rimando dal magnete fisso e questo fa girare la bobina.
+Ma perché non rimangono i magneti all’equilibrio e va avanti a girare ?
+Trucco del filo conduttore solo a metà (si interrompe il magnete dopo mezzo giro per evitare questo)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Resistenze
+Simbolo elettrico e unità di misura
+Fanno "resistenza" - Rallentano il flusso e si riscaldano
+>Legge di Ohm = Tensione = Corrente x Resistenza
+```python
+U = R * I 
+```
+---
+
+Un triangolo per ricordare
+
+![VRI](media/ohm-law.jpg)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Misura delle resistenze con il multimetro
+
+Tabella risultati
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Breadboard
+Schede di connessione senza fili (come funzionano) (1 slide)
+Collegamento verticale vs. orizzontali
+
+---
+
+Esperimento 
+Sfida : Cosa succede se ne metto una dopo l’altra ? Una sopra l’altra? 
+
+Ipotesi della classe
+Misuriamo 
+
+Mettere 2 resistenze uguali in serie
+Mettere 2 resistenze uguali in parallelo
+
+---
+
+Misure resistenze (di valori uguali possibilmente così abbiamo come risultato 2R ; 0.5R)
+ valore ottenuto, R1//R2=(R1+R2)/(R1*R2)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Altri componenti
+
+Cenni su altri componenti (3 slides)
+
+Interruttori e simboli
+Bobina (induttore) e simbolo come "serbatoio di corrente" (in senso inverso...)
+Condensatori e simbolo come "serbatoio di tensione"
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Schema elettrico
+Conclusione : leggiamo uno schema elettrico assieme
+Riconoscere i simboli
+Seguire la corrente
+Qualche simbolo misterioso per la prossima lezione
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+
+```python [1-2|3|4]
+a = 1
+b = 2
+c = x => 1 + 2 + x
+c(3)
+```
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Imaggine
+
+</textarea></section>
+<section data-markdown ><textarea data-template>
+
+## Fonti usate in questa presentazione
+
+### STEM
+### Python
+### AISTAP Chimica Dott. Carlini
+### Sparkfun Creative commons
+- https://learn.sparkfun.com/tutorials/what-is-electricity/all
+### Images
+- "Ka-boom (lightning)" by Leszek.Leszczynski is licensed under CC BY 2.0.
+### Others
+- IEA, Global electricity demand by region in the Stated Policies Scenario, 2000-2040, IEA, Paris https://www.iea.org/data-and-statistics/charts/global-electricity-demand-by-region-in-the-stated-policies-scenario-2000-2040, IEA. Licence: CC BY 4.
+</textarea></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+Reveal.initialize({
+controls : false,
+markdown : {smartypants: true},
+controls : true,
+keyboard : true,
+hash : false,
+respondToHashChanges : false,
+slideNumber : true,
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>
