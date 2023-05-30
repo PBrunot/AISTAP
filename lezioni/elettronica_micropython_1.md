@@ -29,13 +29,15 @@
 Pascal Brunot | AISTAP | July 2023
 
 Note:
+
 - Obiettivi della lezione
 - Capire il concetto di carica (con elettricità statica)
 - L'elettricità come un flusso di cariche
 - Distinguere conduttori e isolanti
 - Necessità di un circuito chiuso per il flusso (corda)
 - Definizioni e unità di corrente, tensione, resistenza
-- Imparare a fare misure con il multimetro
+- Approccio scientifico (ipotesi, esperimento, risultati, conclusioni)
+- Imparare a fare misura di tensione con il multimetro
 
 [comment]: # (!!!)
 
@@ -374,16 +376,29 @@ Note:
 
 Com'è fatto? Come si accende ? Colori dei fili ?
 
+Note:
+- Come si misura una tensione ? Simbolo V DC
+- La tensione si misura fra due punti del circuito
+- La tensione si misura "IN PARALLELO" ai due punti
+
 [comment]: # (!!!)
 ### Esperimento
 
-- Misurare tensione di una pila ?
-- Di più pile ?
+- Misurare tensione di una pila
+- Di due pile
+- Disposte in modo diverso
 
 ![Schema](media/series.png)
 
-- Ipotesi di classe ?
-- Esperimenti a gruppo e raccolte misure
+- Ipotesi di classe : cambierà qualcosa?
+
+### Esperimento
+
+Esperimenti a gruppo e raccolte misure
+
+Note:
+- Obiettivo è che tutti i bambini sappiano misurare una tensione
+- Raccolta valori
 
 ---
 
