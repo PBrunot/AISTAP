@@ -26,13 +26,7 @@
 
 Pascal Brunot | AISTAP | July 2023
 
-[comment]: # (!!!)
-
-## Riassunto ultima lezione
-
-Elettricità è *movimento di cariche elettriche*
-
-[comment]: # (!!! data-auto-animate)
+Lezione 2 : Motori, Resistenze e Python
 
 Note:
 - Obiettivi
@@ -43,7 +37,23 @@ Note:
 - Misurare resistenze
 - Resistenze in parallelo e in serie
 
+[comment]: # (!!!)
+
+## Riassunto ultima lezione 1 / 2
+
+Elettricità è *movimento di cariche elettriche*
+
+Note:
+- Abbiamo visto che l'elettricità è fondamentale nel mondo
+- Abbiamo fatto circolare la corda fra le mani come l'elettricità nei conduttori
+- Esistono conduttori e isolanti
+- Abbiamo conosciuto alcuni scienzati famosi che hanno dato il loro nome a certe unità
+
+[comment]: # (!!!)
+
 ## Riassunto ultima lezione
+
+Le unità
 
 | Grandezza (Abbr.) | Unità | Simbolo | Spiegazione |
 | -- | -- | -- | -- |
@@ -51,7 +61,7 @@ Note:
 | *Tensione* (U o V) | Volt   | V | Potenziale delle cariche elettriche |
 | *Resistenza* (R) | Ohm | Ω | "Freno" alle cariche elettriche |
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (!!!)
 
 ## Riassunto ultima lezione
 
@@ -69,7 +79,7 @@ Ricordare concetti base magneti
 Poli - attrazione e ripulsione
 Provate con i magneti che avete sul tavolo
 
-Nota:
+Note:
 - Cosa hanno i magneti ? (poli N e poli S)
 - C'è però una differenza fondamentale - non esistono monopoli magnetici
 - Abbiamo visto invece che esistono cariche elettriche isolate (palloni)
@@ -97,6 +107,8 @@ Note:
 ### Uniamo elettricità e magnetismo
 
 Costruiamo un motore elettrico
+
+![Motor](media/motor%20symbol.png)
 
 Note:
 - Adesso scopriamo anche noi questo effetto nascosto
@@ -163,7 +175,7 @@ Trucco del filo conduttore solo a metà (si interrompe il magnete dopo mezzo gir
 Note:
 - Trovare animazioni?
 - Valutare se fare l'esperimento con multimetro e bobina in rotazione per osservare 
-- Legge di Faraday {\displaystyle {\mathcal {E}}=-{\frac {\mathrm {d} \Phi _{B}}{\mathrm {d} t}},}
+- Legge di Faraday $$ {\displaystyle {\mathcal {E}}=-{\frac {\mathrm {d} \Phi _{B}}{\mathrm {d} t}},} $$
 
 [comment]: # (!!!)
 
@@ -172,14 +184,22 @@ Note:
 Simbolo elettrico e unità di misura
 Fanno "resistenza" - Rallentano il flusso e si riscaldano
 
->Legge di Ohm = Tensione = Corrente x Resistenza
+![Resistenza](media/resistor%20symbol.png)
 
-```python
-U = R * I 
-```
+
+[comment]: # (!!!)
+
+### Resistenze
+
+Le resistenze seguono la legge di Ohm
+
+Tensione = Corrente x Resistenza
+
+$$ U = R . I $$
 
 Note:
 - Usare Python per provare a fare l'operazione?
+- Si possono manipolare i termini dell'equazione
 
 ---
 
@@ -211,30 +231,35 @@ Note:
 Schede di connessione senza fili (come funzionano) (1 slide)
 Collegamento verticale vs. orizzontali
 
----
-
-Esperimento 
-Sfida : Cosa succede se ne metto una dopo l’altra ? Una sopra l’altra? 
-
-Ipotesi della classe
-Misuriamo 
-
-Mettere 2 resistenze uguali in serie
-Mettere 2 resistenze uguali in parallelo
+![Breadboard](media/breadboard.jpg)
 
 ---
 
-Misure resistenze (di valori uguali possibilmente così abbiamo come risultato 2R ; 0.5R)
- valore ottenuto, R1//R2=(R1+R2)/(R1*R2)
+### Breadboard
+
+Mettere 2 resistenze uguali una dopo l'altra
+Mettere 2 resistenze uguali accanto l'uno l'altra
+
+![Resistenze](media/resistenze.jpg)
+
+Note:
+- [Circuito](https://www.tinkercad.com/things/8aVDNguOsCs-sizzling-borwo/editel)
+- Accanto = parallelo
+- Dopo = Serie
+- Fili = ricordatevi la corda che deve circolare
 
 [comment]: # (!!!)
 
 ### Pausa Python 1/3
 
 Installare Thonny
+
 REPL
+
 Sintassi tab
+
 Ripasso variabili, funzioni
+
 Parole chiavi def, return
 
 [comment]: # (!!!)
@@ -242,6 +267,8 @@ Parole chiavi def, return
 ### Pausa Python 2/3
 
 Facciamo la formula delle resistenze in parallelo
+
+$$ R_{parallelo} = \frac{1}{\frac{1}{R_{1}} + \frac{1}{R_{2}}} $$
 
 ```python [1-2|3-4]
 def parallelo(r1, r2):
@@ -253,6 +280,7 @@ print(parallelo(100, 200))
 Verifica sperimentale con R=100 Ω, R=200 Ω, multimetro
 
 Note:
+- inverso della resistenza equivalente = Somma degli inversi delle resistenze
 - Risultato atteso 66.66 Ω
 
 
@@ -260,7 +288,9 @@ Note:
 
 ### Pausa Python 3/3
 
-Adesso fate la legge di Ohm (U=R * I)
+Adesso facciamo la legge di Ohm in Python
+
+$$ U = R . I $$
 
 ```python [1-2|3-4]
 def ohm_u(r, i):
@@ -273,6 +303,7 @@ Risultato con R=200 Ω, I=0.1A ?
 
 Note:
 - Risultato 20 V
+- Esercizi extra possibili
 
 [comment]: # (!!!)
 
