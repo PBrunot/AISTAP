@@ -445,6 +445,17 @@ Unità di misura
 Note:
 - se c'è tempo elettrolisi acqua salata
 
+
+[comment]: # (!!!)
+
+### Prossima lezione
+
+Chi deve installare Thonny e il driver sul proprio computer?
+
+Note:
+- Verificare che siano tutti più o meno pronti con Thonny per la prossima lezione
+- Per la lezione 2 non serve la connessione alla board
+
 [comment]: # (
     Fonti
     STEM website

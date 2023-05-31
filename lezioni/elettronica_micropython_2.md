@@ -179,44 +179,49 @@ Note:
 
 [comment]: # (!!!)
 
-### Resistenze
+### Resistenze 1/3
 
-Simbolo elettrico e unità di misura
-Fanno "resistenza" - Rallentano il flusso e si riscaldano
+Ogni componente ha un simbolo
+
+Ecco la resistenza
 
 ![Resistenza](media/resistor%20symbol.png)
 
-
-[comment]: # (!!!)
-
-### Resistenze
-
-Le resistenze seguono la legge di Ohm
-
-Tensione = Corrente x Resistenza
-
-$$ U = R . I $$
-
 Note:
-- Usare Python per provare a fare l'operazione?
-- Si possono manipolare i termini dell'equazione
+- Fanno "resistenza" - Rallentano il flusso delle cariche
+- Ciò facendo prendono si riscaldano prendendo l'energia 
+- Cosa succedeva alla mano che stringeva la corda? si riscaldava
+- Si riscaldono le resistenze? Resistenza del forno, della lavatrice...
 
 ---
 
-### Resistenze
+Resistenza del forno
 
-Un triangolo per ricordare
+![Forno](media/forno.png)
 
-![VRI](media/ohm-law.jpg)
+Note:
+- Attenzione che la RESISTENZA ELETTRICA c'è dapertutto (salvo superconduttori)
+- Potremmo dire che un conduttore ha una resistenza ... (bassa)
+- E un isolante ha una resistenza ... (alta)
 
-Esercizio Python
+---
 
+Resistenze usate in elettronica
+
+![Resistors](media/resistors.png)
+
+Note:
+- Commentare resistenze che hanno i ragazzi
+- Resistenze che variano con la temperature (termistori)
+- Resistenze aggiustabili con un bottone (potenziometri, reostati)
+- Piccole resistenze saldate in superficie
+- Noi useremo le resistenze a film di carbone per montaggio con foro passante
+- Menzionare che esiste un codice di colore sulle resistenze per capirne il valore
 
 [comment]: # (!!!)
 
 ### Misura delle resistenze con il multimetro
 
-Spiegare come si misurano le resistenze
 
 Tabella risultati
 
@@ -226,16 +231,16 @@ Note:
 
 [comment]: # (!!!)
 
-### Breadboard
+### Breadboard 1/2
 
-Schede di connessione senza fili (come funzionano) (1 slide)
+Schede di connessione senza fili
 Collegamento verticale vs. orizzontali
 
 ![Breadboard](media/breadboard.jpg)
 
 ---
 
-### Breadboard
+### Breadboard 2/2
 
 Mettere 2 resistenze uguali una dopo l'altra
 Mettere 2 resistenze uguali accanto l'uno l'altra
@@ -250,17 +255,82 @@ Note:
 
 [comment]: # (!!!)
 
-### Pausa Python 1/3
+### Python 1
 
-Installare Thonny
+![Python](media/python.png)
 
-REPL
+Note:
+- Chi ha già scritto programmi ?
+- Chi ha già fatto un corso di Python ?
+- Conoscete altri linguaggi di programmazione ?
 
-Sintassi tab
+### Python
+
+Lanciare Thonny
+
+---
+
+REPL = _Read, Print, Eval, Loop_
+
+![Thonny](media/thonny-python.png)
+
+Esegue subito un commando
+
+---
+
+Nel REPL scrivete le istruzioni dopo >>> e fate INVIO
+
+```python [1|2|3|4]
+>>> 1+1
+2
+>>> 3*10**15
+3000000000000000
+```
+
+Python è un ottimo calcolatore
+
+---
+
+Adesso passiamo alla parte programma
+
+```python
+print("Sono un programma in Python")
+```
+
+Clic sul triangolo bianco nel cerchio verde
+
+Note:
+- Aspettare che tutti abbiano eseguito il programma
+
+---
 
 Ripasso variabili, funzioni
 
-Parole chiavi def, return
+```python [1-2]
+nome = input("Come ti chiami ?")
+print ("Ciao " + nome)
+```
+
+Note:
+- Verificare che tutti abbiano scritto il programma
+
+---
+
+Funzioni utili
+
+```python [1-4]
+print
+input
+type
+str, int
+```
+
+Paroli chiavi
+- def, return
+- for, while
+
+Note:
+- Valutare cheatsheet per sintassi Python
 
 [comment]: # (!!!)
 
@@ -277,12 +347,37 @@ def parallelo(r1, r2):
 print(parallelo(100, 200))
 ```
 
+Risultati ?
 Verifica sperimentale con R=100 Ω, R=200 Ω, multimetro
 
 Note:
 - inverso della resistenza equivalente = Somma degli inversi delle resistenze
 - Risultato atteso 66.66 Ω
 
+[comment]: # (!!!)
+
+### Legge di Ohm 1/2
+
+Le cariche elettriche che passano attraverso una resistenza seguono la *legge di Ohm*
+
+$$ U = R . I $$
+
+Tensione = Corrente x Resistenza
+
+Note:
+- Spiegare il concetto di legge fisica ? 
+- Sarà l'unica formula che vedremo durante il corso ma è la più importante
+- Si possono manipolare i termini dell'equazione U/R=I, I=U/R
+
+[comment]: # (!!!)
+
+### Legge di Ohm 2/2
+
+Un triangolo per ricordare la legge di Ohm
+
+![VRI](media/ohm-law.jpg)
+
+_V era il simbolo della tensione, come U, ricordate?_
 
 [comment]: # (!!!)
 
