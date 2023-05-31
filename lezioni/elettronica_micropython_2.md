@@ -75,13 +75,15 @@ Abbiamo usato alcuni componenti elettrici...
 
 ## Magneti
 
-Ricordare concetti base magneti
-Poli - attrazione e ripulsione
-Provate con i magneti che avete sul tavolo
+![Magnete](media/magnete.jpg)
+
+Cosa vedete su questa immagine ?
+Prendete due magneti e provate a avvicinarli/allontanarli
+- Che cosa osservate ?
 
 Note:
 - Cosa hanno i magneti ? (poli N e poli S)
-- C'è però una differenza fondamentale - non esistono monopoli magnetici
+- C'è però una differenza fondamentale con l'elettricità - non esistono monopoli magnetici
 - Abbiamo visto invece che esistono cariche elettriche isolate (palloni)
 
 [comment]: # (!!!)
@@ -101,6 +103,18 @@ Note:
 - L'elettricità era già nota e studiata da un secolo prima che si notasse questo effetto
 - Maxwell nel 1864 scrisse le leggi che unificano elettricità e magnetismo
 - vediamo come fare qualcosa di utile con tutti i due
+
+[comment]: # (!!!)
+
+### Hans Christian Ørsted
+
+![Orsted](media/orsted.png)
+
+_secondo voi per lui com'è andata la vita?_
+
+Note:
+- E' stato il primo a produrre alluminio
+- Il suo nome è stato dato ad un asteroide
 
 [comment]: # (!!!)
 
