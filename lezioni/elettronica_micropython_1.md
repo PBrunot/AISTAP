@@ -435,6 +435,7 @@ Note:
 - Domande : che tensione c'è fra 1 kV - 500 V in V ?
 
 [comment]: # (!!!)
+
 ### Il multimetro
 
 <img src="media/multimetro.jpg" width="200px" alt="Multimetro" />
