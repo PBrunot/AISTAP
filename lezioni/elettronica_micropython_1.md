@@ -470,7 +470,7 @@ Note:
 - Obiettivo è che tutti i bambini sappiano misurare una tensione
 - Raccolta valori
 
----
+[comment]: # (!!!)
 
 ### Conclusioni esperimento
 

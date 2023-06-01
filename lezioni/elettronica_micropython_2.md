@@ -152,7 +152,7 @@ Note:
 
 Girano tutte nello stesso verso ?
 
-Provate a farlo girare nell'altro senso ?
+Perché girano secondo voi ?
 
 ![Esempio](media/motore-1.png)
 
@@ -160,11 +160,24 @@ Provate a farlo girare nell'altro senso ?
 
 ### Ipotesi
 
-Perché girano secondo voi ?
+| Chi | Come gira | Perché gira ? |
+| -- | -- | -- |
+| Gruppo 1 | $$ \hookleftarrow \hookrightarrow ? $$ | ...... |
+| Gruppo 2 | ..... | .... |
+| Gruppo 3 | ..... | .... |
+| Gruppo 4 | ..... | .... |
+| Gruppo 5 | ..... | .... |
+| Gruppo 6 | ..... | .... |
+
+Provate a farlo girare nell'altro senso ?
+
+[comment]: # (!!!)
+
+## Ipotesi 
 
 Da cosa dipende il senso di rotazione ?
 
-???
+Osserviamo
 
 <iframe width="560" height="315" src="media/motore.mp4" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -322,6 +335,19 @@ Note:
 
 [comment]: # (!!!)
 
+### Risultati
+
+| Gruppo | Valore precedente | Valore in serie | Valore in parallelo |
+| -- | -- | -- | -- |
+| 1 | ..... Ω | ..... Ω |..... Ω |
+| 2 | ..... Ω | ..... Ω |..... Ω |
+| 3 | ..... Ω | ..... Ω |..... Ω |
+| 4 | ..... Ω |  ..... Ω |..... Ω |
+| 5 | ..... Ω | ..... Ω |..... Ω |
+| 6 | ..... Ω | ..... Ω |..... Ω |
+
+[comment]: # (!!!)
+
 ### Python 1
 
 ![Python](media/python.png)
@@ -401,7 +427,22 @@ Note:
 
 [comment]: # (!!!)
 
-### Pausa Python 2/3
+### Pausa Python 2/4
+
+Facciamo la formula delle resistenze in serie
+
+$$ R_{serie} = R_{1} + R_{2} $$
+
+```python [1-2|3-4]
+def serie(r1, r2):
+    return r1 + r2
+
+print(serie(100, 100))
+```
+
+[comment]: # (!!!)
+
+### Pausa Python 3/4
 
 Facciamo la formula delle resistenze in parallelo
 
