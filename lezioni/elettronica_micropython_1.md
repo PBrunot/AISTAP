@@ -26,10 +26,11 @@
 ## Elettronica con Micropython
 ![Micropython logo](media/micropython-logo.svg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
 
-Pascal Brunot | AISTAP | July 2023
+Pascal Brunot | AISTAP | Luglio 2023
+
+Lezione 1 : Elettricità
 
 Note:
-
 - Obiettivi della lezione
 - Capire il concetto di carica (con elettricità statica)
 - L'elettricità come un flusso di cariche
@@ -61,7 +62,10 @@ Note:
 
 
 ## Lezione 1
+
 Elettricità
+
+![Electricity](media/spark.jpg)
 
 Note:
 - Oggi sarà la lezione più teorica di tutte perché dobbiamo imparare i concetti ma ci divertiremo anche facendo esperimenti
@@ -72,9 +76,11 @@ Note:
 
 [comment]: # (!!!)
 
-## Importanza dell’elettricità 1/2
+## Importanza dell’elettricità 1/3
 
-- E' importante l'ettricità?
+E' importante l'ettricità oggi ?
+
+Vediamo senza
 
 ![Blackout](media/blackout.png)
 
@@ -83,29 +89,58 @@ Note:
 - Chiedere a cosa serve l'elettricità?
 - Acqua potabile (pompe), Forno elettrico, luce, conservazione del cibo
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (!!!)
 
-## Importanza dell’elettricità 2/2
+## Importanza dell’elettricità 2/3
 
-- "Motore" della società moderna
+"Motore" della società moderna
+
+_E per gli esseri viventi ?_
 
 Note:
-- Guardate attorno a voi e ditemi cosa funziona con l'elettricità?
+- Avere più energia a disposizione ha consentito alla popolazione umana di vivere in grandi città
 - Menzionare idrocarburi come secondo "motore"
+- Nervi
+- Sapete come è stato scoperto ? Scienfico italiano, Galvani e le rane
 
----
+[comment]: # (!!!)
 
-E' sempre stato così?
-Perché è così comoda?
+## Importanza dell’elettricità 3/3
+
+E' sempre stato così importante nella nostra vita?
 
 Note:
 - Cosa usavamo prima ? carbone, legna, animali
-- Non inquina ed è facile da trasportare
-- La generazione può essere pulita, spesso non lo è
 
 [comment]: # (!!! data-auto-animate)
 
-## Elettricità nel mondo 1/2
+## Importanza dell’elettricità 3/3
+
+E' sempre stato così importante nella nostra vita?
+
+![Agricoltura](media/agricoltura.jpg)
+
+Nota:
+- Adesso cosa si usa al posto degli animali ?
+- Siamo diventati meno contadini e più urbani in poche decenni
+
+[comment]: # (!!!)
+
+## Importanza dell’elettricità 3/3
+
+_Ma perché è così comoda l'elettricità?_
+
+_Da dove proviene l'elettricità che abbiamo in casa ?_
+
+Note:
+- Non inquina ed è facile da trasportare
+- "Vettore energetico"
+- Centrali elettriche (idroelettriche, termiche gas/carbone, eolico, solare, ...)
+- La generazione può essere pulita spesso non lo è
+
+[comment]: # (!!!)
+
+## Elettricità nel mondo 1/3
 
 - Elettricità nel mondo - tanta o poca?
 
@@ -122,17 +157,31 @@ Note:
 - 3000 TWh sono 171 millioni di acciugacappelli accessi in permanenza
 
 [comment]: # (!!! data-auto-animate)
-## Elettricità nel mondo 2/2
 
-- Elettrificazione come motore della riduzione CO2
-- Elettronica sempra più potente e presente
+## Elettricità nel mondo 2/3
 
-E' ora di guardarci da vicino
+Elettrificazione come motore della riduzione CO2
+
+![London Fog, 1952](media/london-fog.jpg)
 
 Note:
+- Dicembre 1952, 4000 morti, 100000 malati per via dello smog (carbone)
 - Esempio delle macchine elettriche vs. a combustione
 - Graduale sostituzione fossili con altre forme di energia e elettricità
+- La combustione dei carburanti fossili producono CO2 nell'atmosfera che assorbe il calore (infrarossi) emesso dal suolo
+- 2400 GT dalla fine della seconda guerra mondiale... ne possiamo emettere 1200 GT max per stare <2.5°C
+
+[comment]: # (!!! data-auto-animate)
+
+## Elettricità nel mondo 3/3
+
+Elettronica sempra più potente e presente
+
+![Datacenter](media/datacenter.jpg)
+
+Note:
 - Chiedere se l'hanno mai vista l'elettricità ?
+- E' ora di guardarci da vicino
 
 [comment]: # (!!! data-auto-animate)
 
@@ -148,7 +197,7 @@ Scarica di elettricità fra la nuvola e il suolo
 
 Note:
 - Elettricità "scorre" come un fluido
-- C'è l'elettricità anche negli esseri viventi (impulsi nervosi)
+- C'è l'elettricità anche negli esseri viventi (impulsi nervosi, Galvani)
 
 [comment]: # (!!! data-auto-animate)
 
@@ -226,7 +275,7 @@ Note:
 
 [comment]: # (!!! data-auto-animate)
 
-### Definizione elettricità
+### Definizione elettricità 1/3
 
 Dobbiamo fare un po' di storia
 
@@ -237,9 +286,14 @@ Dobbiamo fare un po' di storia
 
 ---
 
-Benjamin Frankin è famoso per l'invenzione del parafulmine
+Benjamin Frankin è famoso per l'invenzione del parafulmine (1752)
 
 ![Esperimento con il figlio](media/franklin.jpg)
+
+Note:
+- Nel quadro sopra, Franklin voleva dimostrare che le nuvole sono cariche come i nostri palloni
+- Il filo dell'acquilone era un filo elettrico e Franklin sperava di scaricare la nuvola
+- Riuscì a osservare scariche elettriche all'estremità del filo
 
 [comment]: # (!!! data-auto-animate)
 
@@ -247,9 +301,14 @@ Benjamin Frankin è famoso per l'invenzione del parafulmine
 
 _Non è famoso per rispettare la sicurezza dei bambini_
 
+Note:
+- Se il fulmine avesse colpito il loro acquilone loro sarebbero stati uccisi
+- Parafulmine faceva paura alle popolazioni, attraeva la colera di Dio 
+- Si sarebbero evitati 3000 morti a Brescia quando un fulmine colpì la polveriera nel 1769
+
 [comment]: # (!!! data-auto-animate)
 
-### Definizione elettricità
+### Definizione elettricità 2/3
 
 Tutti pensavano allora che l'elettricità fosse una specie di liquido invisible
 
@@ -268,7 +327,7 @@ Note:
 
 [comment]: # (!!! data-auto-animate)
 
-### Definizione elettricità
+### Definizione elettricità 3/3
 
 Elettricità 
 : cariche in movimento
@@ -284,10 +343,10 @@ Note:
 - Si userà la convenzione usuale nel corso
 - Domande di verifica: cariche positive/negative, atomo
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (!!!)
+
 ### Esercizio di classe
 
-Analogia della corda
 1. Tutti i bambini tengono la corda senza stringerla
 2. Un bambino stringe leggermente la corda
 3. L'insegnante inizia a fare scorrere la corda fra le sue mani
@@ -299,31 +358,33 @@ Note:
 - Conservazione della carica <-> conservazione della corda che entra/esce, non si "consuma" la carica
 - Movimento delle cariche simultaneo della corda
 - Analogia della resistenza che scalda la mano ma non degli altri
+- La corda evita l'errore di pensare che le cariche vengono dalle batterie, sono già presenti
 
 [comment]: # (!!!)
 
 ### Conduttori e isolanti #1
 
-- Altro esperimento
+Tutti i materiali fanno passare le cariche?
 
-Tester di continuità e vari materiali, chi conduce bene e chi no (insegnante)
-I bimbi portanno i materiali da testare all'istruttore con il tester
+![Corrente](media/corrente.jpg)
 
+Prova con tester di continuità + vari materiali
 
 Note:
 - Chi conduce bene l'elettricità? Metalli
 - I buoni conduttori hanno elettroni liberi di spostarsi
+- I bimbi portanno i materiali da testare all'istruttore con il tester
 
 [comment]: # (!!!)
 
 ### Conduttori e isolanti #2
 
-- Teoria: Facilità a strappare elettroni
+Usiamo un simulatore per vedere:
 
-[Simulazione](https://javalab.org/en/electric_current_en/)
+[JavaLab](https://javalab.org/en/electric_current_en/)
 
-Alcuni atomi "si tengono stetti" i loro elettroni (isolanti)
-Altri li possono prestare (conduttori)
+- Alcuni atomi "si tengono stetti" i loro elettroni (isolanti)
+- Altri li possono prestare (conduttori)
 
 [comment]: # (!!!)
 
@@ -360,14 +421,18 @@ Ohm non fu creduto e rinuncio al posto in università
 
 Ricordiamo 3 grandezze
 
-| Grandezza | Unità | Simbolo | Spiegazione |
+| Grandezza (Abbr.) | Unità | Simbolo | Spiegazione |
 | -- | -- | -- | -- |
-| *Corrente* | Ampère | A | Flusso delle cariche elettriche |
-| *Tensione* | Volt   | V o U | Potenziale delle cariche elettriche |
-| *Resistenza* | Ohm | Ω | "Freno" alle cariche elettriche |
+| *Corrente* (I) | Ampere | A | Flusso delle cariche elettriche |
+| *Tensione* (U o V) | Volt   | V | Potenziale delle cariche elettriche |
+| *Resistenza* (R) | Ohm | Ω | "Freno" alle cariche elettriche |
  
 Note:
-- La corda evita l'errore di pensare che le cariche vengono dalle batterie, sono già presenti
+- I simboli delle unità che provvengono da un personaggio storico sono in maiuscole (A non a)
+- Non si usano gli accenti nelle unità (Ampère->Ampere)
+- Alle unità si possono aggiungere i soliti prefissi come per le lunghezze (milli-m, chilo-k, mega-M)
+- Domande : che corrente fa 100 mA + 1 A in A ?
+- Domande : che tensione c'è fra 1 kV - 500 V in V ?
 
 [comment]: # (!!!)
 ### Il multimetro
@@ -380,8 +445,10 @@ Note:
 - Come si misura una tensione ? Simbolo V DC
 - La tensione si misura fra due punti del circuito
 - La tensione si misura "IN PARALLELO" ai due punti
+- Accendete e mettelo su misura di tensione
 
 [comment]: # (!!!)
+
 ### Esperimento
 
 - Misurare tensione di una pila
@@ -391,6 +458,8 @@ Note:
 ![Schema](media/series.png)
 
 - Ipotesi di classe : cambierà qualcosa?
+
+[comment]: # (!!!)
 
 ### Esperimento
 
@@ -414,6 +483,14 @@ Note:
 Note:
 - Generatori di tensione in serie si sommano
 - In parallelo, non si sommano (quando hanno la stessa tensione)
+
+[comment]: # (!!!)
+
+### Generatori
+
+![Generatori](media/generatori.jpg)
+
+Simbolo :
 
 [comment]: # (!!!)
 

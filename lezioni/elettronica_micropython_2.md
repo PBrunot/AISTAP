@@ -24,14 +24,14 @@
 ## Elettronica con Micropython
 ![Micropython logo](media/micropython-logo.svg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
 
-Pascal Brunot | AISTAP | July 2023
+Pascal Brunot | AISTAP | Luglio 2023
 
 Lezione 2 : Motori, Resistenze e Python
 
 Note:
-- Obiettivi
+- Obiettivi della lezione
 - Collegamento elettricità - magnetismo
-- Motore DC 
+- Motore DC
 - Approccio scientifico (osservazione-ipotesi-esperimento-conclusioni)
 - Legge di Ohm
 - Misurare resistenze
@@ -113,14 +113,18 @@ Note:
 _secondo voi per lui com'è andata la vita?_
 
 Note:
-- E' stato il primo a produrre alluminio
+- Dopo l'elettromagnetismo è stato il primo chimico a produrre alluminio 
 - Il suo nome è stato dato ad un asteroide
 
 [comment]: # (!!!)
 
 ### Uniamo elettricità e magnetismo
 
+Oggi anche noi faremo esperimenti
+
 Costruiamo un motore elettrico
+
+Il simbolo del motore
 
 ![Motor](media/motor%20symbol.png)
 
@@ -132,11 +136,11 @@ Note:
 ### Costruzione motore
 
 Istruzioni
-- Graffette su pongo
+- Mettere le due graffette sulle connessioni laterali della breadboard
 - Disporre bobina in mezzo alle graffette
-- Collegare fili alle grafete
-- Collegare batterie ai fili
+- Collegare le 3 batterie alle connessioni
 - Dare un piccolo impulso alla bobina
+- Avvicinare con la mano i magneti
 
 Note:
 - motore homopolo 
@@ -147,21 +151,27 @@ Note:
 ### Osservazione
 
 Girano tutte nello stesso verso ?
-Perché girano secondo voi ?
+
 Provate a farlo girare nell'altro senso ?
+
+![Esempio](media/motore-1.png)
 
 [comment]: # (!!!)
 
 ### Ipotesi
 
-- Senso di rotazione ?
-- Motivo del movimento ?
+Perché girano secondo voi ?
 
-Raccogliamo le vostre ipotesi
+Da cosa dipende il senso di rotazione ?
+
+???
+
+<iframe width="560" height="315" src="media/motore.mp4" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Note:
 - "è l'elettricità" che lo fa girare ? -> allora togliamo il magnete
-- "senso di rotazione diversi" -> cambiamo verso del magnete o della pila
+- "senso di rotazione diversi" -> cambiamo verso del magnete 
+- provare a cambiare il + e il - della pila
 - ricordare effetto di Orsted
 
 [comment]: # (!!!)
@@ -192,6 +202,8 @@ Note:
 - Legge di Faraday $$ {\displaystyle {\mathcal {E}}=-{\frac {\mathrm {d} \Phi _{B}}{\mathrm {d} t}},} $$
 
 [comment]: # (!!!)
+
+### Corrente continua e corrente alternata??
 
 ### Resistenze 1/3
 
@@ -236,12 +248,27 @@ Note:
 
 ### Misura delle resistenze con il multimetro
 
+Le resistenze si misurano con il multimetro in posizione Ω
 
-Tabella risultati
+![Misura](media/misura_resistenza.jpg)
+
+-> Misurate le resistenze che avete sul tavolo
 
 Note:
-- Le resistenze di misurano con il simbolo Ω
 - Come le tensioni le resistenze di misurano fra due punti del circuito con il multimetro in parallelo
+
+[comment]: # (!!!)
+
+### Misura delle resistenze con il multimetro
+
+| Chi | Valore |
+| -- | -- |
+| Gruppo 1 | ..... Ω |
+| Gruppo 2 | ..... Ω |
+| Gruppo 3 | ..... Ω |
+| Gruppo 4 | ..... Ω | 
+| Gruppo 5 | ..... Ω |
+| Gruppo 6 | ..... Ω |
 
 [comment]: # (!!!)
 
@@ -418,9 +445,29 @@ Note:
 
 ### Altri componenti
 
-- Interruttori e simboli
-- Bobina (induttore) e simbolo come "serbatoio di corrente" (in senso inverso...)
-- Condensatori e simbolo come "serbatoio di tensione"
+- Interruttori
+
+[comment]: # (!!!)
+
+### Induttori
+
+Bobina (induttore), sono "serbatoio di corrente" (contrari)
+
+![Induttore](media/induttori.png)
+
+Simbolo
+
+![Simbolo](media/induttore.jpg)
+
+[comment]: # (!!!)
+
+### Condensatori
+
+Condensatori, sono "serbatoio di tensione"
+
+Simbolo
+
+![Condensatori](media/capacit%C3%A0.jpg)
 
 [comment]: # (!!!)
 
@@ -433,3 +480,6 @@ Qualche simbolo misterioso per la prossima lezione
 
 [comment]: # (!!!)
 
+### Fonti
+
+- 
