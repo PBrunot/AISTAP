@@ -87,3 +87,7 @@ o Power pin
 Accensione, collegamento USB (parte pratica)
 - Thonny, arrivare al Python REPL
 - Accendere e spegnere il led sulla board (machine.Pin(numero).on() / machine.Pin(numero).off())
+
+[comment]: # (!!!)
+
+## Riprendiamo Python

@@ -176,12 +176,11 @@ Note:
 
 [comment]: # (!!!)
 
-### Spiegazione
+### Conclusioni scientifiche
 
 Le cariche elettriche in movimento nella bobina creano un "magnete" che viene attratto o respinto dal magnete fisso
 
 Questa spinta fa girare la bobina.
-
 - esattamente come l'ago della bussola si spostava con la corrente
 - però la bussola poi si fermava... perché questo no?
 
@@ -191,19 +190,20 @@ Note:
 
 [comment]: # (!!!)
 
-### Spiegazione
+### Conclusioni scientifiche
 
-Ma perché non rimangono i magneti all’equilibrio e va avanti a girare ?
-Trucco del filo conduttore solo a metà (si interrompe il magnete dopo mezzo giro per evitare questo)
+Perché non rimangono i magneti in equilibrio (e invece va avanti a girare) ?
+
+La parte di filo in contatto con la graffetta è conduttrice *solo a metà* 
+
+Ad ogni mezza-rotazione si interrompe la corrente *ma la bobina continua per inerzia*
 
 Note:
 - Trovare animazioni?
-- Valutare se fare l'esperimento con multimetro e bobina in rotazione per osservare 
-- Legge di Faraday $$ {\displaystyle {\mathcal {E}}=-{\frac {\mathrm {d} \Phi _{B}}{\mathrm {d} t}},} $$
+- Valutare se fare l'esperimento con multimetro e bobina in rotazione per osservare generazione
+- Legge di Faraday $$ {\mathcal {E}}=-{\frac {\mathrm {d} \Phi _{B}}{\mathrm {d} t}} $$
 
 [comment]: # (!!!)
-
-### Corrente continua e corrente alternata??
 
 ### Resistenze 1/3
 
@@ -405,11 +405,11 @@ Note:
 
 Facciamo la formula delle resistenze in parallelo
 
-$$ R_{parallelo} = \frac{1}{\frac{1}{R_{1}} + \frac{1}{R_{2}}} $$
+$$ R_{parallelo} = \frac{R_{1} \times R_{2}}{R_{1} + R_{2}} $$
 
 ```python [1-2|3-4]
 def parallelo(r1, r2):
-    return 1/(1/r1 + 1/r2)
+    return (r1 * r2)/(r1 + r2)
 
 print(parallelo(100, 200))
 ```
@@ -427,7 +427,7 @@ Note:
 
 Le cariche elettriche che passano attraverso una resistenza seguono la *legge di Ohm*
 
-$$ U = R . I $$
+$$ U = R \times I $$
 
 Tensione = Corrente x Resistenza
 

@@ -33,3 +33,47 @@ Note:
 - Usare task indipendenti
 
 [comment]: # (!!!)
+
+## Teoria
+- Task paralleli con multitasking cooperativo
+
+Perché? È molto più semplice pensare a task indipendenti che a thread con stato condiviso
+
+- Parole chiave Async / Await
+- Create un task con asyncio.create_task()
+- Yield con asyncio.sleep_ms()
+- Eseguire i task con asyncio.run(..)
+- Riprendere esempio dei due led che lampeggiano a frequenza diversa
+
+[comment]: # (!!!)
+
+## Come fare un dado elettronico ?
+
+_Divide ut impera_
+
+![Elefante](media/divide_ut_impera.jpg)
+
+[comment]: # (!!!)
+
+## Pratica
+
+- Dado elettronico
+
+Se le schede hanno LCD:
+- Lancio con GPIO Touch pin o switch se non supportato
+- Risultato del dato su LCD
+- Animazione su LCD fra i tiri
+
+Task1 : blink led
+Task2 : animazione schermo
+Task3 : attesa touch e scelta numero
+
+[comment]: # (!!!)
+
+## Grazie
+
+Se volete continuare la scoperta dell'elettronica
+
+- Board Arduino o ESP32
+- La robottica
+

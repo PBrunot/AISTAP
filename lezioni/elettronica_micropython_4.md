@@ -37,3 +37,64 @@ Note:
 - Blink alternati
 
 [comment]: # (!!!)
+
+## Teoria (5 slides)
+- Micropython; ambiente di sviluppo compatibile (Thonny)
+- Life-cycle (RESET / BOOT.PY / STARTUP.PY)
+- Librerie machine.Pin ; time.sleep
+- Librerie dispositivi (LCD) e come si aggiungono (pip -&gt; mip.install(...))
+
+[comment]: # (!!!)
+
+## Pratica
+
+- Caricare un file PY in Thonny
+- Caricare il file PY sul controllore
+
+[comment]: # (!!!)
+
+## Esercizio 1
+
+Fare che la board scriva "Ciao nome" ad ogni poweron/reset
+
+(modifica main.py)
+
+[comment]: # (!!!)
+
+## Esercizio 2
+
+Fare lampeggiare LED esterno con una resistenza
+- Dare Pin-out delle board usata, ripassare GPIO / Bus
+- Proiettare CIRCUITO DA REALIZZARE con simboli standard
+- Realizzare un circuito con board su scheda a connessione senza fili
+- Modificare script fornito per fare lampeggiare il LED
+- Ripasso diodo (verso giusto)
+
+[comment]: # (!!!)
+
+## Esercizio 2 (soluzione)
+
+WOKWI
+
+Codice
+
+[comment]: # (!!!)
+
+## Esercizio 3
+
+(ripasso Python)
+- Fare lampeggiare il led integrato + il led esterno con ciclo while True
+- Alternare il lampeggio fra i due LED
+- Lampeggiare a tempo i due LED (1s)
+
+[comment]: # (!!!)
+
+## Esercizio 4
+
+- Fare lampeggiare il primo LED ogni 2 s e il secondo ogni secondo
+Obiettivo : dimostrare che le cose diventano difficili quando ci sono varie azioni da fare in parallelo.
+Se dovessi aggiungere 7 LED ?
+
+[comment]: # (!!!)
+
+## Conclusioni
