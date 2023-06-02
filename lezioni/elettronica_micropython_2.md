@@ -43,7 +43,7 @@ Note:
 - Misurare resistenze
 - Resistenze in parallelo e in serie
 
-[comment]: # (!!!)
+[comment]: # (!!! data-background-color="aqua")
 
 ## Riassunto ultima lezione 1 / 2
 
@@ -357,7 +357,7 @@ Note:
 
 [comment]: # (!!!)
 
-### Python 1
+### Python
 
 ![Python](media/python.png)
 
@@ -365,6 +365,8 @@ Note:
 - Chi ha già scritto programmi ?
 - Chi ha già fatto un corso di Python ?
 - Conoscete altri linguaggi di programmazione ?
+
+[comment]: # (!!! data-background-color="aqua")
 
 ### Python
 

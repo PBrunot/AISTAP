@@ -44,7 +44,7 @@ Note:
 - Approccio scientifico (ipotesi, esperimento, risultati, conclusioni)
 - Imparare a fare misura di tensione con il multimetro
 
-[comment]: # (!!!)
+[comment]: # (!!! data-background-color="aqua")
 
 ## Introduzione
 
@@ -560,7 +560,7 @@ Note:
 - Misurare resistenze
 - Resistenze in parallelo e in serie
 
-[comment]: # (!!!)
+[comment]: # (!!! data-background-color="aqua")
 
 ## Riassunto ultima lezione 1 / 2
 
@@ -874,7 +874,7 @@ Note:
 
 [comment]: # (!!!)
 
-### Python 1
+### Python
 
 ![Python](media/python.png)
 
@@ -882,6 +882,8 @@ Note:
 - Chi ha già scritto programmi ?
 - Chi ha già fatto un corso di Python ?
 - Conoscete altri linguaggi di programmazione ?
+
+[comment]: # (!!! data-background-color="aqua")
 
 ### Python
 
@@ -1093,7 +1095,7 @@ Pascal Brunot | AISTAP | Luglio 2023
 
 Lezione 3
 
-[comment]: # (!!!)
+[comment]: # (!!! data-background-color="aqua")
 
 ## I semi-conduttori
 
@@ -1226,7 +1228,7 @@ Note:
 - LED esterno pilato da GPIO
 - Blink alternati
 
-[comment]: # (!!!)
+[comment]: # (!!! data-background-color="aqua")
 
 ## Teoria (5 slides)
 
@@ -1341,7 +1343,7 @@ Lezione 5 : un dado elettronico
 Note:
 - Usare task indipendenti
 
-[comment]: # (!!!)
+[comment]: # (!!! data-background-color="aqua")
 
 ## Teoria
 - Task paralleli con multitasking cooperativo

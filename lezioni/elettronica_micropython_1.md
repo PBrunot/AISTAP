@@ -44,7 +44,7 @@ Note:
 - Approccio scientifico (ipotesi, esperimento, risultati, conclusioni)
 - Imparare a fare misura di tensione con il multimetro
 
-[comment]: # (!!!)
+[comment]: # (!!! data-background-color="aqua")
 
 ## Introduzione
 

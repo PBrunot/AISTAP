@@ -35,7 +35,7 @@ Pascal Brunot | AISTAP | Luglio 2023
 
 Lezione 3
 
-[comment]: # (!!!)
+[comment]: # (!!! data-background-color="aqua")
 
 ## I semi-conduttori
 

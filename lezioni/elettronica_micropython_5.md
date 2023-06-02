@@ -38,7 +38,7 @@ Lezione 5 : un dado elettronico
 Note:
 - Usare task indipendenti
 
-[comment]: # (!!!)
+[comment]: # (!!! data-background-color="aqua")
 
 ## Teoria
 - Task paralleli con multitasking cooperativo

@@ -42,7 +42,7 @@ Note:
 - LED esterno pilato da GPIO
 - Blink alternati
 
-[comment]: # (!!!)
+[comment]: # (!!! data-background-color="aqua")
 
 ## Teoria (5 slides)
 
