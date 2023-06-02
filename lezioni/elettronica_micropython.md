@@ -1169,7 +1169,7 @@ operazioni logiche)
 
 [comment]: # (!!!)
 
-## Struttura di una board
+## Struttura della board S2 PICO
 
 <div class="twocolumn">
 <div>
@@ -1192,7 +1192,7 @@ operazioni logiche)
 
 [comment]: # (!!!)
 
-## Board
+## Board S2 PICO
 
 Accensione, collegamento USB (parte pratica)
 
@@ -1203,6 +1203,24 @@ Accensione, collegamento USB (parte pratica)
 [comment]: # (!!!)
 
 ## Riprendiamo Python
+
+
+
+[comment]: # (!!!)
+
+## Conclusioni
+
+Sito Micropython (dove scaricare firmware e documentazione)
+
+[Micropython](https://micropython.org/)
+
+Componenti usati
+
+- [S2 Pico](https://www.wemos.cc/en/latest/s2/s2_pico.html)
+
+- [Ali Express](https://it.aliexpress.com/item/1005003215673294.html) 
+
+- [APA 106](https://it.aliexpress.com/item/1005001863273661.html)
 .twocolumn {
    display: grid;
    grid-template-columns: 1fr 1fr;
@@ -1219,7 +1237,7 @@ Accensione, collegamento USB (parte pratica)
 
 Pascal Brunot | AISTAP | Luglio 2023
 
-Lezione 4 : Micropython
+Lezione 4 : Micropython, board S2 PICO
 
 Note:
 - Thonny, salvare file sul microprocessore
@@ -1233,9 +1251,19 @@ Note:
 ## Teoria (5 slides)
 
 - Micropython; ambiente di sviluppo compatibile (Thonny)
+
+[comment]: # (!!!)
+
+## Sequenza di boot
+
 - Life-cycle (RESET / BOOT.PY / STARTUP.PY)
+
+[comment]: # (!!!)
+
+## Librerie utili
+
 - Librerie machine.Pin ; time.sleep
-- Librerie dispositivi (LCD) e come si aggiungono (pip -&gt; mip.install(...))
+- Librerie dispositivi (LCD) 
 
 [comment]: # (!!!)
 

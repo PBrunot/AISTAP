@@ -109,7 +109,7 @@ operazioni logiche)
 
 [comment]: # (!!!)
 
-## Struttura di una board
+## Struttura della board S2 PICO
 
 <div class="twocolumn">
 <div>
@@ -132,7 +132,7 @@ operazioni logiche)
 
 [comment]: # (!!!)
 
-## Board
+## Board S2 PICO
 
 Accensione, collegamento USB (parte pratica)
 
@@ -143,3 +143,21 @@ Accensione, collegamento USB (parte pratica)
 [comment]: # (!!!)
 
 ## Riprendiamo Python
+
+
+
+[comment]: # (!!!)
+
+## Conclusioni
+
+Sito Micropython (dove scaricare firmware e documentazione)
+
+[Micropython](https://micropython.org/)
+
+Componenti usati
+
+- [S2 Pico](https://www.wemos.cc/en/latest/s2/s2_pico.html)
+
+- [Ali Express](https://it.aliexpress.com/item/1005003215673294.html) 
+
+- [APA 106](https://it.aliexpress.com/item/1005001863273661.html)

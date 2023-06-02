@@ -33,7 +33,7 @@
 
 Pascal Brunot | AISTAP | Luglio 2023
 
-Lezione 4 : Micropython
+Lezione 4 : Micropython, board S2 PICO
 
 Note:
 - Thonny, salvare file sul microprocessore
@@ -47,9 +47,19 @@ Note:
 ## Teoria (5 slides)
 
 - Micropython; ambiente di sviluppo compatibile (Thonny)
+
+[comment]: # (!!!)
+
+## Sequenza di boot
+
 - Life-cycle (RESET / BOOT.PY / STARTUP.PY)
+
+[comment]: # (!!!)
+
+## Librerie utili
+
 - Librerie machine.Pin ; time.sleep
-- Librerie dispositivi (LCD) e come si aggiungono (pip -&gt; mip.install(...))
+- Librerie dispositivi (LCD) 
 
 [comment]: # (!!!)
 
