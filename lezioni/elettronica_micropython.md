@@ -27,6 +27,9 @@
 
 [comment]: # (!!!)
 
+Note:
+- Disporre i ragazzi a gruppi
+
 ## Elettronica con Micropython
 ![Micropython logo](media/micropython-logo.svg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
 
@@ -222,33 +225,29 @@ Note:
 
 ## Esperimento con palloni
 
-A gruppi di due bambini, uno strofina il pallone sulla maglietta dell'altro
+&#x1F6B8; A gruppi di due bambini, uno strofina il pallone sulla maglietta dell'altro
 
-- Cosa succede al pallone ? 
-- Cosa succede ai vostri cappelli ?
-- E fra due palloni ?
+&#x1F6B8; Sentite qualcosa ?
+
+&#x1F6B8; Cosa succede ai vostri cappelli quando avvicinate il pallone ?
+
+&#x1F6B8; Cosa succede quando avvicinate due palloni ?
+
+&#x1F6B8; Potete scaricare un pallone ?
 
 ---
+## Esperimento con palloni
 
 [Spiegazione](https://phet.colorado.edu/sims/html/balloons-and-static-electricity/latest/balloons-and-static-electricity_en.html)
 
-- Il movimento "carica" positivamente il pallone e "negativamente" la maglietta
-- Le cariche uguali si rispongono, le cariche opposte si attragono
+Il movimento "carica" positivamente il pallone e "negativamente" la maglietta
+
+Le cariche uguali si rispongono, le cariche opposte si attragono
 
 Note:
 - Spiegazione cariche 
+- Dove sono le cariche ? Alla superficie del pallone
 - Forza elettrostatica (Legge di Coulomb)
-
----
-## Una carica può crearne un'altra
-
-- Pallone con pezzi di carta
-
-![Pallone](media/dalle-balloon.png)
-
-Note:
-- Induzione elettrostatica
-- https://www.stem.org.uk/resources/elibrary/resource/27020/electric-sausage
 
 [comment]: # (!!!)
 
@@ -258,13 +257,13 @@ Il nome provviene dalla parola greca per l'*ambra gialla* in Greco
 
 ![Ambra](media/ambra.jpg)
 
-- Ricordate l'atomo ? Com'è fatto ?
+Ricordate l'atomo ? Com'è fatto ?
 
 Note:
 - Primo studioso dell'ettricità Talete (600 a.C) - lo stesso del teorema
 - Avevano visto che come il pallone l'ambra strofinata attraeva piccoli oggetti
 
----
+[comment]: # (!!!)
 
 ### Definizione elettricità
 
@@ -278,6 +277,51 @@ Note:
 - Le cariche elettriche sono dapertutto, non solo nell'elettricità
 
 [comment]: # (!!! data-auto-animate)
+
+## Induzione elettrostatica
+
+Pallone con pezzi di carta. La carta è carica ?
+
+![Pallone](media/dalle-balloon.png)
+
+Note:
+- Induzione elettrostatica
+- Cosa è successo ?
+- https://www.stem.org.uk/resources/elibrary/resource/27020/electric-sausage
+
+[comment]: # (!!!)
+
+## Induzione elettrostatica
+
+La presenze di cariche nel pallone ha allontanato gli elettroni nella carta
+
+Così, la carta si è caricata positivamente da un lato, e negativamente dall'altro
+
+Ma perché è stata attrata ? Dopotutto, l'altra parte era respinta...
+
+[Simulatore](https://javalab.org/en/electrostatic_induction_metal_bonding_en/)
+
+Note:
+- La parte carica positivamente è più vicina alle cariche negative
+- La forza dipende dalla distanza (dal quadrato in realtà, come la gravità)
+- La forza attrattiva è quindi maggiore rispetto alla forza repulsiva e la carta vola
+- L'obiettivo di questa dimostrazione è di mostrare che le cariche sono presenti dapertutto, non solo in oggetti positivamente/negativamente carichi
+
+[comment]: # (!!!)
+
+## Quizz
+
+![Bambino](media/domanda%20di%20verifica.jpg)
+
+_perché questo bambino ha i cappelli rizzati ?_
+
+Note:
+- Strisciando sullo scivolo si sono spostate delle cariche fra bambino e scivolo
+- Il risultato è che, come il pallone, il bambino ha una carica elettrica sul suo corpo (e lo scivolo ha la carica esattamente opposta)
+- Le cariche uguali si rispongono e i capelli vogliono stare più lontano possibili gli uni dagli altri
+- Se i cappelli sono bagnati non funziona, perché l'acqua è un conduttore
+
+[comment]: # (!!!)
 
 ### Definizione elettricità 1/3
 
@@ -351,6 +395,8 @@ Note:
 
 ### Esercizio di classe
 
+&#x1F6B8; La corda
+
 1. Tutti i bambini tengono la corda senza stringerla
 2. Un bambino stringe leggermente la corda
 3. L'insegnante inizia a fare scorrere la corda fra le sue mani
@@ -372,7 +418,7 @@ Tutti i materiali fanno passare le cariche?
 
 ![Corrente](media/corrente.jpg)
 
-Prova con tester di continuità + vari materiali
+&#x1F6B8; Prova con tester di continuità + vari materiali
 
 Note:
 - Chi conduce bene l'elettricità? Metalli
@@ -454,7 +500,9 @@ Note:
 
 [comment]: # (!!!)
 
-### Esperimento : misurare tensioni
+### Esperimento
+
+&#x1F6B8; Misurare tensioni
 
 - Misurare tensione di una pila
 - Di due pile
@@ -467,6 +515,8 @@ Note:
 [comment]: # (!!!)
 
 ### Risultati esperimento
+
+&#x1F6B8; Risultati
 
 | Configurazione | Valore misurato | Conclusione |
 | -- | -- | -- |
@@ -497,14 +547,29 @@ Esistono due simboli
 
 ### Effetti dell’elettricità
 
-- Produce calore, luce (lampadine)
-- Movimento (motori)
-- Rischi (pericolo tensioni sul corpo umano)
+<div class="twocolumn">
+<div>
+
+Produce calore, luce (lampadine)
+
+Movimento (motori)
+
+&#9888; Ma è molto pericolosa &#9888;
+
+</div>
+<div>
 
 ![Pericoli](media/pericoli.png)
 
+</div>
+</div>
+
 Note:
+- Ricordare contrazione muscolari (Galvani e le rane)
 - Insistere che non si gioca con l'elettricità 
+- In questo corso useremo tensioni <= 5V e correnti limitate continue
+- Il grafico è valido per tensioni attorno a 200 V
+- La corrente alternata è più pericolosa della corrente continua
 
 [comment]: # (!!!)
 
@@ -513,7 +578,11 @@ Note:
 Elettricità
 : cariche in movimento
 
+![Movimento cariche](media/current-flow.gif)
+
 Conduttori e isolanti
+
+
 
 Unità di misura
 - Ampere per il flusso di cariche
@@ -565,6 +634,8 @@ Note:
 ## Riassunto ultima lezione 1 / 2
 
 Elettricità è *movimento di cariche elettriche*
+
+![Movimento cariche](media/current-flow.gif)
 
 Note:
 - Abbiamo visto che l'elettricità è fondamentale nel mondo
@@ -622,10 +693,10 @@ Magnetismo e elettricità sono legati
 Si parla spesso di "elettromagnetismo"
 
 Note:
-- (Valutare se fare esperimento con batteria di macchina)
+- Orsted era convinto che le forze della natura erano unite fra di loro, e provò per 13 anni a scoprire il collegamento fra elettricità e magnetismo.
 - L'elettricità era già nota e studiata da un secolo prima che si notasse questo effetto
-- Maxwell nel 1864 scrisse le leggi che unificano elettricità e magnetismo
-- vediamo come fare qualcosa di utile con tutti i due
+- Grazie a lui Maxwell nel 1864 scrisse le leggi che unificano elettricità e magnetismo
+- Vediamo come fare qualcosa di utile con tutti i due
 
 [comment]: # (!!!)
 
@@ -645,7 +716,7 @@ Note:
 
 Oggi anche noi faremo esperimenti
 
-Costruiamo un motore elettrico
+&#x1F6B8; Costruiamo un motore elettrico
 
 Il simbolo del motore
 
@@ -658,7 +729,8 @@ Note:
 
 ### Costruzione motore
 
-Istruzioni
+&#x1F6B8; Istruzioni
+
 - Mettere le due graffette sulle connessioni laterali della breadboard
 - Disporre bobina in mezzo alle graffette
 - Collegare le 3 batterie alle connessioni
@@ -683,6 +755,8 @@ Perché girano secondo voi ?
 
 ### Ipotesi
 
+&#x1F6B8; Riassunto
+
 | Chi | Come gira | Perché gira ? |
 | -- | -- | -- |
 | Gruppo 1 | $$ \hookleftarrow \hookrightarrow ? $$ | ...... |
@@ -698,7 +772,7 @@ Provate a farlo girare nell'altro senso ?
 
 ## Ipotesi 
 
-Da cosa dipende il senso di rotazione ?
+&#x1F6B8; Da cosa dipende il senso di rotazione ?
 
 Osserviamo
 
@@ -788,7 +862,7 @@ Le resistenze si misurano con il multimetro in posizione Ω
 
 ![Misura](media/misura_resistenza.jpg)
 
--> Misurate le resistenze che avete sul tavolo
+&#x1F6B8; Misurate le resistenze che avete sul tavolo
 
 Note:
 - Come le tensioni le resistenze di misurano fra due punti del circuito con il multimetro in parallelo
@@ -840,7 +914,9 @@ Note:
 
 [comment]: # (!!!)
 
-### Fate il vostro primo circuito
+### Esperimento
+
+&#x1F6B8; Circuito su breadboard
 
 Mettere 2 resistenze uguali una dopo l'altra
 Mettere 2 resistenze uguali accanto l'uno l'altra
@@ -858,7 +934,9 @@ Note:
 
 [comment]: # (!!!)
 
-### Risultati
+### Esperimento
+
+&#x1F6B8; Risultati
 
 | Gruppo | Valore singola resistenza | Valore in serie | Valore in parallelo |
 | -- | -- | -- | -- |
@@ -899,7 +977,7 @@ Esegue subito un commando
 
 ---
 
-Nel REPL scrivete le istruzioni dopo >>> e fate INVIO
+&#x1F6B8; Nel REPL scrivete le istruzioni dopo >>> e fate INVIO
 
 ```python [1|2|3|4]
 >>> 1+1
@@ -918,14 +996,14 @@ Adesso passiamo alla parte programma
 print("Sono un programma in Python")
 ```
 
-Clic sul triangolo bianco nel cerchio verde
+&#x1F6B8; Clic sul triangolo bianco nel cerchio verde
 
 Note:
 - Aspettare che tutti abbiano eseguito il programma
 
 ---
 
-Ripasso variabili, funzioni
+&#x1F6B8; Ripasso variabili, funzioni
 
 ```python [1-2]
 nome = input("Come ti chiami ?")
@@ -957,7 +1035,7 @@ Note:
 
 ### Pausa Python 2/4
 
-Facciamo la formula delle resistenze in serie
+&#x1F6B8; Facciamo la formula delle resistenze in serie
 
 $$ R_{serie} = R_{1} + R_{2} $$
 
@@ -972,7 +1050,7 @@ print(serie(100, 100))
 
 ### Pausa Python 3/4
 
-Facciamo la formula delle resistenze in parallelo
+&#x1F6B8; Facciamo la formula delle resistenze in parallelo
 
 $$ R_{parallelo} = \frac{R_{1} \times R_{2}}{R_{1} + R_{2}} $$
 
@@ -983,7 +1061,7 @@ def parallelo(r1, r2):
 print(parallelo(100, 200))
 ```
 
-Verificate se ritrovate il valore misurato in parallelo prima
+&#x1F6B8; Verificate se ritrovate il valore misurato in parallelo
 
 Note:
 - Risultato atteso 100//200= 66.66 Ω
@@ -1018,7 +1096,7 @@ _V era il simbolo della tensione, come U, ricordate?_
 
 ### Pausa Python 3/3
 
-Adesso facciamo la legge di Ohm in Python
+&#x1F6B8; Adesso facciamo la legge di Ohm in Python
 
 $$ U = R . I $$
 
@@ -1029,7 +1107,7 @@ def ohm_u(r, i):
 print(ohm_u(200, 0.1))
 ```
 
-Risultato con R=200 Ω, I=0.1A ?
+&#x1F6B8; Risultato con R=200 Ω, I=0.1A ?
 
 Note:
 - Risultato 20 V
@@ -1122,8 +1200,9 @@ L'ingrediente fondamentale del diodo
 <div class="twocolumn">
 <div>
 
-- Riconoscere anodo da catodo
-- Simbolo
+Riconoscere anodo da catodo
+
+Simbolo
 
 ![Symbol](media/symbol-diode2.png)
 
@@ -1139,11 +1218,11 @@ L'ingrediente fondamentale del diodo
 
 ## Esperimentazione
 
-Schema di collegamento
+&#x1F6B8; Collegare come da schema
 
 [TinkerCad](https://www.tinkercad.com/things/8zAUERdv001)
 
-Misurate la caduta di tensione attorno al LED
+&#x1F6B8; Misurate la caduta di tensione attorno al LED
 
 <small>
 
@@ -1162,10 +1241,12 @@ Misurate la caduta di tensione attorno al LED
 
 ## Circuiti integrati
 
-- Cosa sono (tanti componenti – transistor) messi assieme per uno scopo (memorizzare, fare
+Cosa sono (tanti componenti – transistor) messi assieme per uno scopo (memorizzare, fare
 operazioni logiche)
-- Economici da fabbricare in grandi quantità
-- Il transistor come oggetto più fabbricato dell’uomo …
+
+Economici da fabbricare in grandi quantità
+
+Il transistor come oggetto più fabbricato dell’uomo
 
 [comment]: # (!!!)
 
@@ -1192,13 +1273,26 @@ operazioni logiche)
 
 [comment]: # (!!!)
 
-## Board S2 PICO
+## Board S2 PICO - primo uso
 
-Accensione, collegamento USB (parte pratica)
+&#x1F6B8; Collegamento USB al computer
 
-- Thonny, arrivare al Python REPL
-- Accendere e spegnere il led sulla board (machine.Pin(numero).on() / machine.Pin(numero).off())
+&#x1F6B8; Collegamento a Thonny, arrivare al REPL
 
+&#x1F6B8; Accendere il led blu sulla board
+
+```python
+machine.Pin(10).on()
+```
+
+&#x1F6B8; Accendere il led blu sulla board
+
+```python
+machine.Pin(10).off()
+```
+
+Note:
+- Porta seriale varia da computer
 
 [comment]: # (!!!)
 
@@ -1269,14 +1363,15 @@ Note:
 
 ## Pratica
 
-- Caricare un file PY in Thonny
-- Caricare il file PY sul controllore
+&#x1F6B8; Caricare un file PY in Thonny
+
+&#x1F6B8; Caricare il file PY sul controllore
 
 [comment]: # (!!!)
 
 ## Esercizio 1
 
-Fare che la board scriva "Ciao nome" ad ogni poweron/reset
+&#x1F6B8; Fare che la board scriva "Ciao nome" ad ogni poweron/reset
 
 Per scrivere sul display bisogna fare
 
@@ -1292,16 +1387,16 @@ $$ 0 \leq Y \leq 31 $$
 
 ---
 
-Thonny > File > Apri > Dispositivo Micropython > main.py
+&#x1F6B8; Thonny > File > Apri > Dispositivo Micropython > main.py
 
 ```python
 display.text('Ciao AISTAP!', 40, 12, 1)
 display.show()
 ```
 
-Thonny > File > Salva
+&#x1F6B8; Thonny > File > Salva
 
-Premere RESET
+&#x1F6B8; Premere RESET
 
 [comment]: # (!!!)
 
@@ -1327,15 +1422,18 @@ Codice
 ## Esercizio 3
 
 (ripasso Python)
-- Fare lampeggiare il led integrato + il led esterno con ciclo while True
-- Alternare il lampeggio fra i due LED
-- Lampeggiare a tempo i due LED (1s)
+&#x1F6B8;  Fare lampeggiare il led integrato + il led esterno con ciclo while True
+
+&#x1F6B8;  Alternare il lampeggio fra i due LED
+
+&#x1F6B8;  Lampeggiare a tempo i due LED (1s)
 
 [comment]: # (!!!)
 
 ## Esercizio 4
 
-- Fare lampeggiare il primo LED ogni 2 s e il secondo ogni secondo
+&#x1F6B8;  Fare lampeggiare il primo LED ogni 2 s e il secondo ogni secondo
+
 Obiettivo : dimostrare che le cose diventano difficili quando ci sono varie azioni da fare in parallelo.
 Se dovessi aggiungere 7 LED ?
 
@@ -1408,9 +1506,9 @@ Abbiamo visto la lezione precedente che esistono dei TouchPad
 
 Possiamo chiedere all'utente di toccare un pin per lanciare un dado
 
-Breadboard
+&#x1F6B8; Breadboard
 
-Codice Micropython
+&#x1F6B8; Codice Micropython
 
 ```python
 touch = TouchPad(Pin(4))
@@ -1427,7 +1525,7 @@ In Python e Micropython ci sono delle librerie che aggiungono funzioni utili
 
 Esiste una libreria, random, con una funzione <code>randint</code> fa il caso nostro
 
-Nel REPL scrivete
+&#x1F6B8; Nel REPL scrivete
 
 ```python
 import random
@@ -1457,7 +1555,7 @@ Disegnare rettangoli e cerchi
 
 ## Problema 3.1 : Disegnare un rettangolo
 
-Disegnare un quadrato di lato 32 pixels in alto a sinistra
+&#x1F6B8; Disegnare un quadrato di lato 32 pixels in alto a sinistra
 
 Python fornisce solo rettangoli
 
@@ -1476,7 +1574,7 @@ Lunghezza = 32
 
 ## Problema 3.2 : Disegnare un cerchio
 
-Disegnare un cerchio di raggio 4 pixels in posizione 16,16
+&#x1F6B8; Disegnare un cerchio di raggio 4 pixels in posizione 16,16
 
 Python fornisce solo elissi
 
@@ -1513,7 +1611,7 @@ for centro in centri:
 <div class="twocolumn">
 <div>
 
-Approntiamo le coordinate
+&#x1F6B8; Approntiamo le coordinate per ogni faccia del dado
 
 <small>
 
@@ -1547,7 +1645,7 @@ Un dizionario (<code>dict</code>) fa il caso nostro
 dict = { chiave1: valore2, chiave2: valore2, chiave3: valore3}
 ```
 
-Applichiamolo ai risultati di prima
+&#x1F6B8; Applichiamolo ai risultati di prima
 
 ```python [1|2|3|4|5|6]
 coordinate = { 1: [(16,16)],
@@ -1562,7 +1660,7 @@ coordinate = { 1: [(16,16)],
 
 ## Problema 3 : la soluzione
 
-Mettere in main.py, salvare, RESET
+&#x1F6B8; Mettere in main.py, salvare, RESET
 
 ```python[1|2-4|5-11|12-13|14-15|16-20|1-20]
 def disegna_dado(display, valore_tratto):

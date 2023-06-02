@@ -27,6 +27,9 @@
 
 [comment]: # (!!!)
 
+Note:
+- Disporre i ragazzi a gruppi
+
 ## Elettronica con Micropython
 ![Micropython logo](media/micropython-logo.svg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
 
@@ -222,33 +225,29 @@ Note:
 
 ## Esperimento con palloni
 
-A gruppi di due bambini, uno strofina il pallone sulla maglietta dell'altro
+&#x1F6B8; A gruppi di due bambini, uno strofina il pallone sulla maglietta dell'altro
 
-- Cosa succede al pallone ? 
-- Cosa succede ai vostri cappelli ?
-- E fra due palloni ?
+&#x1F6B8; Sentite qualcosa ?
+
+&#x1F6B8; Cosa succede ai vostri cappelli quando avvicinate il pallone ?
+
+&#x1F6B8; Cosa succede quando avvicinate due palloni ?
+
+&#x1F6B8; Potete scaricare un pallone ?
 
 ---
+## Esperimento con palloni
 
 [Spiegazione](https://phet.colorado.edu/sims/html/balloons-and-static-electricity/latest/balloons-and-static-electricity_en.html)
 
-- Il movimento "carica" positivamente il pallone e "negativamente" la maglietta
-- Le cariche uguali si rispongono, le cariche opposte si attragono
+Il movimento "carica" positivamente il pallone e "negativamente" la maglietta
+
+Le cariche uguali si rispongono, le cariche opposte si attragono
 
 Note:
 - Spiegazione cariche 
+- Dove sono le cariche ? Alla superficie del pallone
 - Forza elettrostatica (Legge di Coulomb)
-
----
-## Una carica può crearne un'altra
-
-- Pallone con pezzi di carta
-
-![Pallone](media/dalle-balloon.png)
-
-Note:
-- Induzione elettrostatica
-- https://www.stem.org.uk/resources/elibrary/resource/27020/electric-sausage
 
 [comment]: # (!!!)
 
@@ -258,13 +257,13 @@ Il nome provviene dalla parola greca per l'*ambra gialla* in Greco
 
 ![Ambra](media/ambra.jpg)
 
-- Ricordate l'atomo ? Com'è fatto ?
+Ricordate l'atomo ? Com'è fatto ?
 
 Note:
 - Primo studioso dell'ettricità Talete (600 a.C) - lo stesso del teorema
 - Avevano visto che come il pallone l'ambra strofinata attraeva piccoli oggetti
 
----
+[comment]: # (!!!)
 
 ### Definizione elettricità
 
@@ -278,6 +277,51 @@ Note:
 - Le cariche elettriche sono dapertutto, non solo nell'elettricità
 
 [comment]: # (!!! data-auto-animate)
+
+## Induzione elettrostatica
+
+Pallone con pezzi di carta. La carta è carica ?
+
+![Pallone](media/dalle-balloon.png)
+
+Note:
+- Induzione elettrostatica
+- Cosa è successo ?
+- https://www.stem.org.uk/resources/elibrary/resource/27020/electric-sausage
+
+[comment]: # (!!!)
+
+## Induzione elettrostatica
+
+La presenze di cariche nel pallone ha allontanato gli elettroni nella carta
+
+Così, la carta si è caricata positivamente da un lato, e negativamente dall'altro
+
+Ma perché è stata attrata ? Dopotutto, l'altra parte era respinta...
+
+[Simulatore](https://javalab.org/en/electrostatic_induction_metal_bonding_en/)
+
+Note:
+- La parte carica positivamente è più vicina alle cariche negative
+- La forza dipende dalla distanza (dal quadrato in realtà, come la gravità)
+- La forza attrattiva è quindi maggiore rispetto alla forza repulsiva e la carta vola
+- L'obiettivo di questa dimostrazione è di mostrare che le cariche sono presenti dapertutto, non solo in oggetti positivamente/negativamente carichi
+
+[comment]: # (!!!)
+
+## Quizz
+
+![Bambino](media/domanda%20di%20verifica.jpg)
+
+_perché questo bambino ha i cappelli rizzati ?_
+
+Note:
+- Strisciando sullo scivolo si sono spostate delle cariche fra bambino e scivolo
+- Il risultato è che, come il pallone, il bambino ha una carica elettrica sul suo corpo (e lo scivolo ha la carica esattamente opposta)
+- Le cariche uguali si rispongono e i capelli vogliono stare più lontano possibili gli uni dagli altri
+- Se i cappelli sono bagnati non funziona, perché l'acqua è un conduttore
+
+[comment]: # (!!!)
 
 ### Definizione elettricità 1/3
 
@@ -351,6 +395,8 @@ Note:
 
 ### Esercizio di classe
 
+&#x1F6B8; La corda
+
 1. Tutti i bambini tengono la corda senza stringerla
 2. Un bambino stringe leggermente la corda
 3. L'insegnante inizia a fare scorrere la corda fra le sue mani
@@ -372,7 +418,7 @@ Tutti i materiali fanno passare le cariche?
 
 ![Corrente](media/corrente.jpg)
 
-Prova con tester di continuità + vari materiali
+&#x1F6B8; Prova con tester di continuità + vari materiali
 
 Note:
 - Chi conduce bene l'elettricità? Metalli
@@ -454,7 +500,9 @@ Note:
 
 [comment]: # (!!!)
 
-### Esperimento : misurare tensioni
+### Esperimento
+
+&#x1F6B8; Misurare tensioni
 
 - Misurare tensione di una pila
 - Di due pile
@@ -467,6 +515,8 @@ Note:
 [comment]: # (!!!)
 
 ### Risultati esperimento
+
+&#x1F6B8; Risultati
 
 | Configurazione | Valore misurato | Conclusione |
 | -- | -- | -- |
@@ -497,14 +547,29 @@ Esistono due simboli
 
 ### Effetti dell’elettricità
 
-- Produce calore, luce (lampadine)
-- Movimento (motori)
-- Rischi (pericolo tensioni sul corpo umano)
+<div class="twocolumn">
+<div>
+
+Produce calore, luce (lampadine)
+
+Movimento (motori)
+
+&#9888; Ma è molto pericolosa &#9888;
+
+</div>
+<div>
 
 ![Pericoli](media/pericoli.png)
 
+</div>
+</div>
+
 Note:
+- Ricordare contrazione muscolari (Galvani e le rane)
 - Insistere che non si gioca con l'elettricità 
+- In questo corso useremo tensioni <= 5V e correnti limitate continue
+- Il grafico è valido per tensioni attorno a 200 V
+- La corrente alternata è più pericolosa della corrente continua
 
 [comment]: # (!!!)
 
@@ -513,7 +578,11 @@ Note:
 Elettricità
 : cariche in movimento
 
+![Movimento cariche](media/current-flow.gif)
+
 Conduttori e isolanti
+
+
 
 Unità di misura
 - Ampere per il flusso di cariche

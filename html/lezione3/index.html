@@ -75,8 +75,9 @@ L'ingrediente fondamentale del diodo
 <div class="twocolumn">
 <div>
 
-- Riconoscere anodo da catodo
-- Simbolo
+Riconoscere anodo da catodo
+
+Simbolo
 
 ![Symbol](media/symbol-diode2.png)
 
@@ -93,11 +94,11 @@ L'ingrediente fondamentale del diodo
 
 ## Esperimentazione
 
-Schema di collegamento
+&#x1F6B8; Collegare come da schema
 
 [TinkerCad](https://www.tinkercad.com/things/8zAUERdv001)
 
-Misurate la caduta di tensione attorno al LED
+&#x1F6B8; Misurate la caduta di tensione attorno al LED
 
 <small>
 
@@ -117,10 +118,12 @@ Misurate la caduta di tensione attorno al LED
 
 ## Circuiti integrati
 
-- Cosa sono (tanti componenti – transistor) messi assieme per uno scopo (memorizzare, fare
+Cosa sono (tanti componenti – transistor) messi assieme per uno scopo (memorizzare, fare
 operazioni logiche)
-- Economici da fabbricare in grandi quantità
-- Il transistor come oggetto più fabbricato dell’uomo …
+
+Economici da fabbricare in grandi quantità
+
+Il transistor come oggetto più fabbricato dell’uomo
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
@@ -149,13 +152,26 @@ operazioni logiche)
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Board S2 PICO
+## Board S2 PICO - primo uso
 
-Accensione, collegamento USB (parte pratica)
+&#x1F6B8; Collegamento USB al computer
 
-- Thonny, arrivare al Python REPL
-- Accendere e spegnere il led sulla board (machine.Pin(numero).on() / machine.Pin(numero).off())
+&#x1F6B8; Collegamento a Thonny, arrivare al REPL
 
+&#x1F6B8; Accendere il led blu sulla board
+
+```python
+machine.Pin(10).on()
+```
+
+&#x1F6B8; Accendere il led blu sulla board
+
+```python
+machine.Pin(10).off()
+```
+
+Note:
+- Porta seriale varia da computer
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>

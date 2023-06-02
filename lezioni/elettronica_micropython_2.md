@@ -49,6 +49,8 @@ Note:
 
 Elettricità è *movimento di cariche elettriche*
 
+![Movimento cariche](media/current-flow.gif)
+
 Note:
 - Abbiamo visto che l'elettricità è fondamentale nel mondo
 - Abbiamo fatto circolare la corda fra le mani come l'elettricità nei conduttori
@@ -105,10 +107,10 @@ Magnetismo e elettricità sono legati
 Si parla spesso di "elettromagnetismo"
 
 Note:
-- (Valutare se fare esperimento con batteria di macchina)
+- Orsted era convinto che le forze della natura erano unite fra di loro, e provò per 13 anni a scoprire il collegamento fra elettricità e magnetismo.
 - L'elettricità era già nota e studiata da un secolo prima che si notasse questo effetto
-- Maxwell nel 1864 scrisse le leggi che unificano elettricità e magnetismo
-- vediamo come fare qualcosa di utile con tutti i due
+- Grazie a lui Maxwell nel 1864 scrisse le leggi che unificano elettricità e magnetismo
+- Vediamo come fare qualcosa di utile con tutti i due
 
 [comment]: # (!!!)
 
@@ -128,7 +130,7 @@ Note:
 
 Oggi anche noi faremo esperimenti
 
-Costruiamo un motore elettrico
+&#x1F6B8; Costruiamo un motore elettrico
 
 Il simbolo del motore
 
@@ -141,7 +143,8 @@ Note:
 
 ### Costruzione motore
 
-Istruzioni
+&#x1F6B8; Istruzioni
+
 - Mettere le due graffette sulle connessioni laterali della breadboard
 - Disporre bobina in mezzo alle graffette
 - Collegare le 3 batterie alle connessioni
@@ -166,6 +169,8 @@ Perché girano secondo voi ?
 
 ### Ipotesi
 
+&#x1F6B8; Riassunto
+
 | Chi | Come gira | Perché gira ? |
 | -- | -- | -- |
 | Gruppo 1 | $$ \hookleftarrow \hookrightarrow ? $$ | ...... |
@@ -181,7 +186,7 @@ Provate a farlo girare nell'altro senso ?
 
 ## Ipotesi 
 
-Da cosa dipende il senso di rotazione ?
+&#x1F6B8; Da cosa dipende il senso di rotazione ?
 
 Osserviamo
 
@@ -271,7 +276,7 @@ Le resistenze si misurano con il multimetro in posizione Ω
 
 ![Misura](media/misura_resistenza.jpg)
 
--> Misurate le resistenze che avete sul tavolo
+&#x1F6B8; Misurate le resistenze che avete sul tavolo
 
 Note:
 - Come le tensioni le resistenze di misurano fra due punti del circuito con il multimetro in parallelo
@@ -323,7 +328,9 @@ Note:
 
 [comment]: # (!!!)
 
-### Fate il vostro primo circuito
+### Esperimento
+
+&#x1F6B8; Circuito su breadboard
 
 Mettere 2 resistenze uguali una dopo l'altra
 Mettere 2 resistenze uguali accanto l'uno l'altra
@@ -341,7 +348,9 @@ Note:
 
 [comment]: # (!!!)
 
-### Risultati
+### Esperimento
+
+&#x1F6B8; Risultati
 
 | Gruppo | Valore singola resistenza | Valore in serie | Valore in parallelo |
 | -- | -- | -- | -- |
@@ -382,7 +391,7 @@ Esegue subito un commando
 
 ---
 
-Nel REPL scrivete le istruzioni dopo >>> e fate INVIO
+&#x1F6B8; Nel REPL scrivete le istruzioni dopo >>> e fate INVIO
 
 ```python [1|2|3|4]
 >>> 1+1
@@ -401,14 +410,14 @@ Adesso passiamo alla parte programma
 print("Sono un programma in Python")
 ```
 
-Clic sul triangolo bianco nel cerchio verde
+&#x1F6B8; Clic sul triangolo bianco nel cerchio verde
 
 Note:
 - Aspettare che tutti abbiano eseguito il programma
 
 ---
 
-Ripasso variabili, funzioni
+&#x1F6B8; Ripasso variabili, funzioni
 
 ```python [1-2]
 nome = input("Come ti chiami ?")
@@ -440,7 +449,7 @@ Note:
 
 ### Pausa Python 2/4
 
-Facciamo la formula delle resistenze in serie
+&#x1F6B8; Facciamo la formula delle resistenze in serie
 
 $$ R_{serie} = R_{1} + R_{2} $$
 
@@ -455,7 +464,7 @@ print(serie(100, 100))
 
 ### Pausa Python 3/4
 
-Facciamo la formula delle resistenze in parallelo
+&#x1F6B8; Facciamo la formula delle resistenze in parallelo
 
 $$ R_{parallelo} = \frac{R_{1} \times R_{2}}{R_{1} + R_{2}} $$
 
@@ -466,7 +475,7 @@ def parallelo(r1, r2):
 print(parallelo(100, 200))
 ```
 
-Verificate se ritrovate il valore misurato in parallelo prima
+&#x1F6B8; Verificate se ritrovate il valore misurato in parallelo
 
 Note:
 - Risultato atteso 100//200= 66.66 Ω
@@ -501,7 +510,7 @@ _V era il simbolo della tensione, come U, ricordate?_
 
 ### Pausa Python 3/3
 
-Adesso facciamo la legge di Ohm in Python
+&#x1F6B8; Adesso facciamo la legge di Ohm in Python
 
 $$ U = R . I $$
 
@@ -512,7 +521,7 @@ def ohm_u(r, i):
 print(ohm_u(200, 0.1))
 ```
 
-Risultato con R=200 Ω, I=0.1A ?
+&#x1F6B8; Risultato con R=200 Ω, I=0.1A ?
 
 Note:
 - Risultato 20 V
