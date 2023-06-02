@@ -1,8 +1,3 @@
-[comment]: # (This presentation was made with markdown-slides)
-[comment]: # (This is a CommonMark compliant comment. It will not be included in the presentation.)
-[comment]: # (Compile this presentation with the command below)
-[comment]: # (mdslides elettronica_micropython.md --include media)
-
 [comment]: # (THEME = league)
 [comment]: # (CODE_THEME = base16/zenburn)
 [comment]: # (controls: true)
@@ -11,17 +6,26 @@
 [comment]: # (hash: false)
 [comment]: # (respondToHashChanges: false)
 [comment]: # (slideNumber: true)
-[comment]: # (center: false)
-[comment]: # (showNotes: true)
+
 
 <style>
 .reveal h1 { font-size: 2.5em; }
 </style>
 <style type="text/css">
     :root {
-        --r-main-font-size: 35px;
+        --r-main-font-size: 32px;
     }
 </style>
+<style type="text/css">
+.twocolumn {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+   text-align: left;
+}
+</style>
+
+[comment]: # (!!!)
 
 ## Elettronica con Micropython
 ![Micropython logo](media/micropython-logo.svg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
@@ -530,11 +534,3 @@ Note:
 - Verificare che siano tutti più o meno pronti con Thonny per la prossima lezione
 - Per la lezione 2 non serve la connessione alla board
 
-[comment]: # (
-    Fonti
-    STEM website
-    AISTAP Chimica Dott. Carlini
-    Sparkfun Creative commons https://learn.sparkfun.com/tutorials/what-is-electricity/all
-    "Ka-boom (lightning)" by Leszek.Leszczynski is licensed under CC BY 2.0.)
-    IEA, Global electricity demand by region in the Stated Policies Scenario, 2000-2040, IEA, Paris https://www.iea.org/data-and-statistics/charts/global-electricity-demand-by-region-in-the-stated-policies-scenario-2000-2040, IEA. Licence: CC BY 4.0
-    )

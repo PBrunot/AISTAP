@@ -1,8 +1,3 @@
-[comment]: # (This presentation was made with markdown-slides)
-[comment]: # (This is a CommonMark compliant comment. It will not be included in the presentation.)
-[comment]: # (Compile this presentation with the command below)
-[comment]: # (mdslides elettronica_micropython.md --include media)
-
 [comment]: # (THEME = league)
 [comment]: # (CODE_THEME = base16/zenburn)
 [comment]: # (controls: true)
@@ -12,6 +7,7 @@
 [comment]: # (respondToHashChanges: false)
 [comment]: # (slideNumber: true)
 
+
 <style>
 .reveal h1 { font-size: 2.5em; }
 </style>
@@ -20,6 +16,16 @@
         --r-main-font-size: 32px;
     }
 </style>
+<style type="text/css">
+.twocolumn {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+   text-align: left;
+}
+</style>
+
+[comment]: # (!!!)
 
 ## Elettronica con Micropython
 
@@ -55,18 +61,203 @@ _Divide ut impera_
 
 [comment]: # (!!!)
 
-## Pratica
+## Come fare un dado elettronico ?
 
-- Dado elettronico
+1. Aspettare richiesta di un tiro **
+2. Tirare un numero a caso *
+3. Disegnare il risultato sullo schermo ***
 
-Se le schede hanno LCD:
-- Lancio con GPIO Touch pin o switch se non supportato
-- Risultato del dato su LCD
-- Animazione su LCD fra i tiri
+[comment]: # (!!!)
 
-Task1 : blink led
-Task2 : animazione schermo
-Task3 : attesa touch e scelta numero
+## Problema 1 : aspettare richiesta di un tiro
+
+Abbiamo visto la lezione precedente che esistono dei TouchPad
+
+Possiamo chiedere all'utente di toccare un pin per lanciare un dado
+
+Breadboard
+
+Codice Micropython
+
+```python
+touch = TouchPad(Pin(4))
+
+if touch.read() > 10000:
+    # L'utente ha toccato il pin
+```
+
+[comment]: # (!!!)
+
+## Problema 2 : tirare un numero caso
+
+In Python e Micropython ci sono delle librerie che aggiungono funzioni utili
+
+Esiste una libreria, random, con una funzione <code>randint</code> fa il caso nostro
+
+Nel REPL scrivete
+
+```python
+import random
+print(random.randint(1,6))
+```
+
+Note:
+- Farli provare tutti nel REPL
+
+[comment]: # (!!!)
+
+## Problema 3 : disegnare il dado
+
+Come disegnare un dado ?
+
+![Imagine](media/dado%20coordinate.png)
+
+[comment]: # (!!!)
+
+## Problema 3
+
+![Elefante](media/divide_ut_impera.jpg)
+
+Disegnare rettangoli e cerchi
+
+[comment]: # (!!!)
+
+## Problema 3.1 : Disegnare un rettangolo
+
+Disegnare un quadrato di lato 32 pixels in alto a sinistra
+
+Python fornisce solo rettangoli
+
+```python
+display.fill_rect(0, 0, 32, 32, 1)
+```
+
+```
+X =0
+Y =0
+Larghezza = 32
+Lunghezza = 32
+```
+
+[comment]: # (!!!)
+
+## Problema 3.2 : Disegnare un cerchio
+
+Disegnare un cerchio di raggio 4 pixels in posizione 16,16
+
+Python fornisce solo elissi
+
+```python
+display.ellipse(16, 16, 4, 4, 0, True)
+```
+
+```
+Centro del cerchio : X = 16, Y = 16
+Semiasse orizzontale : 4 pixels
+Semiasse verticale : 4 pixels
+Colore dell'elisse : 0
+Ultimo parametro True per riempire il cerchio
+```
+
+[comment]: # (!!!)
+
+## Problema 3.3 : Disegnare più cerchi
+
+Facciamo una lista di centri di cerchi
+
+```python [1-2|3-5]
+# Facciamo una lista di coordinate (tuple)
+centri = [(16,16),(8,8),(24,24)]
+
+for centro in centri:
+    display.ellipse(centro[0], centro[1], 4, 4, 0, True)
+```
+
+[comment]: # (!!!)
+
+## Problema 3.4 : Disegnare i cerchi giusti
+
+<div class="twocolumn">
+<div>
+
+Approntiamo le coordinate
+
+<small>
+
+| Gruppo | Coordinate dei puntini (X,Y) |
+| -- | -- |
+| 1 | (.., ..) |
+| 2 | (.., ..) (.., ..) |
+| 3 | (.., ..) (.., ..) (.., ..) |
+| 4 | (.., ..) (.., ..) (.., ..) (.., ..) |
+| 5 | (.., ..) (.., ..) (.., ..) (.., ..) (.., ..) |
+| 6 | (.., ..) (.., ..) (.., ..) (.., ..) (.., ..) (.., ..) |
+
+</small>
+</div>
+<div>
+
+![Dado](media/dado%20coordinate.png)
+
+</div>
+</div>
+
+[comment]: # (!!!)
+
+## Problema 3.4 : Disegnare i cerchi giusti
+
+Ci serve un elenco che, per ogni valore del dado, ci dia una lista di coordinate
+
+Un dizionario (<code>dict</code>) fa il caso nostro
+
+```
+dict = { chiave1: valore2, chiave2: valore2, chiave3: valore3}
+```
+
+Applichiamolo ai risultati di prima
+
+```python [1|2|3|4|5|6]
+coordinate = { 1: [(16,16)],
+               2: [(8,8), (24,24)],
+               3: [(8,8), (16,16), (24,24)],
+               4: [(8,8), (8,24), (24,8), (24,24)],
+               5: [(8,8), (8,24), (24,8), (24,24), (16,16)],
+               6: [(8,8), (8,24), (24,8), (24,24), (8,16), (24,16)] }
+```
+
+[comment]: # (!!!)
+
+## Problema 3 : la soluzione
+
+Mettere in main.py, salvare, RESET
+
+```python[1|2-4|5-11|12-13|14-15|16-20|1-20]
+def disegna_dado(display, valore_tratto):
+    display.fill(0) 
+    display.fill_rect(0, 0, 32, 32, 1)
+
+    dado = { 1: [(16,16)],
+             2: [(8,8), (24,24)],
+             3: [(8,8), (16,16), (24,24)],
+             4: [(8,8), (8,24), (24,8), (24,24)],
+             5: [(8,8), (8,24), (24,8), (24,24), (16,16)],
+             6: [(8,8), (8,24), (24,8), (24,24), (8,16), (24,16)] }
+    
+    puntini = dado[valore_tratto]
+    for punto in puntini:
+        display.ellipse(punto[0], punto[1], 4, 4, 0, True)
+
+    display.show()
+
+# Proviamo
+disegna_dado(6)
+```
+
+[comment]: # (!!!)
+
+## Il risultato
+
+<iframe width="560" height="560" src="media/dado-micropython.mp4" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 [comment]: # (!!!)
 

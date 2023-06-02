@@ -1,8 +1,3 @@
-[comment]: # (This presentation was made with markdown-slides)
-[comment]: # (This is a CommonMark compliant comment. It will not be included in the presentation.)
-[comment]: # (Compile this presentation with the command below)
-[comment]: # (mdslides elettronica_micropython.md --include media)
-
 [comment]: # (THEME = league)
 [comment]: # (CODE_THEME = base16/zenburn)
 [comment]: # (controls: true)
@@ -12,6 +7,7 @@
 [comment]: # (respondToHashChanges: false)
 [comment]: # (slideNumber: true)
 
+
 <style>
 .reveal h1 { font-size: 2.5em; }
 </style>
@@ -20,6 +16,16 @@
         --r-main-font-size: 32px;
     }
 </style>
+<style type="text/css">
+.twocolumn {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+   text-align: left;
+}
+</style>
+
+[comment]: # (!!!)
 
 ## Elettronica con Micropython
 
@@ -39,6 +45,7 @@ Note:
 [comment]: # (!!!)
 
 ## Teoria (5 slides)
+
 - Micropython; ambiente di sviluppo compatibile (Thonny)
 - Life-cycle (RESET / BOOT.PY / STARTUP.PY)
 - Librerie machine.Pin ; time.sleep
@@ -57,7 +64,30 @@ Note:
 
 Fare che la board scriva "Ciao nome" ad ogni poweron/reset
 
-(modifica main.py)
+Per scrivere sul display bisogna fare
+
+```python
+display.text(testo, coordinata X, coordinata Y, colore [1 o 0])
+display.show() 
+```
+
+Dimensioni schermo 
+
+$$ 0 \leq X \leq 127 $$
+$$ 0 \leq Y \leq 31 $$
+
+---
+
+Thonny > File > Apri > Dispositivo Micropython > main.py
+
+```python
+display.text('Ciao AISTAP!', 40, 12, 1)
+display.show()
+```
+
+Thonny > File > Salva
+
+Premere RESET
 
 [comment]: # (!!!)
 
@@ -94,6 +124,14 @@ Codice
 - Fare lampeggiare il primo LED ogni 2 s e il secondo ogni secondo
 Obiettivo : dimostrare che le cose diventano difficili quando ci sono varie azioni da fare in parallelo.
 Se dovessi aggiungere 7 LED ?
+
+[comment]: # (!!!)
+
+## TouchPAD
+
+[comment]: # (!!!)
+
+## NeoPixel
 
 [comment]: # (!!!)
 

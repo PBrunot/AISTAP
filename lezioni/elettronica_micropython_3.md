@@ -1,8 +1,3 @@
-[comment]: # (This presentation was made with markdown-slides)
-[comment]: # (This is a CommonMark compliant comment. It will not be included in the presentation.)
-[comment]: # (Compile this presentation with the command below)
-[comment]: # (mdslides elettronica_micropython.md --include media)
-
 [comment]: # (THEME = league)
 [comment]: # (CODE_THEME = base16/zenburn)
 [comment]: # (controls: true)
@@ -29,6 +24,8 @@
    text-align: left;
 }
 </style>
+
+[comment]: # (!!!)
 
 ## Elettronica con Micropython
 

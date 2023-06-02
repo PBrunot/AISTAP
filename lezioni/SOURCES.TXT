@@ -1,0 +1,6 @@
+Fonti
+- STEM website
+- AISTAP Chimica Dott. Carlini
+- Sparkfun Creative commons https://learn.sparkfun.com/tutorials/what-is-electricity/all
+- "Ka-boom (lightning)" by Leszek.Leszczynski is licensed under CC BY 2.0.
+- IEA, Global electricity demand by region in the Stated Policies Scenario, 2000-2040, IEA, Paris https://www.iea.org/data-and-statistics/charts/global-electricity-demand-by-region-in-the-stated-policies-scenario-2000-2040, IEA. Licence: CC BY 4.0
