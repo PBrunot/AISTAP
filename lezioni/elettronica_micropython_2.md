@@ -53,7 +53,7 @@ Note:
 
 ## Riassunto ultima lezione
 
-Le unità
+*Unità di misura*
 
 | Grandezza (Abbr.) | Unità | Simbolo | Spiegazione |
 | -- | -- | -- | -- |
@@ -320,10 +320,10 @@ Note:
 ### Fate il vostro primo circuito
 
 Mettere 2 resistenze uguali una dopo l'altra
-
 Mettere 2 resistenze uguali accanto l'uno l'altra
+Misurate la resistenza totale 
 
-Misurate la resistenza totale e diteci il valore
+[TinkerCad](https://www.tinkercad.com/things/8aVDNguOsCs)
 
 ![Resistenze](media/resistenze.jpg)
 
@@ -337,7 +337,7 @@ Note:
 
 ### Risultati
 
-| Gruppo | Valore precedente | Valore in serie | Valore in parallelo |
+| Gruppo | Valore singola resistenza | Valore in serie | Valore in parallelo |
 | -- | -- | -- | -- |
 | 1 | ..... Ω | ..... Ω |..... Ω |
 | 2 | ..... Ω | ..... Ω |..... Ω |
@@ -345,6 +345,9 @@ Note:
 | 4 | ..... Ω |  ..... Ω |..... Ω |
 | 5 | ..... Ω | ..... Ω |..... Ω |
 | 6 | ..... Ω | ..... Ω |..... Ω |
+
+Note:
+- Cosa possiamo concludere?
 
 [comment]: # (!!!)
 
@@ -455,12 +458,11 @@ def parallelo(r1, r2):
 print(parallelo(100, 200))
 ```
 
-Risultati ?
-Verifica sperimentale con R=100 Ω, R=200 Ω, multimetro
+Verificate se ritrovate il valore misurato in parallelo prima
 
 Note:
-- inverso della resistenza equivalente = Somma degli inversi delle resistenze
-- Risultato atteso 66.66 Ω
+- Risultato atteso 100//200= 66.66 Ω
+- Con due resistenze in parallelo la resistenza equivalente è sempre *più piccola* di entrambe resistenze
 
 [comment]: # (!!!)
 
