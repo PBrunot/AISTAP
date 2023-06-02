@@ -27,8 +27,12 @@
 
 [comment]: # (!!!)
 
+Benvenuti
+
 Note:
 - Disporre i ragazzi a gruppi
+
+[comment]: # (!!!)
 
 ## Elettronica con Micropython
 ![Micropython logo](media/micropython-logo.svg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
@@ -37,8 +41,8 @@ Pascal Brunot | AISTAP | Luglio 2023
 
 Lezione 1 : Elettricità
 
+
 Note:
-- Obiettivi della lezione
 - Capire il concetto di carica (con elettricità statica)
 - L'elettricità come un flusso di cariche
 - Distinguere conduttori e isolanti
@@ -61,6 +65,7 @@ Perché queste due parole assieme ? Cosa possono fare ?
 1. Per programmare questi robot ci vuole ... Micropython
 2. Per capire i componenti elettronica ci vuole... un po' di fisica
 3. Inizieremo a capire l'elettricità nelle prossime lezioni
+
 
 Note:
 - Chiarire che non costruiremo un robot ma qualcos'altro
@@ -127,7 +132,7 @@ E' sempre stato così importante nella nostra vita?
 
 ![Agricoltura](media/agricoltura.jpg)
 
-Nota:
+Note:
 - Adesso cosa si usa al posto degli animali ?
 - Siamo diventati meno contadini e più urbani in poche decenni
 
@@ -215,6 +220,7 @@ Note:
 ![Cat](media/cat.jpg)
 
 Cosa è successo in questa immagine ?
+
 Cosa trattiene il polistirolo al gatto ?
 
 Note:
@@ -386,7 +392,6 @@ Ma movimento in quale direzione ?
 
 <iframe src="media/conventional-current.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
 Note:
 - Si userà la convenzione usuale nel corso
 - Domande di verifica: cariche positive/negative, atomo
@@ -444,11 +449,15 @@ Tante unità diverse per l'elettricità
 - L'unità di Alessandro Volta (inventore della pila)
 - L'unità di André-Marie Ampère 
 - L'unità di Georg Ohm
-- e molte altre (Watt, Farad, Henry, Coulomb)...
+e molte altre (Watt, Farad, Henry, Coulomb) che non useremo...
+
+Note:
+- Vediamo questi tre scienzati da dove venivano
+- Volta, Italia. Ampère, Francia. Ohm, Germania.
 
 ---
 
-Secondo voi chi se l'è passata meglio fra i tre?
+Secondo voi chi se l'è passata meglio fra i tre scienzati ?
 
 [comment]: # (!!! data-auto-animate)
 Volta divenne senatore e ebbe la sua villa a Como
@@ -478,6 +487,7 @@ Ricordiamo 3 grandezze
 | *Resistenza* (R) | Ohm | Ω | "Freno" alle cariche elettriche |
  
 Note:
+- Tensione come differenza di altitudine che fa scorrere l'acqua del fiume
 - I simboli delle unità che provvengono da un personaggio storico sono in maiuscole (A non a)
 - Non si usano gli accenti nelle unità (Ampère->Ampere)
 - Alle unità si possono aggiungere i soliti prefissi come per le lunghezze (milli-m, chilo-k, mega-M)
@@ -505,7 +515,7 @@ Note:
 &#x1F6B8; Misurare tensioni
 
 - Misurare tensione di una pila
-- Di due pile
+- Di due pile attaccate
 - Disposte in modo diverso
 
 [TinkerCad](https://www.tinkercad.com/things/kFyHZJa3gyv)
@@ -535,13 +545,17 @@ Note:
 
 ### Rappresentazione schematica
 
-Le pile sono generatori di tensione
+Le "pile" sono un tipo di "generatore di tensione"
 
 ![Generatori](media/generatori.jpg)
 
-Esistono due simboli
+Esistono due simboli per questi concetti
 
 ![Simbolo](media/voltage_source.png)
+
+Note:
+- A cosa servono i simboli ? A disegnare schemi elettrici più complessi
+- A trasmettere in modo preciso le informazioni (rispetto ad una lettera)
 
 [comment]: # (!!!)
 
@@ -581,8 +595,6 @@ Elettricità
 ![Movimento cariche](media/current-flow.gif)
 
 Conduttori e isolanti
-
-
 
 Unità di misura
 - Ampere per il flusso di cariche
