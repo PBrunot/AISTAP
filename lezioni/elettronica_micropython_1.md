@@ -450,29 +450,19 @@ Note:
 
 [comment]: # (!!!)
 
-### Esperimento
+### Esperimento : misurare tensioni
 
 - Misurare tensione di una pila
 - Di due pile
 - Disposte in modo diverso
 
-![Schema](media/series.png)
+[TinkerCad](https://www.tinkercad.com/things/kFyHZJa3gyv)
 
 - Ipotesi di classe : cambierà qualcosa?
 
 [comment]: # (!!!)
 
-### Esperimento
-
-Esperimenti a gruppo e raccolte misure
-
-Note:
-- Obiettivo è che tutti i bambini sappiano misurare una tensione
-- Raccolta valori
-
-[comment]: # (!!!)
-
-### Conclusioni esperimento
+### Risultati esperimento
 
 | Configurazione | Valore misurato | Conclusione |
 | -- | -- | -- |
@@ -482,16 +472,22 @@ Note:
 | Pile che non si toccano | ??? | ??? |
 
 Note:
+- Obiettivo è che tutti i bambini sappiano misurare una tensione
+- Raccolta valori
 - Generatori di tensione in serie si sommano
 - In parallelo, non si sommano (quando hanno la stessa tensione)
 
 [comment]: # (!!!)
 
-### Generatori
+### Rappresentazione schematica
+
+Le pile sono generatori di tensione
 
 ![Generatori](media/generatori.jpg)
 
-Simbolo :
+Esistono due simboli
+
+![Simbolo](media/voltage_source.png)
 
 [comment]: # (!!!)
 
@@ -516,7 +512,7 @@ Elettricità
 Conduttori e isolanti
 
 Unità di misura
-- Ampère per il flusso di cariche
+- Ampere per il flusso di cariche
 - Volt per il potenziale elettrico
 - Ohm per la resistenza al flusso di cariche
 
