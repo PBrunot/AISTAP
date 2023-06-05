@@ -33,7 +33,7 @@
 
 Pascal Brunot | AISTAP | Luglio 2023
 
-Lezione 3
+Lezione 3 : semi-conduttori, diodi, board ESP32
 
 [comment]: # (!!! data-background-color="aqua")
 
@@ -139,7 +139,17 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 &#x1F6B8; Collegamento USB al computer
 
-&#x1F6B8; Collegamento a Thonny, arrivare al REPL
+&#x1F6B8; Individuare la porta seriale (COM)
+
+&#x1F6B8; Configurare Thonny per usare ESP32 con porta COM
+
+&#x1F6B8; Nel REPL dovreste vedere Micropython
+
+Note:
+- Porta seriale varia da computer
+- Tutti devono collegare il computer una volta
+
+[comment]: # (!!!)
 
 &#x1F6B8; Accendere il led blu sulla board
 
@@ -147,7 +157,7 @@ Il transistor come oggetto più fabbricato dell’uomo
 machine.Pin(10).on()
 ```
 
-&#x1F6B8; Accendere il led blu sulla board
+&#x1F6B8; Spegnere il led blu sulla board
 
 ```python
 machine.Pin(10).off()
@@ -159,7 +169,6 @@ Note:
 [comment]: # (!!!)
 
 ## Riprendiamo Python
-
 
 
 [comment]: # (!!!)

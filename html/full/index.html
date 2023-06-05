@@ -1469,21 +1469,47 @@ Note:
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Teoria (5 slides)
+## Micropython
 
-- Micropython; ambiente di sviluppo compatibile (Thonny)
+Micropython e Python
+
+[micropython.org](https://micropython.org/)
+
+Librerie (<code>import X / from X import A</code>)
+
+Note:
+- Storia di Micropython, creato da un fisico teorico australiano
+- Kickstarter per finanziare il progetto, è stato poi usato a bordo di satelliti
+- E' un Python più leggero per microprocessori, bastano KB invece di MB di RAM
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Sequenza di boot
+## Teoria
 
-- Life-cycle (RESET / BOOT.PY / STARTUP.PY)
+Connessione board / computer (USB seriale)
+
+&#x1F6B8; Collegare e individuare la porta COM
+
+Come programmare senza board ? WOKWI
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Micropython: Sequenza di boot
+
+Quando si accende il computer, parte il sistema operativo
+
+Con Micropython al "power-on" / "reset"
+- Esegue il file boot.py
+- Esegue il file main.py * noi lavoremo qua *
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
 ## Librerie utili
+
+E' molto importante riusare codice già testato
 
 - Librerie machine.Pin ; time.sleep
 - Librerie dispositivi (LCD) 
@@ -1497,10 +1523,60 @@ Note:
 
 &#x1F6B8; Caricare il file PY sul controllore
 
+Salvare / Caricare
+
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Esercizio 1
+## LED esterno
+
+Fare lampeggiare LED esterno con una resistenza
+
+Note:
+- Dare Pin-out delle board usata, ripassare GPIO / Bus
+- Proiettare CIRCUITO DA REALIZZARE con simboli standard
+- Realizzare un circuito con board su scheda a connessione senza fili
+- Modificare script fornito per fare lampeggiare il LED
+- Ripasso diodo (verso giusto)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## LED esterno
+
+Circuito da realizzare
+
+[WOKWI](https://wokwi.com/projects/366723277993554945)
+
+![Wokwi](media/wokwi-1.jpg)
+
+&#x1F6B8; Realizzatelo sulla board o con WOKWI
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## NeoPixel
+
+Il nostro ESP32 ha un LED RGB programmabile sul pin 48
+
+&#x1F6B8; Accendetelo con il colore che preferite
+
+```python
+pin = Pin(48, Pin.OUT)    # 48 è il PIN dello schema
+np = NeoPixel(pin, 1)     # Un solo led   
+np[0] = (255, 255, 255)   # Imposta il primo LED (0) con colori R, G, B
+np.write()
+```
+
+---
+## Colori RGB
+
+![RGB](media/rgb.jpg)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Schermo LCD
 
 &#x1F6B8; Fare che la board scriva "Ciao nome" ad ogni poweron/reset
 
@@ -1532,28 +1608,7 @@ display.show()
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Esercizio 2
-
-Fare lampeggiare LED esterno con una resistenza
-- Dare Pin-out delle board usata, ripassare GPIO / Bus
-- Proiettare CIRCUITO DA REALIZZARE con simboli standard
-- Realizzare un circuito con board su scheda a connessione senza fili
-- Modificare script fornito per fare lampeggiare il LED
-- Ripasso diodo (verso giusto)
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-## Esercizio 2 (soluzione)
-
-WOKWI
-
-Codice
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-## Esercizio 3
+## Cicli
 
 (ripasso Python)
 &#x1F6B8;  Fare lampeggiare il led integrato + il led esterno con ciclo while True
@@ -1569,18 +1624,54 @@ Codice
 
 &#x1F6B8;  Fare lampeggiare il primo LED ogni 2 s e il secondo ogni secondo
 
-Obiettivo : dimostrare che le cose diventano difficili quando ci sono varie azioni da fare in parallelo.
-Se dovessi aggiungere 7 LED ?
+```python
+import asyncio
+
+led1 = Pin(10, Pin.OUT)
+led2 = Pin(7, Pin.OUT)
+
+async def blink_1():
+    global led1
+    while True:
+        led1.value(not(led1.value()))
+        await asyncio.sleep_ms(2000)
+
+async def blink_2():
+    global led2
+    while True:
+        led2.value(not(led2.value()))
+        await asyncio.sleep_ms(1000)
+
+def main():
+    t1 = asyncio.create_task(blink_1)
+    t2 = asyncio.create_task(blink_2)
+    asyncio.gather(t1, t2)
+```
+
+Note:
+- Obiettivo : dimostrare che le cose diventano difficili quando ci sono varie azioni da fare in parallelo.
+- Se dovessi aggiungere 7 LED ?
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
 ## TouchPAD
 
-</textarea></section>
-<section data-markdown  ><textarea data-template>
+Il nostro ESP32 supporta la configurazione di alcuni PIN come sensori tattili
 
-## NeoPixel
+```python
+from machine import TouchPad
+import time
+
+tp = TouchPad(Pin(4))
+
+while True:
+    print(tp.read())
+    time.sleep_ms(250)
+```
+
+Note:
+- Funziona perché il nostro corpo conduce un po' l'elettricità e perturba un oscillatore
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
