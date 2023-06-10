@@ -25,8 +25,6 @@
 }
 </style>
 
-[comment]: # (!!!)
-
 Benvenuti
 
 Note:
@@ -627,3 +625,4 @@ Note:
 - Verificare che siano tutti più o meno pronti con Thonny per la prossima lezione
 - Per la lezione 2 non serve la connessione alla board
 
+[comment]: # (!!!)

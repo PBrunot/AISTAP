@@ -268,3 +268,7 @@ Se volete continuare la scoperta dell'elettronica
 - Board Arduino o ESP32
 - La robottica
 - TBD
+- Altri componenti collegabili (motori, sensori)
+- Connessioni dati
+
+[comment]: # (!!!)

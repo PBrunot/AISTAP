@@ -25,8 +25,6 @@
 }
 </style>
 
-[comment]: # (!!!)
-
 Benvenuti
 
 Note:
@@ -627,14 +625,6 @@ Note:
 - Verificare che siano tutti più o meno pronti con Thonny per la prossima lezione
 - Per la lezione 2 non serve la connessione alla board
 
-.twocolumn {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-gap: 10px;
-   text-align: left;
-}
-</style>
-
 [comment]: # (!!!)
 
 ## Elettronica con Micropython
@@ -1191,13 +1181,6 @@ Seguire la corrente
 ### Fonti
 
 TBD 
-.twocolumn {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-gap: 10px;
-   text-align: left;
-}
-</style>
 
 [comment]: # (!!!)
 
@@ -1367,13 +1350,6 @@ Componenti usati
 - [Ali Express](https://it.aliexpress.com/item/1005003215673294.html) 
 
 - [APA 106](https://it.aliexpress.com/item/1005001863273661.html)
-.twocolumn {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-gap: 10px;
-   text-align: left;
-}
-</style>
 
 [comment]: # (!!!)
 
@@ -1383,7 +1359,7 @@ Componenti usati
 
 Pascal Brunot | AISTAP | Luglio 2023
 
-Lezione 4 : Micropython, board S2 PICO
+Lezione 4 : Controllare LED, NeoPixel, LCD con Micropython
 
 Note:
 - Thonny, salvare file sul microprocessore
@@ -1613,17 +1589,6 @@ while True:
 
 Note:
 - Funziona perché il nostro corpo conduce un po' l'elettricità e perturba un oscillatore
-
-[comment]: # (!!!)
-
-## Conclusioni
-.twocolumn {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-gap: 10px;
-   text-align: left;
-}
-</style>
 
 [comment]: # (!!!)
 
@@ -1868,3 +1833,7 @@ Se volete continuare la scoperta dell'elettronica
 - Board Arduino o ESP32
 - La robottica
 - TBD
+- Altri componenti collegabili (motori, sensori)
+- Connessioni dati
+
+[comment]: # (!!!)

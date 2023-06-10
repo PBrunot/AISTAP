@@ -193,3 +193,5 @@ Componenti usati
 - [Ali Express](https://it.aliexpress.com/item/1005003215673294.html) 
 
 - [APA 106](https://it.aliexpress.com/item/1005001863273661.html)
+
+[comment]: # (!!!)

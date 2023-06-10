@@ -33,7 +33,7 @@
 
 Pascal Brunot | AISTAP | Luglio 2023
 
-Lezione 4 : Micropython, board S2 PICO
+Lezione 4 : Controllare LED, NeoPixel, LCD con Micropython
 
 Note:
 - Thonny, salvare file sul microprocessore
@@ -265,5 +265,3 @@ Note:
 - Funziona perché il nostro corpo conduce un po' l'elettricità e perturba un oscillatore
 
 [comment]: # (!!!)
-
-## Conclusioni
