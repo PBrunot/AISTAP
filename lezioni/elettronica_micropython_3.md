@@ -55,6 +55,9 @@ L'ingrediente fondamentale del diodo
 
 ![P-N](https://www.youtube.com/watch?v=JBtEckh3L9Q&t=3s)
 
+Note:
+- Valutare se tagliare o meno. E' interessante il video ma troppo lungo.
+
 [comment]: # (!!!)
 
 ## Proviamo il diodo elettroluminescente ("LED")
@@ -98,6 +101,9 @@ Simbolo
 | 6 | ..... V |
 
 </small>
+
+Note:
+- Fare osservare la correlazione con il colore?
 
 [comment]: # (!!!)
 
@@ -154,13 +160,13 @@ Note:
 &#x1F6B8; Accendere il led blu sulla board
 
 ```python
-machine.Pin(10).on()
+Pin(10).on()
 ```
 
 &#x1F6B8; Spegnere il led blu sulla board
 
 ```python
-machine.Pin(10).off()
+Pin(10).off()
 ```
 
 Note:
@@ -170,6 +176,7 @@ Note:
 
 ## Riprendiamo Python
 
+TBD
 
 [comment]: # (!!!)
 

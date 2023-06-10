@@ -43,7 +43,7 @@
 
 Pascal Brunot | AISTAP | Luglio 2023
 
-Lezione 3
+Lezione 3 : semi-conduttori, diodi, board ESP32
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
@@ -66,6 +66,9 @@ Note:
 L'ingrediente fondamentale del diodo
 
 ![P-N](https://www.youtube.com/watch?v=JBtEckh3L9Q&t=3s)
+
+Note:
+- Valutare se tagliare o meno. E' interessante il video ma troppo lungo.
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
@@ -113,6 +116,9 @@ Simbolo
 
 </small>
 
+Note:
+- Fare osservare la correlazione con il colore?
+
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
@@ -156,18 +162,29 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 &#x1F6B8; Collegamento USB al computer
 
-&#x1F6B8; Collegamento a Thonny, arrivare al REPL
+&#x1F6B8; Individuare la porta seriale (COM)
+
+&#x1F6B8; Configurare Thonny per usare ESP32 con porta COM
+
+&#x1F6B8; Nel REPL dovreste vedere Micropython
+
+Note:
+- Porta seriale varia da computer
+- Tutti devono collegare il computer una volta
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 &#x1F6B8; Accendere il led blu sulla board
 
 ```python
-machine.Pin(10).on()
+Pin(10).on()
 ```
 
-&#x1F6B8; Accendere il led blu sulla board
+&#x1F6B8; Spegnere il led blu sulla board
 
 ```python
-machine.Pin(10).off()
+Pin(10).off()
 ```
 
 Note:
@@ -178,7 +195,7 @@ Note:
 
 ## Riprendiamo Python
 
-
+TBD
 
 </textarea></section>
 <section data-markdown ><textarea data-template>

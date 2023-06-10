@@ -261,10 +261,10 @@ disegna_dado(6)
 
 [comment]: # (!!!)
 
-## Grazie
+## Fonti
 
 Se volete continuare la scoperta dell'elettronica
 
 - Board Arduino o ESP32
 - La robottica
-
+- TBD

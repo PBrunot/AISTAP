@@ -928,13 +928,19 @@ Note:
 
 ### Breadboard configurazione 1
 
+TBD
+
 [comment]: # (!!!)
 
 ### Breadboard configurazione 2
 
+TBD
+
 [comment]: # (!!!)
 
 ### Breadboard configurazione 3
+
+TBD
 
 [comment]: # (!!!)
 
@@ -1179,13 +1185,12 @@ Simbolo
 Conclusione : leggiamo uno schema elettrico assieme
 Riconoscere i simboli
 Seguire la corrente
-Qualche simbolo misterioso per la prossima lezione
 
 [comment]: # (!!!)
 
 ### Fonti
 
-- 
+TBD 
 .twocolumn {
    display: grid;
    grid-template-columns: 1fr 1fr;
@@ -1202,7 +1207,7 @@ Qualche simbolo misterioso per la prossima lezione
 
 Pascal Brunot | AISTAP | Luglio 2023
 
-Lezione 3
+Lezione 3 : semi-conduttori, diodi, board ESP32
 
 [comment]: # (!!! data-background-color="aqua")
 
@@ -1223,6 +1228,9 @@ Note:
 L'ingrediente fondamentale del diodo
 
 ![P-N](https://www.youtube.com/watch?v=JBtEckh3L9Q&t=3s)
+
+Note:
+- Valutare se tagliare o meno. E' interessante il video ma troppo lungo.
 
 [comment]: # (!!!)
 
@@ -1268,6 +1276,9 @@ Simbolo
 
 </small>
 
+Note:
+- Fare osservare la correlazione con il colore?
+
 [comment]: # (!!!)
 
 ## Circuiti integrati
@@ -1308,18 +1319,28 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 &#x1F6B8; Collegamento USB al computer
 
-&#x1F6B8; Collegamento a Thonny, arrivare al REPL
+&#x1F6B8; Individuare la porta seriale (COM)
+
+&#x1F6B8; Configurare Thonny per usare ESP32 con porta COM
+
+&#x1F6B8; Nel REPL dovreste vedere Micropython
+
+Note:
+- Porta seriale varia da computer
+- Tutti devono collegare il computer una volta
+
+[comment]: # (!!!)
 
 &#x1F6B8; Accendere il led blu sulla board
 
 ```python
-machine.Pin(10).on()
+Pin(10).on()
 ```
 
-&#x1F6B8; Accendere il led blu sulla board
+&#x1F6B8; Spegnere il led blu sulla board
 
 ```python
-machine.Pin(10).off()
+Pin(10).off()
 ```
 
 Note:
@@ -1329,7 +1350,7 @@ Note:
 
 ## Riprendiamo Python
 
-
+TBD
 
 [comment]: # (!!!)
 
@@ -1388,13 +1409,14 @@ Note:
 
 [comment]: # (!!!)
 
-## Teoria
+## Micropython 
 
-Connessione board / computer (USB seriale)
+Come programmare senza board collegata?
 
-&#x1F6B8; Collegare e individuare la porta COM
+[WOKWI](https://wokwi.com/projects/305568836183130690)
 
-Come programmare senza board ? WOKWI
+Note:
+- Quelli che hanno un computer e rete wifi si possono collegare a www.wokwi.com e selezionare "ESP32 with Micropython"
 
 [comment]: # (!!!)
 
@@ -1402,32 +1424,47 @@ Come programmare senza board ? WOKWI
 
 Quando si accende il computer, parte il sistema operativo
 
-Con Micropython al "power-on" / "reset"
-- Esegue il file boot.py
-- Esegue il file main.py * noi lavoremo qua *
+Con Micropython al "power-on" o pulstane "reset"
+
+- Esegue il file boot.py *non lo toccate*
+- Esegue il file main.py *noi lavoremo qua*
+
+Note:
+- Nel file boot.py ho preparato gli import e le funzioni utili per il resto del corso
 
 [comment]: # (!!!)
 
-## Librerie utili
+## Librerie Python e Micropython
 
-E' molto importante riusare codice già testato
+E' molto importante riusare codice già testato (librerie)
 
-- Librerie machine.Pin ; time.sleep
-- Librerie dispositivi (LCD) 
+Micropython dà librerie utili
+
+- Librerie machine [Link](https://docs.micropython.org/en/v1.20.0/library/machine.html)
+- Librerie dispositivi (NeoPixel, Bluetooth...) [Link](https://docs.micropython.org/en/v1.20.0/library/neopixel.html)
+- Librerie Python (random, math, time, ecc..) [Link](https://docs.micropython.org/en/v1.20.0/library/random.html)
 
 [comment]: # (!!!)
 
-## Pratica
+## Pratica BOARD
 
 &#x1F6B8; Caricare un file PY in Thonny
 
-&#x1F6B8; Caricare il file PY sul controllore
+```python
+while True:
+    Pin(10).on()
+    sleep_ms(1000)
+    Pin(10).off()
+    sleep_ms(1000)
+```
 
-Salvare / Caricare
+&#x1F6B8; Caricare il file PY sul controllore come main.py
+
+&#x1F6B8; Premere RESET
 
 [comment]: # (!!!)
 
-## LED esterno
+## Breadboard e LED esterno
 
 Fare lampeggiare LED esterno con una resistenza
 
@@ -1456,7 +1493,9 @@ Circuito da realizzare
 
 Il nostro ESP32 ha un LED RGB programmabile sul pin 48
 
-&#x1F6B8; Accendetelo con il colore che preferite
+I LED RGB si chiamano spesso NEOPIXEL
+
+&#x1F6B8; Preparate il programma con Thonny con il colore che preferite
 
 ```python
 pin = Pin(48, Pin.OUT)    # 48 è il PIN dello schema
@@ -1466,34 +1505,43 @@ np.write()
 ```
 
 ---
+
 ## Colori RGB
 
 ![RGB](media/rgb.jpg)
 
+&#x1F6B8; Esecuzione programma sulla board
+
 [comment]: # (!!!)
 
-## Schermo LCD
+## Schermo LCD 1/2
 
-&#x1F6B8; Fare che la board scriva "Ciao nome" ad ogni poweron/reset
-
-Per scrivere sul display bisogna fare
+La nostra board ha anche uno schermo piccolo, si usa così:
 
 ```python
 display.text(testo, coordinata X, coordinata Y, colore [1 o 0])
 display.show() 
 ```
 
+<small>
 Dimensioni schermo 
 
 $$ 0 \leq X \leq 127 $$
 $$ 0 \leq Y \leq 31 $$
+</small>
 
----
+&#x1F6B8; Fate scrivere "Ciao _nome_" *ad ogni poweron/reset*
+
+[comment]: # (!!!)
+
+## Schermo LCD 2/2
 
 &#x1F6B8; Thonny > File > Apri > Dispositivo Micropython > main.py
 
+Sostuitire con
+
 ```python
-display.text('Ciao AISTAP!', 40, 12, 1)
+display.text('Ciao <nome>', 40, 12, 1)
 display.show()
 ```
 
@@ -1813,10 +1861,10 @@ disegna_dado(6)
 
 [comment]: # (!!!)
 
-## Grazie
+## Fonti
 
 Se volete continuare la scoperta dell'elettronica
 
 - Board Arduino o ESP32
 - La robottica
-
+- TBD

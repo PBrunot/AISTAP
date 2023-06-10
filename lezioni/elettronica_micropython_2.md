@@ -318,13 +318,19 @@ Note:
 
 ### Breadboard configurazione 1
 
+TBD
+
 [comment]: # (!!!)
 
 ### Breadboard configurazione 2
 
+TBD
+
 [comment]: # (!!!)
 
 ### Breadboard configurazione 3
+
+TBD
 
 [comment]: # (!!!)
 
@@ -569,10 +575,9 @@ Simbolo
 Conclusione : leggiamo uno schema elettrico assieme
 Riconoscere i simboli
 Seguire la corrente
-Qualche simbolo misterioso per la prossima lezione
 
 [comment]: # (!!!)
 
 ### Fonti
 
-- 
+TBD 
