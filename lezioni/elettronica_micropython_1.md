@@ -544,6 +544,7 @@ Note:
 | Pile una dopo l'altra (serie) | ??? | ??? |
 | Pile connesse in parallelo (//) | ??? | ??? |
 | Pile che non si toccano | ??? | ??? |
+| Portabatterie | ??? | ??? |
 
 Note:
 - Obiettivo è che tutti i bambini sappiano misurare una tensione

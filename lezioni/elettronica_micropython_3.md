@@ -41,11 +41,13 @@ Lezione 3 : semi-conduttori, diodi, board ESP32
 
 I componenti che abbiamo usati fin'ora erano lineari
 
-- Differenza con conduttori e isolanti
+- Alcuni materiali possono essere sia isolanti che conduttori
+- Li chiamiamo semi-conduttori
 
 Note:
-
 - Lineari perché per resistenze U = R x I, Induttanze U = L x dV/dt, Capacità I =C x dV/dt
+- Esempi : diodi, transistori, celle fotovoltaiche
+- Ricordate perché alcuni materiali lasciano passare la corrente elettrica?
 
 [comment]: # (!!!)
 
@@ -56,6 +58,7 @@ L'ingrediente fondamentale del diodo
 ![P-N](https://www.youtube.com/watch?v=JBtEckh3L9Q&t=3s)
 
 Note:
+- Prima di usare un semiconduttore dobbiamo capire il principio fisico che lo rende possibile.
 - Valutare se tagliare o meno. E' interessante il video ma troppo lungo.
 
 [comment]: # (!!!)
@@ -83,27 +86,29 @@ Simbolo
 
 ## Esperimentazione
 
-&#x1F6B8; Collegare come da schema
+&#x1F6B8; Collegare come da schema con le vostre pile e la resistenza
 
 [TinkerCad](https://www.tinkercad.com/things/8zAUERdv001)
 
-&#x1F6B8; Misurate la caduta di tensione attorno al LED
+&#x1F6B8; Misurate la tensione attorno al LED (1) e alla resistenza (2)
 
 <small>
 
-| Gruppo | Caduta di tensione |
-| -- | -- |
-| 1 | ..... V |
-| 2 | ..... V |
-| 3 | ..... V |
-| 4 | ..... V |
-| 5 | ..... V |
-| 6 | ..... V |
+| Gruppo | Tensione U(LED) | Tensione U(R) |
+| -- | -- | -- | 
+| 1 | ..... V | .... V |
+| 2 | ..... V | .... V |
+| 3 | ..... V | .... V |
+| 4 | ..... V | .... V |
+| 5 | ..... V | .... V |
+| 6 | ..... V | .... V |
 
 </small>
 
 Note:
 - Fare osservare la correlazione con il colore?
+- Fare osservare che U(LED) + U(R) = U(pile) - Legge di Kirshoff
+- La caduta di tensione è dovuta alla giunzione P-N ed è indipendente dalla corrente
 
 [comment]: # (!!!)
 
@@ -151,17 +156,18 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 &#x1F6B8; Nel REPL dovreste vedere Micropython
 
-Note:
-- Porta seriale varia da computer
-- Tutti devono collegare il computer una volta
-
-[comment]: # (!!!)
-
 &#x1F6B8; Accendere il led blu sulla board
 
 ```python
 Pin(10).on()
 ```
+
+Note:
+- Porta seriale varia da computer
+- Tutti devono collegare il computer una volta
+- Quando scollegano la board si spegne il LED
+
+[comment]: # (!!!)
 
 &#x1F6B8; Spegnere il led blu sulla board
 
@@ -174,9 +180,15 @@ Note:
 
 [comment]: # (!!!)
 
-## Riprendiamo Python
+## Come provare senza essere connesso alla BOARD
 
-TBD
+[WOKWI ESP32](https://wokwi.com/projects/new/micropython-esp32)
+
+![Struttura](media/wokwi-struttura.png)
+
+Note:
+- Serve connessione internet
+- Possibile collegare vari componenti
 
 [comment]: # (!!!)
 

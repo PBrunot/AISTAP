@@ -485,7 +485,7 @@ $$ R_{parallelo} = \frac{R_{1} \times R_{2}}{R_{1} + R_{2}} $$
 def parallelo(r1, r2):
     return (r1 * r2)/(r1 + r2)
 
-print(parallelo(100, 200))
+print(parallelo(100, 100))
 ```
 
 &#x1F6B8; Verificate se ritrovate il valore misurato in parallelo
