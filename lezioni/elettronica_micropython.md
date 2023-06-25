@@ -415,9 +415,10 @@ Note:
 ![Corda](media/rope.jpg)
 
 Note:
-- E' solo un'analogia della corrente, non è perfetto (ad es. la tensione è problematica)
+- E' solo un'analogia della corrente, non è perfetto (ad es. la tensione è problematica, si potrebbe approssimare con altezza della corda...)
 - Conservazione della carica <-> conservazione della corda che entra/esce, non si "consuma" la carica
 - Movimento delle cariche simultaneo della corda (non si muove prima da una parte)
+- La corrente è la stessa in tutto il circuito (la corda non circola più veloce da una parta rispetto all'altra)
 - Analogia della resistenza che scalda la mano ma non degli altri
 - La corda evita l'errore di pensare che le cariche vengono dalle batterie, sono già presenti
 
@@ -544,6 +545,7 @@ Note:
 | Pile una dopo l'altra (serie) | ??? | ??? |
 | Pile connesse in parallelo (//) | ??? | ??? |
 | Pile che non si toccano | ??? | ??? |
+| Portabatterie | ??? | ??? |
 
 Note:
 - Obiettivo è che tutti i bambini sappiano misurare una tensione
@@ -1085,7 +1087,7 @@ $$ R_{parallelo} = \frac{R_{1} \times R_{2}}{R_{1} + R_{2}} $$
 def parallelo(r1, r2):
     return (r1 * r2)/(r1 + r2)
 
-print(parallelo(100, 200))
+print(parallelo(100, 100))
 ```
 
 &#x1F6B8; Verificate se ritrovate il valore misurato in parallelo
@@ -1198,11 +1200,13 @@ Lezione 3 : semi-conduttori, diodi, board ESP32
 
 I componenti che abbiamo usati fin'ora erano lineari
 
-- Differenza con conduttori e isolanti
+- Alcuni materiali possono essere sia isolanti che conduttori
+- Li chiamiamo semi-conduttori
 
 Note:
-
 - Lineari perché per resistenze U = R x I, Induttanze U = L x dV/dt, Capacità I =C x dV/dt
+- Esempi : diodi, transistori, celle fotovoltaiche
+- Ricordate perché alcuni materiali lasciano passare la corrente elettrica?
 
 [comment]: # (!!!)
 
@@ -1213,6 +1217,7 @@ L'ingrediente fondamentale del diodo
 ![P-N](https://www.youtube.com/watch?v=JBtEckh3L9Q&t=3s)
 
 Note:
+- Prima di usare un semiconduttore dobbiamo capire il principio fisico che lo rende possibile.
 - Valutare se tagliare o meno. E' interessante il video ma troppo lungo.
 
 [comment]: # (!!!)
@@ -1238,29 +1243,32 @@ Simbolo
 
 [comment]: # (!!!)
 
-## Esperimentazione
+## Esperimento 1 - LED e tensioni nel circuito
 
-&#x1F6B8; Collegare come da schema
+&#x1F6B8; Collegare come da schema con le vostre pile e la resistenza
 
 [TinkerCad](https://www.tinkercad.com/things/8zAUERdv001)
 
-&#x1F6B8; Misurate la caduta di tensione attorno al LED
+&#x1F6B8; Misurate la tensione attorno al LED (1) e alla resistenza (2)
 
 <small>
 
-| Gruppo | Caduta di tensione |
-| -- | -- |
-| 1 | ..... V |
-| 2 | ..... V |
-| 3 | ..... V |
-| 4 | ..... V |
-| 5 | ..... V |
-| 6 | ..... V |
+| Gruppo | Colore | Tensione U(LED) | Tensione U(R) |
+| -- | -- | -- | -- |
+| 1 | -- | ..... V | .... V |
+| 2 | -- | ..... V | .... V |
+| 3 | -- | ..... V | .... V |
+| 4 | -- | ..... V | .... V |
+| 5 | -- | ..... V | .... V |
+| 6 | -- | ..... V | .... V |
 
 </small>
 
 Note:
 - Fare osservare la correlazione con il colore?
+- Fare osservare che U(LED) + U(R) = U(pile) - Legge di Kirshoff
+- La caduta di tensione è dovuta alla giunzione P-N ed è indipendente dalla corrente (non si può applicare la legge di Ohm al diodo)
+- Fare calcolare la corrente nel circuito ? (utile per ritornare su corrente uguale e legge di Ohm)
 
 [comment]: # (!!!)
 
@@ -1298,7 +1306,7 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 [comment]: # (!!!)
 
-## Board S2 PICO - primo uso
+## Esperimento 2 - Board S2 PICO
 
 &#x1F6B8; Collegamento USB al computer
 
@@ -1308,17 +1316,18 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 &#x1F6B8; Nel REPL dovreste vedere Micropython
 
-Note:
-- Porta seriale varia da computer
-- Tutti devono collegare il computer una volta
-
-[comment]: # (!!!)
-
 &#x1F6B8; Accendere il led blu sulla board
 
 ```python
 Pin(10).on()
 ```
+
+Note:
+- Porta seriale varia da computer
+- Tutti devono collegare il computer una volta
+- Quando scollegano la board si spegne il LED
+
+[comment]: # (!!!)
 
 &#x1F6B8; Spegnere il led blu sulla board
 
@@ -1331,9 +1340,21 @@ Note:
 
 [comment]: # (!!!)
 
-## Riprendiamo Python
+## Come provare senza essere connesso alla BOARD
 
-TBD
+[WOKWI ESP32](https://wokwi.com/projects/new/micropython-esp32)
+
+![Struttura](media/wokwi-struttura.png)
+
+Note:
+- Serve connessione internet
+- Possibile collegare vari componenti
+
+[comment]: # (!!!)
+
+## Premio al gruppo scientifico più preciso
+
+* Migliore precisione
 
 [comment]: # (!!!)
 
@@ -1465,31 +1486,6 @@ Circuito da realizzare
 
 [comment]: # (!!!)
 
-## NeoPixel
-
-Il nostro ESP32 ha un LED RGB programmabile sul pin 48
-
-I LED RGB si chiamano spesso NEOPIXEL
-
-&#x1F6B8; Preparate il programma con Thonny con il colore che preferite
-
-```python
-pin = Pin(48, Pin.OUT)    # 48 è il PIN dello schema
-np = NeoPixel(pin, 1)     # Un solo led   
-np[0] = (255, 255, 255)   # Imposta il primo LED (0) con colori R, G, B
-np.write()
-```
-
----
-
-## Colori RGB
-
-![RGB](media/rgb.jpg)
-
-&#x1F6B8; Esecuzione programma sulla board
-
-[comment]: # (!!!)
-
 ## Schermo LCD 1/2
 
 La nostra board ha anche uno schermo piccolo, si usa così:
@@ -1530,11 +1526,87 @@ display.show()
 ## Cicli
 
 (ripasso Python)
-&#x1F6B8;  Fare lampeggiare il led integrato + il led esterno con ciclo while True
+&#x1F6B8;  Fare lampeggiare il led integrato con ciclo while True
+
+```python
+while True:
+    Pin(10).on()
+    sleep(1)
+    Pin(10).off()
+    sleep(1)
+```
+
+[comment]: # (!!!)
+
+## TouchPAD
+
+Il nostro ESP32 supporta la configurazione di alcuni PIN come sensori tattili
+
+```python
+from machine import TouchPad
+from time import sleep_ms
+
+tp = TouchPad(Pin(4))
+
+while True:
+    print(tp.read())
+    sleep_ms(250)
+```
+
+Note:
+- Funziona perché il nostro corpo conduce un po' l'elettricità e perturba un oscillatore
+- Aggiungere in boot.py gli import (from machine import TouchPad, from time import sleep_ms)
+
+[comment]: # (!!!)
+
+## TouchPAD
+
+Accendiamo il LED quando rileviamo il tocco
+
+```python
+tp = TouchPad(Pin(4))
+SOGLIA = ...
+while True:
+    if tp.read() > SOGLIA:
+        Pin(10).on()
+    else:
+        Pin(10).off()
+    sleep_ms(250)
+```
+
+```python
+tp = TouchPad(Pin(4))
+SOGLIA = ...
+while True:
+    if tp.read() > SOGLIA:
+        Pin(10).on()
+        display.text('Ciao!', 40, 12, 1)
+        display.show()
+    else:
+        Pin(10).off()
+        display.text('Arrivederci!', 40, 12, 1)
+        display.show()
+    sleep_ms(250)
+```
+
+Note:
+- Funziona perché il nostro corpo conduce un po' l'elettricità e perturba un oscillatore
+
 
 &#x1F6B8;  Alternare il lampeggio fra i due LED
 
-&#x1F6B8;  Lampeggiare a tempo i due LED (1s)
+```python [6,8]
+led1 = Pin(36, Pin.OUT)
+led2 = Pin(10, Pin.OUT)
+
+while True:
+    led1.on()
+    led2.off()    
+    sleep(1)
+    led1.off()
+    led2.on()
+    sleep(1)
+```
 
 [comment]: # (!!!)
 
@@ -1542,11 +1614,38 @@ display.show()
 
 &#x1F6B8;  Fare lampeggiare il primo LED ogni 2 s e il secondo ogni secondo
 
+```python [6,8]
+led1 = Pin(36, Pin.OUT)
+led2 = Pin(10, Pin.OUT)
+
+while True:
+    led1.on()
+    led2.off()    
+    sleep(1)
+    led1.on()
+    led2.on()
+    sleep(1)
+    led1.off()
+    led2.off()
+    sleep(1)
+    led1.off()
+    led2.on()
+    sleep(1)
+```
+
+Se dovessi aggiungere un terzo LED ogni 5 secondi ?
+
+Note:
+- L'approccio con un unico ciclo infinito ha dei limiti
+- Sarebbe più semplice creare più cicli 
+
+[comment]: # (!!!)
+
 ```python
 import asyncio
 
-led1 = Pin(10, Pin.OUT)
-led2 = Pin(7, Pin.OUT)
+led1 = Pin(36, Pin.OUT)
+led2 = Pin(10, Pin.OUT)
 
 async def blink_1():
     global led1
@@ -1572,23 +1671,102 @@ Note:
 
 [comment]: # (!!!)
 
-## TouchPAD
+Aggiungiamo un conta secondi sul display
 
-Il nostro ESP32 supporta la configurazione di alcuni PIN come sensori tattili
+```python [5,19-25,30-31]
+import asyncio
 
-```python
-from machine import TouchPad
-import time
+led1 = Pin(36, Pin.OUT)
+led2 = Pin(10, Pin.OUT)
+contatore = 0
 
-tp = TouchPad(Pin(4))
+async def blink_1():
+    global led1
+    while True:
+        led1.value(not(led1.value()))
+        await asyncio.sleep_ms(2000)
 
-while True:
-    print(tp.read())
-    time.sleep_ms(250)
+async def blink_2():
+    global led2
+    while True:
+        led2.value(not(led2.value()))
+        await asyncio.sleep_ms(1000)
+
+async def conta():
+    global contatore
+    while True:
+        contatore += 1
+        display.text(str(contatore), 40, 12, 1)
+        display.show()
+        await asyncio.sleep_ms(1000)
+
+def main():
+    t1 = asyncio.create_task(blink_1)
+    t2 = asyncio.create_task(blink_2)
+    t3 = asyncio.create_task(conta)
+    asyncio.gather(t1, t2, t3)
 ```
 
-Note:
-- Funziona perché il nostro corpo conduce un po' l'elettricità e perturba un oscillatore
+```python
+contatore = 0
+led1 = Pin(36, Pin.OUT)
+led2 = Pin(10, Pin.OUT)
+
+while True:
+    led1.on()
+    led2.off()
+    contatore += 1
+    display.text(str(contatore), 40, 12, 1)
+    display.show()
+
+    sleep(1)
+    led1.on()
+    led2.on()
+    contatore += 1
+    display.text(str(contatore), 40, 12, 1)
+    display.show()
+
+    sleep(1)
+    led1.off()
+    led2.off()
+    contatore += 1
+    display.text(str(contatore), 40, 12, 1)
+    display.show()
+
+    sleep(1)
+    led1.off()
+    led2.on()
+
+    contatore += 1
+    display.text(str(contatore), 40, 12, 1)
+    display.show()
+    sleep(1)
+```
+
+[comment]: # (!!!)
+
+## NeoPixel
+
+Il nostro ESP32 ha un LED RGB programmabile sul pin 48
+
+I LED RGB si chiamano spesso NEOPIXEL
+
+&#x1F6B8; Preparate il programma con Thonny con il colore che preferite
+
+```python
+pin = Pin(48, Pin.OUT)    # 48 è il PIN dello schema
+np = NeoPixel(pin, 1)     # Un solo led   
+np[0] = (255, 255, 255)   # Imposta il primo LED (0) con colori R, G, B
+np.write()
+```
+
+---
+
+## Colori RGB
+
+![RGB](media/rgb.jpg)
+
+&#x1F6B8; Esecuzione programma sulla board
 
 [comment]: # (!!!)
 
@@ -1659,15 +1837,21 @@ In Python e Micropython ci sono delle librerie che aggiungono funzioni utili
 
 Esiste una libreria, random, con una funzione <code>randint</code> fa il caso nostro
 
-&#x1F6B8; Nel REPL scrivete
+&#x1F6B8; Nel REPL scrivete e raccogliete 6 risultati
 
 ```python
 import random
 print(random.randint(1,6))
 ```
 
+E' veramente casuale ?
+
+[Jupyter](https://jupyter.org/try-jupyter/retro/notebooks/?path=Untitled1.ipynb)
+
 Note:
 - Farli provare tutti nel REPL
+- Ottenere 6 risposte per gruppo
+- Sommare i risultati per ottenere in grafico di distribuzione
 
 [comment]: # (!!!)
 
@@ -1796,8 +1980,8 @@ coordinate = { 1: [(16,16)],
 
 &#x1F6B8; Mettere in main.py, salvare, RESET
 
-```python[1|2-4|5-11|12-13|14-15|16-20|1-20]
-def disegna_dado(display, valore_tratto):
+```python [1|2-4|5-11|12-13|14-15|16-20|1-20]
+def disegna_dado(valore_tratto):
     display.fill(0) 
     display.fill_rect(0, 0, 32, 32, 1)
 
@@ -1814,7 +1998,7 @@ def disegna_dado(display, valore_tratto):
 
     display.show()
 
-# Proviamo
+# Proviamo con un numero
 disegna_dado(6)
 ```
 

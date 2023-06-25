@@ -139,31 +139,6 @@ Circuito da realizzare
 
 [comment]: # (!!!)
 
-## NeoPixel
-
-Il nostro ESP32 ha un LED RGB programmabile sul pin 48
-
-I LED RGB si chiamano spesso NEOPIXEL
-
-&#x1F6B8; Preparate il programma con Thonny con il colore che preferite
-
-```python
-pin = Pin(48, Pin.OUT)    # 48 è il PIN dello schema
-np = NeoPixel(pin, 1)     # Un solo led   
-np[0] = (255, 255, 255)   # Imposta il primo LED (0) con colori R, G, B
-np.write()
-```
-
----
-
-## Colori RGB
-
-![RGB](media/rgb.jpg)
-
-&#x1F6B8; Esecuzione programma sulla board
-
-[comment]: # (!!!)
-
 ## Schermo LCD 1/2
 
 La nostra board ha anche uno schermo piccolo, si usa così:
@@ -204,11 +179,87 @@ display.show()
 ## Cicli
 
 (ripasso Python)
-&#x1F6B8;  Fare lampeggiare il led integrato + il led esterno con ciclo while True
+&#x1F6B8;  Fare lampeggiare il led integrato con ciclo while True
+
+```python
+while True:
+    Pin(10).on()
+    sleep(1)
+    Pin(10).off()
+    sleep(1)
+```
+
+[comment]: # (!!!)
+
+## TouchPAD
+
+Il nostro ESP32 supporta la configurazione di alcuni PIN come sensori tattili
+
+```python
+from machine import TouchPad
+from time import sleep_ms
+
+tp = TouchPad(Pin(4))
+
+while True:
+    print(tp.read())
+    sleep_ms(250)
+```
+
+Note:
+- Funziona perché il nostro corpo conduce un po' l'elettricità e perturba un oscillatore
+- Aggiungere in boot.py gli import (from machine import TouchPad, from time import sleep_ms)
+
+[comment]: # (!!!)
+
+## TouchPAD
+
+Accendiamo il LED quando rileviamo il tocco
+
+```python
+tp = TouchPad(Pin(4))
+SOGLIA = ...
+while True:
+    if tp.read() > SOGLIA:
+        Pin(10).on()
+    else:
+        Pin(10).off()
+    sleep_ms(250)
+```
+
+```python
+tp = TouchPad(Pin(4))
+SOGLIA = ...
+while True:
+    if tp.read() > SOGLIA:
+        Pin(10).on()
+        display.text('Ciao!', 40, 12, 1)
+        display.show()
+    else:
+        Pin(10).off()
+        display.text('Arrivederci!', 40, 12, 1)
+        display.show()
+    sleep_ms(250)
+```
+
+Note:
+- Funziona perché il nostro corpo conduce un po' l'elettricità e perturba un oscillatore
+
 
 &#x1F6B8;  Alternare il lampeggio fra i due LED
 
-&#x1F6B8;  Lampeggiare a tempo i due LED (1s)
+```python [6,8]
+led1 = Pin(36, Pin.OUT)
+led2 = Pin(10, Pin.OUT)
+
+while True:
+    led1.on()
+    led2.off()    
+    sleep(1)
+    led1.off()
+    led2.on()
+    sleep(1)
+```
 
 [comment]: # (!!!)
 
@@ -216,11 +267,38 @@ display.show()
 
 &#x1F6B8;  Fare lampeggiare il primo LED ogni 2 s e il secondo ogni secondo
 
+```python [6,8]
+led1 = Pin(36, Pin.OUT)
+led2 = Pin(10, Pin.OUT)
+
+while True:
+    led1.on()
+    led2.off()    
+    sleep(1)
+    led1.on()
+    led2.on()
+    sleep(1)
+    led1.off()
+    led2.off()
+    sleep(1)
+    led1.off()
+    led2.on()
+    sleep(1)
+```
+
+Se dovessi aggiungere un terzo LED ogni 5 secondi ?
+
+Note:
+- L'approccio con un unico ciclo infinito ha dei limiti
+- Sarebbe più semplice creare più cicli 
+
+[comment]: # (!!!)
+
 ```python
 import asyncio
 
-led1 = Pin(10, Pin.OUT)
-led2 = Pin(7, Pin.OUT)
+led1 = Pin(36, Pin.OUT)
+led2 = Pin(10, Pin.OUT)
 
 async def blink_1():
     global led1
@@ -246,22 +324,101 @@ Note:
 
 [comment]: # (!!!)
 
-## TouchPAD
+Aggiungiamo un conta secondi sul display
 
-Il nostro ESP32 supporta la configurazione di alcuni PIN come sensori tattili
+```python [5,19-25,30-31]
+import asyncio
 
-```python
-from machine import TouchPad
-import time
+led1 = Pin(36, Pin.OUT)
+led2 = Pin(10, Pin.OUT)
+contatore = 0
 
-tp = TouchPad(Pin(4))
+async def blink_1():
+    global led1
+    while True:
+        led1.value(not(led1.value()))
+        await asyncio.sleep_ms(2000)
 
-while True:
-    print(tp.read())
-    time.sleep_ms(250)
+async def blink_2():
+    global led2
+    while True:
+        led2.value(not(led2.value()))
+        await asyncio.sleep_ms(1000)
+
+async def conta():
+    global contatore
+    while True:
+        contatore += 1
+        display.text(str(contatore), 40, 12, 1)
+        display.show()
+        await asyncio.sleep_ms(1000)
+
+def main():
+    t1 = asyncio.create_task(blink_1)
+    t2 = asyncio.create_task(blink_2)
+    t3 = asyncio.create_task(conta)
+    asyncio.gather(t1, t2, t3)
 ```
 
-Note:
-- Funziona perché il nostro corpo conduce un po' l'elettricità e perturba un oscillatore
+```python
+contatore = 0
+led1 = Pin(36, Pin.OUT)
+led2 = Pin(10, Pin.OUT)
+
+while True:
+    led1.on()
+    led2.off()
+    contatore += 1
+    display.text(str(contatore), 40, 12, 1)
+    display.show()
+
+    sleep(1)
+    led1.on()
+    led2.on()
+    contatore += 1
+    display.text(str(contatore), 40, 12, 1)
+    display.show()
+
+    sleep(1)
+    led1.off()
+    led2.off()
+    contatore += 1
+    display.text(str(contatore), 40, 12, 1)
+    display.show()
+
+    sleep(1)
+    led1.off()
+    led2.on()
+
+    contatore += 1
+    display.text(str(contatore), 40, 12, 1)
+    display.show()
+    sleep(1)
+```
+
+[comment]: # (!!!)
+
+## NeoPixel
+
+Il nostro ESP32 ha un LED RGB programmabile sul pin 48
+
+I LED RGB si chiamano spesso NEOPIXEL
+
+&#x1F6B8; Preparate il programma con Thonny con il colore che preferite
+
+```python
+pin = Pin(48, Pin.OUT)    # 48 è il PIN dello schema
+np = NeoPixel(pin, 1)     # Un solo led   
+np[0] = (255, 255, 255)   # Imposta il primo LED (0) con colori R, G, B
+np.write()
+```
+
+---
+
+## Colori RGB
+
+![RGB](media/rgb.jpg)
+
+&#x1F6B8; Esecuzione programma sulla board
 
 [comment]: # (!!!)

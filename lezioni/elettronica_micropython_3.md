@@ -84,7 +84,7 @@ Simbolo
 
 [comment]: # (!!!)
 
-## Esperimentazione
+## Esperimento 1 - LED e tensioni nel circuito
 
 &#x1F6B8; Collegare come da schema con le vostre pile e la resistenza
 
@@ -94,21 +94,22 @@ Simbolo
 
 <small>
 
-| Gruppo | Tensione U(LED) | Tensione U(R) |
-| -- | -- | -- | 
-| 1 | ..... V | .... V |
-| 2 | ..... V | .... V |
-| 3 | ..... V | .... V |
-| 4 | ..... V | .... V |
-| 5 | ..... V | .... V |
-| 6 | ..... V | .... V |
+| Gruppo | Colore | Tensione U(LED) | Tensione U(R) |
+| -- | -- | -- | -- |
+| 1 | -- | ..... V | .... V |
+| 2 | -- | ..... V | .... V |
+| 3 | -- | ..... V | .... V |
+| 4 | -- | ..... V | .... V |
+| 5 | -- | ..... V | .... V |
+| 6 | -- | ..... V | .... V |
 
 </small>
 
 Note:
 - Fare osservare la correlazione con il colore?
 - Fare osservare che U(LED) + U(R) = U(pile) - Legge di Kirshoff
-- La caduta di tensione è dovuta alla giunzione P-N ed è indipendente dalla corrente
+- La caduta di tensione è dovuta alla giunzione P-N ed è indipendente dalla corrente (non si può applicare la legge di Ohm al diodo)
+- Fare calcolare la corrente nel circuito ? (utile per ritornare su corrente uguale e legge di Ohm)
 
 [comment]: # (!!!)
 
@@ -146,7 +147,7 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 [comment]: # (!!!)
 
-## Board S2 PICO - primo uso
+## Esperimento 2 - Board S2 PICO
 
 &#x1F6B8; Collegamento USB al computer
 
@@ -189,6 +190,12 @@ Note:
 Note:
 - Serve connessione internet
 - Possibile collegare vari componenti
+
+[comment]: # (!!!)
+
+## Premio al gruppo scientifico più preciso
+
+* Migliore precisione
 
 [comment]: # (!!!)
 

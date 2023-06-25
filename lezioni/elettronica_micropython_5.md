@@ -94,15 +94,21 @@ In Python e Micropython ci sono delle librerie che aggiungono funzioni utili
 
 Esiste una libreria, random, con una funzione <code>randint</code> fa il caso nostro
 
-&#x1F6B8; Nel REPL scrivete
+&#x1F6B8; Nel REPL scrivete e raccogliete 6 risultati
 
 ```python
 import random
 print(random.randint(1,6))
 ```
 
+E' veramente casuale ?
+
+[Jupyter](https://jupyter.org/try-jupyter/retro/notebooks/?path=Untitled1.ipynb)
+
 Note:
 - Farli provare tutti nel REPL
+- Ottenere 6 risposte per gruppo
+- Sommare i risultati per ottenere in grafico di distribuzione
 
 [comment]: # (!!!)
 
@@ -231,8 +237,8 @@ coordinate = { 1: [(16,16)],
 
 &#x1F6B8; Mettere in main.py, salvare, RESET
 
-```python[1|2-4|5-11|12-13|14-15|16-20|1-20]
-def disegna_dado(display, valore_tratto):
+```python [1|2-4|5-11|12-13|14-15|16-20|1-20]
+def disegna_dado(valore_tratto):
     display.fill(0) 
     display.fill_rect(0, 0, 32, 32, 1)
 
@@ -249,7 +255,7 @@ def disegna_dado(display, valore_tratto):
 
     display.show()
 
-# Proviamo
+# Proviamo con un numero
 disegna_dado(6)
 ```
 
