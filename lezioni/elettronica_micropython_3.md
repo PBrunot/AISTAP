@@ -39,27 +39,29 @@ Lezione 3 : semi-conduttori, diodi, board ESP32
 
 ## I semi-conduttori
 
-I componenti che abbiamo usati fin'ora erano lineari
+I componenti che abbiamo usati fin'ora erano "lineari"
 
-- Alcuni materiali possono essere sia isolanti che conduttori
-- Li chiamiamo semi-conduttori
+Alcuni materiali possono essere sia isolanti che conduttori a secondo delle condizioni
+
+Li chiamiamo semi-conduttori
 
 Note:
 - Lineari perché per resistenze U = R x I, Induttanze U = L x dV/dt, Capacità I =C x dV/dt
 - Esempi : diodi, transistori, celle fotovoltaiche
-- Ricordate perché alcuni materiali lasciano passare la corrente elettrica?
+- Ricordate perché alcuni materiali lasciano passare la corrente elettrica? (gli elettroni stretti o meno)
 
 [comment]: # (!!!)
 
 ## La giunzione P-N
 
-L'ingrediente fondamentale del diodo
+L'ingrediente fondamentale del diodo, creata nel 1939
 
 ![P-N](https://www.youtube.com/watch?v=JBtEckh3L9Q&t=3s)
 
 Note:
+- Ci stiamo avvicinando pian piano ai nostri giorni
 - Prima di usare un semiconduttore dobbiamo capire il principio fisico che lo rende possibile.
-- Valutare se tagliare o meno. E' interessante il video ma troppo lungo.
+- Valutare come tagliare il video. E' interessante ma troppo lungo.
 
 [comment]: # (!!!)
 
@@ -106,7 +108,6 @@ Simbolo
 </small>
 
 Note:
-- Fare osservare la correlazione con il colore?
 - Fare osservare che U(LED) + U(R) = U(pile) - Legge di Kirshoff
 - La caduta di tensione è dovuta alla giunzione P-N ed è indipendente dalla corrente (non si può applicare la legge di Ohm al diodo)
 - Fare calcolare la corrente nel circuito ? (utile per ritornare su corrente uguale e legge di Ohm)
@@ -115,12 +116,19 @@ Note:
 
 ## Circuiti integrati
 
-Cosa sono (tanti componenti – transistor) messi assieme per uno scopo (memorizzare, fare
-operazioni logiche)
+Tanti transistor messi assieme per uno scopo (memorizzare, fare operazioni logiche)
 
 Economici da fabbricare in grandi quantità
 
-Il transistor come oggetto più fabbricato dell’uomo
+- Fabbrichiamo migliari di migliardi di transistor ogni anno
+
+![Wafer](media/wafer_45nm.jpg)
+
+Note:
+- Esistono circuiti integrati per tutte le operazioni comuni in elettronica
+- Esistono circuiti integrati che sono capaci di ricevere istruzioni da altri circuiti e di eseguirle
+- Diventano così "microprocessori" o più semplicemente "processori"
+
 
 [comment]: # (!!!)
 
@@ -131,6 +139,8 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 - Microprocessore con memoria integrata
 - Antenna WiFi
+- Interrutori ("switch")
+- Resistenze, Condensatori
 - Componenti di alimentazione
 - Ingressi/Uscite del controllore (GPIO)
 - Bus (USB x PC, SPI x LCD)
@@ -144,6 +154,40 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 </div>
 </div>
+
+Note: prendete la board e guardatela tutti
+
+[comment]: # (!!!)
+
+## Unità di misura : velocità
+
+Processore: la frequenza alla quale prende istruzioni
+- 1 Hertz = 1 istruzione al secondo
+- Il nostro può arrivare a 240.000.000 Hz
+
+E' un processore molto potente
+
+![Gameboy ESP32](media/esp32gb_detail.jpg)
+
+Note:
+- Con questa board abbiamo abbastanza potenza per una console di gioco
+
+[comment]: # (!!!)
+
+## Unità di misura : memorie
+
+*Memoria volatile* (RAM)
+- Circa 2 millioni di bytes (2 Mb)
+- Viene persa quando perde la corrente
+
+*Memoria flash*
+- Circa 4 millioni di bytes (4Mb)
+- Rimane anche senza corrente grazie ad un condensatore
+
+Note:
+- Il tedesco Heinrich Rudolf Hertz scoprì le onde elettromagnetiche nel 1885
+- Quando sentite parlare di Gigabytes? cosa vuole dire?
+- Qual'è la memoria più veloce? La PSRAM (10-50ns vs. 500 us)
 
 [comment]: # (!!!)
 

@@ -271,10 +271,9 @@ disegna_dado(6)
 
 Se volete continuare la scoperta dell'elettronica
 
-- Board Arduino o ESP32
+- Board Arduino o ESP32 (AliExpress)
 - La robottica
-- TBD
 - Altri componenti collegabili (motori, sensori)
-- Connessioni dati
+- Connessioni e bus dati (USB,seriali)
 
 [comment]: # (!!!)

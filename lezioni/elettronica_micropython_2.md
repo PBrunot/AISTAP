@@ -65,7 +65,7 @@ Note:
 
 | Grandezza (Abbr.) | Unità | Simbolo | Spiegazione |
 | -- | -- | -- | -- |
-| *Corrente* (I) | Ampère | A | Flusso delle cariche elettriche |
+| *Corrente* (I) | Ampere | A | Flusso delle cariche elettriche |
 | *Tensione* (U o V) | Volt   | V | Potenziale delle cariche elettriche |
 | *Resistenza* (R) | Ohm | Ω | "Freno" alle cariche elettriche |
 
@@ -223,9 +223,7 @@ La parte di filo in contatto con la graffetta è conduttrice *solo a metà*
 Ad ogni mezza-rotazione si interrompe la corrente *ma la bobina continua per inerzia*
 
 Note:
-- Trovare animazioni?
 - Valutare se fare l'esperimento con multimetro e bobina in rotazione per osservare generazione
-- Legge di Faraday $$ {\mathcal {E}}=-{\frac {\mathrm {d} \Phi _{B}}{\mathrm {d} t}} $$
 
 [comment]: # (!!!)
 
@@ -316,25 +314,7 @@ Note:
 
 [comment]: # (!!!)
 
-### Breadboard configurazione 1
-
-TBD
-
-[comment]: # (!!!)
-
-### Breadboard configurazione 2
-
-TBD
-
-[comment]: # (!!!)
-
-### Breadboard configurazione 3
-
-TBD
-
-[comment]: # (!!!)
-
-### Esperimento
+### Esperimento 1
 
 &#x1F6B8; Circuito su breadboard
 
@@ -354,7 +334,7 @@ Note:
 
 [comment]: # (!!!)
 
-### Esperimento
+### Esperimento 1
 
 &#x1F6B8; Risultati
 
@@ -445,7 +425,7 @@ int() # trasforma in interno
 range(a,b) # l'intervallo fra a (incluso) e b (non incluso)
 ```
 
-Paroli chiavi
+Parole chiavi
 
 ```python
 def funzione(parametro1):  # definisce una funzione di un parametro
@@ -542,15 +522,44 @@ Note:
 
 [comment]: # (!!!)
 
-### Altri componenti
+### Altri componenti : interruttore
 
-- Interruttori
+![Interrutore luce](media/interruttore.png)
+
+Simbolo
+
+![Interrutore simbolo](media/interruttore-simbolo.jpg)
+
+A cosa serve?
+
+Note:
+- Imparare i simboli è come riconoscere i mattoncini di Lego
+- Poi si assemblano i componenti per fare circuiti più o meno complessi
 
 [comment]: # (!!!)
 
-### Induttori
+### Altri componenti : Condensatori
 
-Bobina (induttore), sono "serbatoio di corrente" (contrari)
+Condensatori, sono "serbatoio di tensione"
+
+![Condensatori](media/condensatori%20foto.png)
+
+Simbolo
+
+![Condensatori](media/capacit%C3%A0.jpg)
+
+Note:
+- Usano un campo elettrico per immaganizzare energia, scoperti nel 1745
+- Si misurano in Farad ma è un'unità enorme, si usa di solito il micro-farad o addirittura il pico-farad (10^-12)
+- Il nome arriva dall'inglese Michael Faraday. E' uno dei scienzati più importanti al mondo, Einstein aveva il suo ritratto sulla scrivania.
+- Costruisse lui la prima dinamo
+- Molto utili per regolare una tensione, fanno dà serbatorio per eliminare variazioni
+
+[comment]: # (!!!)
+
+### Altri componenti : Induttori
+
+Bobina (induttore), sono "serbatoio di corrente"
 
 ![Induttore](media/induttori.png)
 
@@ -558,28 +567,34 @@ Simbolo
 
 ![Simbolo](media/induttore.jpg)
 
-[comment]: # (!!!)
-
-### Condensatori
-
-Condensatori, sono "serbatoio di tensione"
-
-Simbolo
-
-![Condensatori](media/capacit%C3%A0.jpg)
+Note:
+- Usano un campo magnetico per immaganizzare energia, scoperti attorno al 1830
+- Molto utili per filtrare parasiti, si oppongono alle variazioni veloci
+- Perché si usa L ? Per Lenz, un fisico russo che scoprì il rapporto fra la corrente e la tensione.
+- E' stato dato il suo nome ad un cratere sulla Luna
+- Si misurano in Henry, ma è un'unità enorme, si usa spesso il milli-Henry. Il suo nome è stato dato ad una montagna negli USA.
 
 [comment]: # (!!!)
 
 ### Schema elettrico
 
 Conclusione : leggiamo uno schema elettrico assieme
-Riconoscere i simboli
-Seguire la corrente
+
+![Radio](media/schema-radio.jpg)
+
+Che simboli riconoscete?
+
+Provate a indovinare cosa fa?
+
+Note:
+- Resistenze, Condensatori, Induttori (bobine), Diodo
+- E' una radio AM
+- Non lo costruiamo perché dobbiamo imparare a programmare l'elettronica nelle prossime lezioni
+- Transistor al centro, è un componente a tre zampe semiconduttore
+- Invece guarderemo da vicino i DIODI
 
 [comment]: # (!!!)
 
-### Fonti
+### FINE
 
-TBD 
-
-[comment]: # (!!!)
+Risolviamo problemi con Thonny/Board

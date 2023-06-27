@@ -667,7 +667,7 @@ Note:
 
 | Grandezza (Abbr.) | Unità | Simbolo | Spiegazione |
 | -- | -- | -- | -- |
-| *Corrente* (I) | Ampère | A | Flusso delle cariche elettriche |
+| *Corrente* (I) | Ampere | A | Flusso delle cariche elettriche |
 | *Tensione* (U o V) | Volt   | V | Potenziale delle cariche elettriche |
 | *Resistenza* (R) | Ohm | Ω | "Freno" alle cariche elettriche |
 
@@ -825,9 +825,7 @@ La parte di filo in contatto con la graffetta è conduttrice *solo a metà*
 Ad ogni mezza-rotazione si interrompe la corrente *ma la bobina continua per inerzia*
 
 Note:
-- Trovare animazioni?
 - Valutare se fare l'esperimento con multimetro e bobina in rotazione per osservare generazione
-- Legge di Faraday $$ {\mathcal {E}}=-{\frac {\mathrm {d} \Phi _{B}}{\mathrm {d} t}} $$
 
 [comment]: # (!!!)
 
@@ -918,25 +916,7 @@ Note:
 
 [comment]: # (!!!)
 
-### Breadboard configurazione 1
-
-TBD
-
-[comment]: # (!!!)
-
-### Breadboard configurazione 2
-
-TBD
-
-[comment]: # (!!!)
-
-### Breadboard configurazione 3
-
-TBD
-
-[comment]: # (!!!)
-
-### Esperimento
+### Esperimento 1
 
 &#x1F6B8; Circuito su breadboard
 
@@ -956,7 +936,7 @@ Note:
 
 [comment]: # (!!!)
 
-### Esperimento
+### Esperimento 1
 
 &#x1F6B8; Risultati
 
@@ -1047,7 +1027,7 @@ int() # trasforma in interno
 range(a,b) # l'intervallo fra a (incluso) e b (non incluso)
 ```
 
-Paroli chiavi
+Parole chiavi
 
 ```python
 def funzione(parametro1):  # definisce una funzione di un parametro
@@ -1144,15 +1124,44 @@ Note:
 
 [comment]: # (!!!)
 
-### Altri componenti
+### Altri componenti : interruttore
 
-- Interruttori
+![Interrutore luce](media/interruttore.png)
+
+Simbolo
+
+![Interrutore simbolo](media/interruttore-simbolo.jpg)
+
+A cosa serve?
+
+Note:
+- Imparare i simboli è come riconoscere i mattoncini di Lego
+- Poi si assemblano i componenti per fare circuiti più o meno complessi
 
 [comment]: # (!!!)
 
-### Induttori
+### Altri componenti : Condensatori
 
-Bobina (induttore), sono "serbatoio di corrente" (contrari)
+Condensatori, sono "serbatoio di tensione"
+
+![Condensatori](media/condensatori%20foto.png)
+
+Simbolo
+
+![Condensatori](media/capacit%C3%A0.jpg)
+
+Note:
+- Usano un campo elettrico per immaganizzare energia, scoperti nel 1745
+- Si misurano in Farad ma è un'unità enorme, si usa di solito il micro-farad o addirittura il pico-farad (10^-12)
+- Il nome arriva dall'inglese Michael Faraday. E' uno dei scienzati più importanti al mondo, Einstein aveva il suo ritratto sulla scrivania.
+- Costruisse lui la prima dinamo
+- Molto utili per regolare una tensione, fanno dà serbatorio per eliminare variazioni
+
+[comment]: # (!!!)
+
+### Altri componenti : Induttori
+
+Bobina (induttore), sono "serbatoio di corrente"
 
 ![Induttore](media/induttori.png)
 
@@ -1160,31 +1169,37 @@ Simbolo
 
 ![Simbolo](media/induttore.jpg)
 
-[comment]: # (!!!)
-
-### Condensatori
-
-Condensatori, sono "serbatoio di tensione"
-
-Simbolo
-
-![Condensatori](media/capacit%C3%A0.jpg)
+Note:
+- Usano un campo magnetico per immaganizzare energia, scoperti attorno al 1830
+- Molto utili per filtrare parasiti, si oppongono alle variazioni veloci
+- Perché si usa L ? Per Lenz, un fisico russo che scoprì il rapporto fra la corrente e la tensione.
+- E' stato dato il suo nome ad un cratere sulla Luna
+- Si misurano in Henry, ma è un'unità enorme, si usa spesso il milli-Henry. Il suo nome è stato dato ad una montagna negli USA.
 
 [comment]: # (!!!)
 
 ### Schema elettrico
 
 Conclusione : leggiamo uno schema elettrico assieme
-Riconoscere i simboli
-Seguire la corrente
+
+![Radio](media/schema-radio.jpg)
+
+Che simboli riconoscete?
+
+Provate a indovinare cosa fa?
+
+Note:
+- Resistenze, Condensatori, Induttori (bobine), Diodo
+- E' una radio AM
+- Non lo costruiamo perché dobbiamo imparare a programmare l'elettronica nelle prossime lezioni
+- Transistor al centro, è un componente a tre zampe semiconduttore
+- Invece guarderemo da vicino i DIODI
 
 [comment]: # (!!!)
 
-### Fonti
+### FINE
 
-TBD 
-
-[comment]: # (!!!)
+Risolviamo problemi con Thonny/Board
 
 ## Elettronica con Micropython
 
@@ -1198,27 +1213,29 @@ Lezione 3 : semi-conduttori, diodi, board ESP32
 
 ## I semi-conduttori
 
-I componenti che abbiamo usati fin'ora erano lineari
+I componenti che abbiamo usati fin'ora erano "lineari"
 
-- Alcuni materiali possono essere sia isolanti che conduttori
-- Li chiamiamo semi-conduttori
+Alcuni materiali possono essere sia isolanti che conduttori a secondo delle condizioni
+
+Li chiamiamo semi-conduttori
 
 Note:
 - Lineari perché per resistenze U = R x I, Induttanze U = L x dV/dt, Capacità I =C x dV/dt
 - Esempi : diodi, transistori, celle fotovoltaiche
-- Ricordate perché alcuni materiali lasciano passare la corrente elettrica?
+- Ricordate perché alcuni materiali lasciano passare la corrente elettrica? (gli elettroni stretti o meno)
 
 [comment]: # (!!!)
 
 ## La giunzione P-N
 
-L'ingrediente fondamentale del diodo
+L'ingrediente fondamentale del diodo, creata nel 1939
 
 ![P-N](https://www.youtube.com/watch?v=JBtEckh3L9Q&t=3s)
 
 Note:
+- Ci stiamo avvicinando pian piano ai nostri giorni
 - Prima di usare un semiconduttore dobbiamo capire il principio fisico che lo rende possibile.
-- Valutare se tagliare o meno. E' interessante il video ma troppo lungo.
+- Valutare come tagliare il video. E' interessante ma troppo lungo.
 
 [comment]: # (!!!)
 
@@ -1274,12 +1291,19 @@ Note:
 
 ## Circuiti integrati
 
-Cosa sono (tanti componenti – transistor) messi assieme per uno scopo (memorizzare, fare
-operazioni logiche)
+Tanti transistor messi assieme per uno scopo (memorizzare, fare operazioni logiche)
 
 Economici da fabbricare in grandi quantità
 
-Il transistor come oggetto più fabbricato dell’uomo
+- Fabbrichiamo migliari di migliardi di transistor ogni anno
+
+![Wafer](media/wafer_45nm.jpg)
+
+Note:
+- Esistono circuiti integrati per tutte le operazioni comuni in elettronica
+- Esistono circuiti integrati che sono capaci di ricevere istruzioni da altri circuiti e di eseguirle
+- Diventano così "microprocessori" o più semplicemente "processori"
+
 
 [comment]: # (!!!)
 
@@ -1290,6 +1314,8 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 - Microprocessore con memoria integrata
 - Antenna WiFi
+- Interrutori ("switch")
+- Resistenze, Condensatori
 - Componenti di alimentazione
 - Ingressi/Uscite del controllore (GPIO)
 - Bus (USB x PC, SPI x LCD)
@@ -1303,6 +1329,40 @@ Il transistor come oggetto più fabbricato dell’uomo
 
 </div>
 </div>
+
+Note: prendete la board e guardatela tutti
+
+[comment]: # (!!!)
+
+## Unità di misura : velocità
+
+Processore: la frequenza alla quale prende istruzioni
+- 1 Hertz = 1 istruzione al secondo
+- Il nostro può arrivare a 240.000.000 Hz
+
+E' un processore molto potente
+
+![Gameboy ESP32](media/esp32gb_detail.jpg)
+
+Note:
+- Con questa board abbiamo abbastanza potenza per una console di gioco
+
+[comment]: # (!!!)
+
+## Unità di misura : memorie
+
+*Memoria volatile* (RAM)
+- Circa 2 millioni di bytes (2 Mb)
+- Viene persa quando perde la corrente
+
+*Memoria flash*
+- Circa 4 millioni di bytes (4Mb)
+- Rimane anche senza corrente grazie ad un condensatore
+
+Note:
+- Il tedesco Heinrich Rudolf Hertz scoprì le onde elettromagnetiche nel 1885
+- Quando sentite parlare di Gigabytes? cosa vuole dire?
+- Qual'è la memoria più veloce? La PSRAM (10-50ns vs. 500 us)
 
 [comment]: # (!!!)
 
@@ -2014,10 +2074,9 @@ disegna_dado(6)
 
 Se volete continuare la scoperta dell'elettronica
 
-- Board Arduino o ESP32
+- Board Arduino o ESP32 (AliExpress)
 - La robottica
-- TBD
 - Altri componenti collegabili (motori, sensori)
-- Connessioni dati
+- Connessioni e bus dati (USB,seriali)
 
 [comment]: # (!!!)
