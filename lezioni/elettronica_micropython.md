@@ -472,7 +472,7 @@ e molte altre (Watt, Farad, Henry, Coulomb) che non useremo...
 Note:
 - Vediamo questi tre scienzati da dove venivano
 - Volta, Italia. Ampère, Francia. Ohm, Germania.
-
+- Pila elettrica 1745. Legge di Ohm 1826.
 ---
 
 Secondo voi chi se l'è passata meglio fra i tre scienzati ?
