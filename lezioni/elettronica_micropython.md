@@ -6,7 +6,6 @@
 [comment]: # (hash: false)
 [comment]: # (respondToHashChanges: false)
 [comment]: # (slideNumber: true)
-[comment]: # (showNotes: 'separate-page')
 
 <style>
 .reveal h1 { font-size: 2.5em; }
@@ -70,6 +69,19 @@ Note:
 
 [comment]: # (!!!)
 
+## Regole del corso
+
+1. Si alza la mano per prendere la parola, a qualunque momento
+2. Si ascoltano le domande degli altri
+3. Non c'è una gara, non c'è un voto
+4. Condividete il materiale che avete a disposizione
+
+
+Note:
+- Chiarire che non costruiremo un robot ma qualcos'altro
+
+[comment]: # (!!!)
+
 
 ## Lezione 1
 
@@ -80,13 +92,13 @@ Elettricità
 Note:
 - Oggi sarà la lezione più teorica di tutte perché dobbiamo imparare i concetti ma ci divertiremo anche facendo esperimenti
 - Materiali richiesti: palloni, pezzi di carta tagliati, piatto, corda 5-10m un po spessa
-- Pile elettriche 1.5 V (2 a bambino), fili, alluminio, scotch
+- Pile elettriche 1.5 V (2 a ragazzi), fili, alluminio, scotch
 - Acqua / Acqua salata, monetine, ferro
 - Alcuni multimetri
 
 [comment]: # (!!!)
 
-## Importanza dell’elettricità 1/3
+## Elettricità a casa
 
 E' importante l'ettricità oggi ?
 
@@ -101,7 +113,7 @@ Note:
 
 [comment]: # (!!!)
 
-## Importanza dell’elettricità 2/3
+## Elettricità nella società
 
 "Motore" della società moderna
 
@@ -111,11 +123,11 @@ Note:
 - Avere più energia a disposizione ha consentito alla popolazione umana di vivere in grandi città
 - Menzionare idrocarburi come secondo "motore"
 - Nervi
-- Sapete come è stato scoperto ? Scienfico italiano, Galvani e le rane
+- Sapete come è stato scoperto ? Scienfico italiano, Galvani e le rane (1781)
 
 [comment]: # (!!!)
 
-## Importanza dell’elettricità 3/3
+## E prima ?
 
 E' sempre stato così importante nella nostra vita?
 
@@ -124,7 +136,7 @@ Note:
 
 [comment]: # (!!! data-auto-animate)
 
-## Importanza dell’elettricità 3/3
+## Animali, legna, carbone
 
 E' sempre stato così importante nella nostra vita?
 
@@ -136,7 +148,7 @@ Note:
 
 [comment]: # (!!!)
 
-## Importanza dell’elettricità 3/3
+## Vantaggi
 
 _Ma perché è così comoda l'elettricità?_
 
@@ -150,7 +162,7 @@ Note:
 
 [comment]: # (!!!)
 
-## Elettricità nel mondo 1/3
+## Quanta elettricità ?
 
 - Elettricità nel mondo - tanta o poca?
 
@@ -162,13 +174,14 @@ Note:
 Ce ne vorrà di più in futuro ?
 
 Note:
+- Prima unità di misura, James Watt (1776 - macchina a vapore efficiente)
 - Un asciugacapelli di 2000 W accesso un'ora quanto consuma?
 - Accesso due ore? (1 anno=17.5MWh)
 - 3000 TWh sono 171 millioni di acciugacappelli accessi in permanenza
 
 [comment]: # (!!! data-auto-animate)
 
-## Elettricità nel mondo 2/3
+## Come la usiamo?
 
 Elettrificazione come motore della riduzione CO2
 
@@ -475,7 +488,7 @@ Ampère ha il suo nome inciso nella Torre Eiffel
 ![Ampère](media/ampere.jpg)
 
 [comment]: # (!!! data-auto-animate)
-Ohm non fu creduto e rinuncio al posto in università
+Ohm non fu creduto e rinunciò al posto in università
 
 ![Ohm](media/ohm.jpg)
 
