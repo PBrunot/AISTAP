@@ -44,7 +44,7 @@ Note:
 - Misurare resistenze
 - Resistenze in parallelo e in serie
 
-[comment]: # (!!! data-background-color="aqua")
+[comment]: # (!!! data-background-color="white")
 
 ## Riassunto ultima lezione 1 / 2
 
@@ -138,8 +138,6 @@ Note:
 
 [comment]: # (!!!)
 
-[comment]: # (!!!)
-
 ### Resistenze 1/3
 
 Ogni componente elettrico ha un simbolo
@@ -159,6 +157,8 @@ Note:
 Resistenza del forno
 
 ![Forno](media/forno.png)
+
+Trasforma la corrente
 
 Note:
 - Attenzione che la RESISTENZA ELETTRICA c'è dapertutto (salvo superconduttori)
@@ -212,7 +212,7 @@ Note:
 
 [comment]: # (!!!)
 
-### Python
+### (Micro)Python
 
 ![Micropython logo](media/micropython-logo.svg)
 
