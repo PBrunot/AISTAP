@@ -7,7 +7,6 @@
 [comment]: # (respondToHashChanges: false)
 [comment]: # (slideNumber: true)
 
-
 <style>
 .reveal h1 { font-size: 2.5em; }
 </style>
@@ -32,6 +31,8 @@
 
 Pascal Brunot | AISTAP | Luglio 2023
 
+http://aistap-micropython.pages.dev/
+
 Lezione 2 : Motori, Resistenze e Python
 
 Note:
@@ -47,9 +48,10 @@ Note:
 
 ## Riassunto ultima lezione 1 / 2
 
-Elettricità è *movimento di cariche elettriche*
+Corrente elettrica = *movimento di cariche elettriche*
 
 ![Movimento cariche](media/current-flow.gif)
+
 
 Note:
 - Abbiamo visto che l'elettricità è fondamentale nel mondo
@@ -59,25 +61,35 @@ Note:
 
 [comment]: # (!!!)
 
-## Riassunto ultima lezione
+## Riassunto ultima lezione 2/2
 
 *Unità di misura*
 
 | Grandezza (Abbr.) | Unità | Simbolo | Spiegazione |
 | -- | -- | -- | -- |
 | *Corrente* (I) | Ampere | A | Flusso delle cariche elettriche |
-| *Tensione* (U o V) | Volt   | V | Potenziale delle cariche elettriche |
+| *Tensione* (U o V) | Volt   | V | Differenza di potenziale |
 | *Resistenza* (R) | Ohm | Ω | "Freno" alle cariche elettriche |
+
+[comment]: # (!!!)
+
+## La tensione
+
+La tensione in Volt fra 2 punti è definita la differenza di potenziale elettrico fra i due punti
+
+![Differenza](media/tensione.png)
+
+Mette in moto le cariche elettriche (flusso)
 
 [comment]: # (!!!)
 
 ## Riassunto ultima lezione
 
-Abbiamo usato alcuni componenti elettrici...
+Abbiamo usato alcuni componenti elettrici
 
 - Pile (generatori di tensione)
 - Fili
-- Multimetro
+- Multimetro (Voltmetro)
 
 [comment]: # (!!!)
 
@@ -86,7 +98,6 @@ Abbiamo usato alcuni componenti elettrici...
 ![Magnete](media/magnete.jpg)
 
 Cosa vedete su questa immagine ?
-Prendete due magneti e provate a avvicinarli/allontanarli
 - Che cosa osservate ?
 
 Note:
@@ -110,7 +121,7 @@ Note:
 - Orsted era convinto che le forze della natura erano unite fra di loro, e provò per 13 anni a scoprire il collegamento fra elettricità e magnetismo.
 - L'elettricità era già nota e studiata da un secolo prima che si notasse questo effetto
 - Grazie a lui Maxwell nel 1864 scrisse le leggi che unificano elettricità e magnetismo
-- Vediamo come fare qualcosa di utile con tutti i due
+- Vedremo come fare qualcosa di utile con tutti i due
 
 [comment]: # (!!!)
 
@@ -121,115 +132,17 @@ Note:
 _secondo voi per lui com'è andata la vita?_
 
 Note:
-- Dopo l'elettromagnetismo è stato il primo chimico a produrre alluminio 
+- Dopo l'elettromagnetismo è stato il primo chimico a produrre alluminio
+- Scrisse poesia
 - Il suo nome è stato dato ad un asteroide
 
 [comment]: # (!!!)
-
-### Uniamo elettricità e magnetismo
-
-Oggi anche noi faremo esperimenti
-
-&#x1F6B8; Costruiamo un motore elettrico
-
-Il simbolo del motore
-
-![Motor](media/motor%20symbol.png)
-
-Note:
-- Adesso scopriamo anche noi questo effetto nascosto
-
-[comment]: # (!!!)
-
-### Costruzione motore
-
-&#x1F6B8; Istruzioni
-
-- Mettere le due graffette sulle connessioni laterali della breadboard
-- Disporre bobina in mezzo alle graffette
-- Collegare le 3 batterie alle connessioni
-- Dare un piccolo impulso alla bobina
-- Avvicinare con la mano i magneti
-
-Note:
-- motore homopolo 
-- quanto tutti hanno un motore funzionante passare alle domande
-
-[comment]: # (!!!)
-
-### Osservazione
-
-Girano tutte nello stesso verso ?
-
-Perché girano secondo voi ?
-
-![Esempio](media/motore-1.png)
-
-[comment]: # (!!!)
-
-### Ipotesi
-
-&#x1F6B8; Riassunto
-
-| Chi | Come gira | Perché gira ? |
-| -- | -- | -- |
-| Gruppo 1 | $$ \hookleftarrow \hookrightarrow ? $$ | ...... |
-| Gruppo 2 | ..... | .... |
-| Gruppo 3 | ..... | .... |
-| Gruppo 4 | ..... | .... |
-| Gruppo 5 | ..... | .... |
-| Gruppo 6 | ..... | .... |
-
-Provate a farlo girare nell'altro senso ?
-
-[comment]: # (!!!)
-
-## Ipotesi 
-
-&#x1F6B8; Da cosa dipende il senso di rotazione ?
-
-Osserviamo
-
-<iframe width="560" height="315" src="media/motore.mp4" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-Note:
-- "è l'elettricità" che lo fa girare ? -> allora togliamo il magnete
-- "senso di rotazione diversi" -> cambiamo verso del magnete 
-- provare a cambiare il + e il - della pila
-- ricordare effetto di Orsted
-
-[comment]: # (!!!)
-
-### Conclusioni scientifiche
-
-Le cariche elettriche in movimento nella bobina creano un "magnete" che viene attratto o respinto dal magnete fisso
-
-Questa spinta fa girare la bobina.
-- esattamente come l'ago della bussola si spostava con la corrente
-- però la bussola poi si fermava... perché questo no?
-
-Note:
-- Non è affatto semplice spiegare che il campo magnetico del magnete fisso attrae metà bobina e respinge metà bobina creando il movimento 
-- Spiegare la regola della mano sinistra mi sembra troppo ambizioso
-
-[comment]: # (!!!)
-
-### Conclusioni scientifiche
-
-Perché non rimangono i magneti in equilibrio (e invece va avanti a girare) ?
-
-La parte di filo in contatto con la graffetta è conduttrice *solo a metà* 
-
-Ad ogni mezza-rotazione si interrompe la corrente *ma la bobina continua per inerzia*
-
-Note:
-- Valutare se fare l'esperimento con multimetro e bobina in rotazione per osservare generazione
 
 [comment]: # (!!!)
 
 ### Resistenze 1/3
 
-Ogni componente ha un simbolo
+Ogni componente elettrico ha un simbolo
 
 Ecco la resistenza
 
@@ -274,23 +187,8 @@ Le resistenze si misurano con il multimetro in posizione Ω
 
 ![Misura](media/misura_resistenza.jpg)
 
-&#x1F6B8; Misurate le resistenze che avete sul tavolo
-
 Note:
 - Come le tensioni le resistenze di misurano fra due punti del circuito con il multimetro in parallelo
-
-[comment]: # (!!!)
-
-### Misura delle resistenze con il multimetro
-
-| Chi | Valore |
-| -- | -- |
-| Gruppo 1 | ..... Ω |
-| Gruppo 2 | ..... Ω |
-| Gruppo 3 | ..... Ω |
-| Gruppo 4 | ..... Ω | 
-| Gruppo 5 | ..... Ω |
-| Gruppo 6 | ..... Ω |
 
 [comment]: # (!!!)
 
@@ -314,44 +212,6 @@ Note:
 
 [comment]: # (!!!)
 
-### Esperimento 1
-
-&#x1F6B8; Circuito su breadboard
-
-Mettere 2 resistenze uguali una dopo l'altra
-Mettere 2 resistenze uguali accanto l'uno l'altra
-Misurate la resistenza totale 
-
-[TinkerCad](https://www.tinkercad.com/things/8aVDNguOsCs)
-
-![Resistenze](media/resistenze.jpg)
-
-Note:
-- [Circuito](https://www.tinkercad.com/things/8aVDNguOsCs-sizzling-borwo/editel)
-- Accanto = parallelo
-- Dopo = Serie
-- Fili = ricordatevi la corda che deve circolare
-
-[comment]: # (!!!)
-
-### Esperimento 1
-
-&#x1F6B8; Risultati
-
-| Gruppo | Valore singola resistenza | Valore in serie | Valore in parallelo |
-| -- | -- | -- | -- |
-| 1 | ..... Ω | ..... Ω |..... Ω |
-| 2 | ..... Ω | ..... Ω |..... Ω |
-| 3 | ..... Ω | ..... Ω |..... Ω |
-| 4 | ..... Ω |  ..... Ω |..... Ω |
-| 5 | ..... Ω | ..... Ω |..... Ω |
-| 6 | ..... Ω | ..... Ω |..... Ω |
-
-Note:
-- Cosa possiamo concludere?
-
-[comment]: # (!!!)
-
 ### Python
 
 ![Micropython logo](media/micropython-logo.svg)
@@ -366,6 +226,8 @@ Note:
 ### Python
 
 Lanciare Thonny
+
+![Python](media/python%20execution.png)
 
 ---
 
@@ -412,6 +274,7 @@ print ("Ciao " + nome)
 
 Note:
 - Verificare che tutti abbiano scritto il programma
+- Domanda cos'è una variabile ? Scatola (nome, tipo, valore)
 
 ---
 
@@ -425,7 +288,7 @@ int() # trasforma in interno
 range(a,b) # l'intervallo fra a (incluso) e b (non incluso)
 ```
 
-Parole chiavi
+Parole chiavi def, for, while
 
 ```python
 def funzione(parametro1):  # definisce una funzione di un parametro
@@ -544,7 +407,7 @@ Condensatori, sono "serbatoio di tensione"
 
 ![Condensatori](media/condensatori%20foto.png)
 
-Simbolo
+Abbreviazione (C), Simbolo, Unità (F)
 
 ![Condensatori](media/capacit%C3%A0.jpg)
 
@@ -563,7 +426,7 @@ Bobina (induttore), sono "serbatoio di corrente"
 
 ![Induttore](media/induttori.png)
 
-Simbolo
+Abbreviazione (L), Simbolo, Unità (Farad)
 
 ![Simbolo](media/induttore.jpg)
 
@@ -595,8 +458,166 @@ Note:
 
 [comment]: # (!!!)
 
-### FINE
+### FINE TEORIA
 
 Risolviamo problemi con Thonny/Board
 
 [comment]: # (!!!)
+
+### Uniamo elettricità e magnetismo
+
+Oggi anche noi faremo esperimenti
+
+&#x1F6B8; Costruiamo un motore elettrico
+
+Il simbolo del motore
+
+![Motor](media/motor%20symbol.png)
+
+Note:
+- Adesso scopriamo anche noi questo effetto nascosto
+
+[comment]: # (!!!)
+
+### Costruzione motore
+
+&#x1F6B8; Istruzioni
+
+- Mettere le due graffette sulle connessioni laterali della breadboard
+- Disporre bobina in mezzo alle graffette
+- Collegare le 3 batterie alle connessioni
+- Dare un piccolo impulso alla bobina
+- Avvicinare con la mano i magneti
+
+Note:
+- motore homopolo 
+- quanto tutti hanno un motore funzionante passare alle domande
+
+[comment]: # (!!!)
+
+### Osservazione
+
+Girano tutte nello stesso verso ?
+
+Perché girano secondo voi ?
+
+![Esempio](media/motore-1.png)
+
+[comment]: # (!!!)
+
+### Ipotesi
+
+&#x1F6B8; Riassunto risultati
+
+| Chi | Come gira | Perché gira ? |
+| -- | -- | -- |
+| Gruppo 1 | $$ \hookleftarrow \hookrightarrow ? $$ | ...... |
+| Gruppo 2 | ..... | .... |
+| Gruppo 3 | ..... | .... |
+| Gruppo 4 | ..... | .... |
+| Gruppo 5 | ..... | .... |
+| Gruppo 6 | ..... | .... |
+
+Provate a farlo girare nell'altro senso ?
+
+[comment]: # (!!!)
+
+## Ipotesi 
+
+&#x1F6B8; Da cosa dipende il senso di rotazione ?
+
+Osserviamo
+
+<iframe width="560" height="315" src="media/motore.mp4" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Note:
+- "è l'elettricità" che lo fa girare ? -> allora togliamo il magnete
+- "senso di rotazione diversi" -> cambiamo verso del magnete 
+- provare a cambiare il + e il - della pila
+- ricordare effetto di Orsted
+
+[comment]: # (!!!)
+
+### Conclusioni scientifiche
+
+Le cariche elettriche in movimento nella bobina creano un "magnete" che viene attratto o respinto dal magnete fisso
+
+Questa spinta fa girare la bobina.
+- esattamente come l'ago della bussola si spostava con la corrente
+- però la bussola poi si fermava... perché questo no?
+
+Note:
+- Non è affatto semplice spiegare che il campo magnetico del magnete fisso attrae metà bobina e respinge metà bobina creando il movimento 
+- Spiegare la regola della mano sinistra mi sembra troppo ambizioso
+
+[comment]: # (!!!)
+
+### Conclusioni scientifiche
+
+Perché non rimangono i magneti in equilibrio (e invece va avanti a girare) ?
+
+La parte di filo in contatto con la graffetta è conduttrice *solo a metà* 
+
+Ad ogni mezza-rotazione si interrompe la corrente *ma la bobina continua per inerzia*
+
+Note:
+- Valutare se fare l'esperimento con multimetro e bobina in rotazione per osservare generazione
+
+### Misura delle resistenze con il multimetro
+
+&#x1F6B8; Misurate le resistenze che avete sul tavolo
+
+| Chi | Valore 1 | Valore 2  |
+| -- | -- | -- |
+| Gruppo 1 | ..... Ω | -- |
+| Gruppo 2 | ..... Ω | -- |
+| Gruppo 3 | ..... Ω | -- |
+| Gruppo 4 | ..... Ω | -- |
+| Gruppo 5 | ..... Ω | -- |
+| Gruppo 6 | ..... Ω | -- |
+
+[comment]: # (!!!)
+
+### Esperimento 3
+
+&#x1F6B8; Circuito su breadboard
+
+Mettere 2 resistenze uguali una dopo l'altra
+Mettere 2 resistenze uguali accanto l'uno l'altra
+Misurate la resistenza totale 
+
+[TinkerCad](https://www.tinkercad.com/things/8aVDNguOsCs)
+
+![Resistenze](media/resistenze.jpg)
+
+Note:
+- [Circuito](https://www.tinkercad.com/things/8aVDNguOsCs-sizzling-borwo/editel)
+- Accanto = parallelo
+- Dopo = Serie
+- Fili = ricordatevi la corda che deve circolare
+
+[comment]: # (!!!)
+
+### Esperimento 3
+
+&#x1F6B8; Risultati
+
+| Gruppo | Valore singola resistenza | Valore in serie | Valore in parallelo |
+| -- | -- | -- | -- |
+| 1 | ..... Ω | ..... Ω |..... Ω |
+| 2 | ..... Ω | ..... Ω |..... Ω |
+| 3 | ..... Ω | ..... Ω |..... Ω |
+| 4 | ..... Ω |  ..... Ω |..... Ω |
+| 5 | ..... Ω | ..... Ω |..... Ω |
+| 6 | ..... Ω | ..... Ω |..... Ω |
+
+Note:
+- Cosa possiamo concludere?
+
+[comment]: # (!!!)
+
+### Analisi risultati
+
+| Gruppo | Misura Rparallelo | Teoria | Errore |
+| -- | -- | -- | -- |
+| 1  | ..... Ω | ..... Ω | ..... % |
