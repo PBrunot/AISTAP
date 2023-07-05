@@ -7,3 +7,14 @@ Lezione1:
 
 Fare i gruppi e la loro disposizione
 I palloni piacciono ma distraggono
+
+Lezione2:
+- Non siamo riusciti a fare la legge di Ohm
+- Il computer rallenta enormamente la lezione
+- Problema installazione Thonny
+- Disporre prima i tavoli a gruppi per evitare il caos
+- Il motore elettrico funziona e trovano la soluzione (cambiare verso del magnete, polarità)
+- 1h30 difficile. Probabilmen funzionerebbe meglio con prima parte teorica - Thonny, Pausa e seconda parte esperimentale
+
+Lezione 3:
+- Tagliata la teoria fisica della giunzione P-N

@@ -1244,6 +1244,64 @@ Pascal Brunot | AISTAP | Luglio 2023
 Lezione 3 : semi-conduttori, diodi, board ESP32
 
 [comment]: # (!!! data-background-color="aqua")
+[comment]: # (!!!)
+
+### Altri componenti : Condensatori
+
+Condensatori, sono "serbatoio di tensione"
+
+![Condensatori](media/condensatori%20foto.png)
+
+Abbreviazione (C), Simbolo, Unità (F)
+
+![Condensatori](media/capacit%C3%A0.jpg)
+
+Note:
+- Usano un campo elettrico per immaganizzare energia, scoperti nel 1745
+- Si misurano in Farad ma è un'unità enorme, si usa di solito il micro-farad o addirittura il pico-farad (10^-12)
+- Il nome arriva dall'inglese Michael Faraday. E' uno dei scienzati più importanti al mondo, Einstein aveva il suo ritratto sulla scrivania.
+- Costruisse lui la prima dinamo
+- Molto utili per regolare una tensione, fanno dà serbatorio per eliminare variazioni
+
+[comment]: # (!!!)
+
+### Altri componenti : Induttori
+
+Bobina (induttore), sono "serbatoio di corrente"
+
+![Induttore](media/induttori.png)
+
+Abbreviazione (L), Simbolo, Unità (Farad)
+
+![Simbolo](media/induttore.jpg)
+
+Note:
+- Usano un campo magnetico per immaganizzare energia, scoperti attorno al 1830
+- Molto utili per filtrare parasiti, si oppongono alle variazioni veloci
+- Perché si usa L ? Per Lenz, un fisico russo che scoprì il rapporto fra la corrente e la tensione.
+- E' stato dato il suo nome ad un cratere sulla Luna
+- Si misurano in Henry, ma è un'unità enorme, si usa spesso il milli-Henry. Il suo nome è stato dato ad una montagna negli USA.
+
+[comment]: # (!!!)
+
+### Schema elettrico
+
+Conclusione : leggiamo uno schema elettrico assieme
+
+![Radio](media/schema-radio.jpg)
+
+Che simboli riconoscete?
+
+Provate a indovinare cosa fa?
+
+Note:
+- Resistenze, Condensatori, Induttori (bobine), Diodo
+- E' una radio AM
+- Non lo costruiamo perché dobbiamo imparare a programmare l'elettronica nelle prossime lezioni
+- Transistor al centro, è un componente a tre zampe semiconduttore
+- Invece guarderemo da vicino i DIODI
+
+[comment]: # (!!!)
 
 ## I semi-conduttori
 
@@ -1257,19 +1315,6 @@ Note:
 - Lineari perché per resistenze U = R x I, Induttanze U = L x dV/dt, Capacità I =C x dV/dt
 - Esempi : diodi, transistori, celle fotovoltaiche
 - Ricordate perché alcuni materiali lasciano passare la corrente elettrica? (gli elettroni stretti o meno)
-
-[comment]: # (!!!)
-
-## La giunzione P-N
-
-L'ingrediente fondamentale del diodo, creata nel 1939
-
-![P-N](https://www.youtube.com/watch?v=JBtEckh3L9Q&t=3s)
-
-Note:
-- Ci stiamo avvicinando pian piano ai nostri giorni
-- Prima di usare un semiconduttore dobbiamo capire il principio fisico che lo rende possibile.
-- Valutare come tagliare il video. E' interessante ma troppo lungo.
 
 [comment]: # (!!!)
 
@@ -1322,24 +1367,6 @@ Note:
 
 [comment]: # (!!!)
 
-## Circuiti integrati
-
-Tanti transistor messi assieme per uno scopo (memorizzare, fare operazioni logiche)
-
-Economici da fabbricare in grandi quantità
-
-- Fabbrichiamo migliari di migliardi di transistor ogni anno
-
-![Wafer](media/wafer_45nm.jpg)
-
-Note:
-- Esistono circuiti integrati per tutte le operazioni comuni in elettronica
-- Esistono circuiti integrati che sono capaci di ricevere istruzioni da altri circuiti e di eseguirle
-- Diventano così "microprocessori" o più semplicemente "processori"
-
-
-[comment]: # (!!!)
-
 ## Struttura della board S2 PICO
 
 <div class="twocolumn">
@@ -1369,7 +1396,7 @@ Note: prendete la board e guardatela tutti
 
 ## Unità di misura : velocità
 
-Processore: la frequenza alla quale prende istruzioni
+Processore: la frequenza alla quale carica istruzioni
 - 1 Hertz = 1 istruzione al secondo
 - Il nostro può arrivare a 240.000.000 Hz
 
@@ -1433,6 +1460,53 @@ Note:
 
 [comment]: # (!!!)
 
+## Conclusioni
+
+Sito Micropython (dove scaricare firmware e documentazione)
+
+[Micropython](https://micropython.org/)
+
+Componenti usati
+
+- [S2 Pico](https://www.wemos.cc/en/latest/s2/s2_pico.html)
+
+- [Ali Express](https://it.aliexpress.com/item/1005003215673294.html) 
+
+- [APA 106](https://it.aliexpress.com/item/1005001863273661.html)
+
+[comment]: # (!!!)
+
+## Slides aggiuntive
+
+L'ingrediente fondamentale del diodo, creata nel 1939
+
+![P-N](https://www.youtube.com/watch?v=JBtEckh3L9Q&t=3s)
+
+Note:
+- Ci stiamo avvicinando pian piano ai nostri giorni
+- Prima di usare un semiconduttore dobbiamo capire il principio fisico che lo rende possibile.
+- Valutare come tagliare il video. E' interessante ma troppo lungo.
+
+[comment]: # (!!!)
+
+## Circuiti integrati
+
+Tanti transistor messi assieme per uno scopo (memorizzare, fare operazioni logiche)
+
+Economici da fabbricare in grandi quantità
+
+- Fabbrichiamo migliari di migliardi di transistor ogni anno
+
+![Wafer](media/wafer_45nm.jpg)
+
+Note:
+- Esistono circuiti integrati per tutte le operazioni comuni in elettronica
+- Esistono circuiti integrati che sono capaci di ricevere istruzioni da altri circuiti e di eseguirle
+- Diventano così "microprocessori" o più semplicemente "processori"
+
+
+[comment]: # (!!!)
+
 ## Come provare senza essere connesso alla BOARD
 
 [WOKWI ESP32](https://wokwi.com/projects/new/micropython-esp32)
@@ -1461,21 +1535,6 @@ Note:
 
 [comment]: # (!!!)
 
-## Conclusioni
-
-Sito Micropython (dove scaricare firmware e documentazione)
-
-[Micropython](https://micropython.org/)
-
-Componenti usati
-
-- [S2 Pico](https://www.wemos.cc/en/latest/s2/s2_pico.html)
-
-- [Ali Express](https://it.aliexpress.com/item/1005003215673294.html) 
-
-- [APA 106](https://it.aliexpress.com/item/1005001863273661.html)
-
-[comment]: # (!!!)
 
 ## Elettronica con Micropython
 
