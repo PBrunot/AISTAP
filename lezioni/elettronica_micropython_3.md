@@ -52,6 +52,31 @@ Note:
 
 [comment]: # (!!!)
 
+### Legge di Ohm 1/2
+
+Tensione e correnti attraverso una resistenza seguono la *legge di Ohm*
+
+$$ U = R \times I $$
+
+Tensione = Corrente x Resistenza
+
+Note:
+- Spiegare il concetto di legge fisica ? 
+- Sarà l'unica formula che vedremo durante il corso ma è la più importante
+- Si possono manipolare i termini dell'equazione U/R=I, I=U/R
+
+[comment]: # (!!!)
+
+### Legge di Ohm 2/2
+
+Un triangolo per ricordare la legge di Ohm
+
+![VRI](media/ohm-law.jpg)
+
+_V era il simbolo della tensione, come U, ricordate?_
+
+[comment]: # (!!!)
+
 ### Condensatori
 
 Condensatori, sono "serbatoio di tensione"
@@ -155,14 +180,13 @@ Simbolo
 
 <small>
 
-| Gruppo | Colore | Tensione U(LED) | Tensione U(R) |
-| -- | -- | -- | -- |
-| 1 | -- | ..... V | .... V |
-| 2 | -- | ..... V | .... V |
-| 3 | -- | ..... V | .... V |
-| 4 | -- | ..... V | .... V |
-| 5 | -- | ..... V | .... V |
-| 6 | -- | ..... V | .... V |
+| Gruppo | Colore | Tensione U(LED) | Tensione U(R) | Tensione (Pile)
+| -- | -- | -- | -- | -- |
+| 1 | -- | ..... V | .... V | .... V |
+| 2 | -- | ..... V | .... V | .... V |
+| 3 | -- | ..... V | .... V | .... V |
+| 4 | -- | ..... V | .... V | .... V |
+| 5 | -- | ..... V | .... V | .... V |
 
 </small>
 
@@ -178,11 +202,11 @@ Note:
 <div class="twocolumn">
 <div>
 
-- Microprocessore con memoria integrata
-- Antenna WiFi
+- Microprocessore ESP32 + memoria integrata
+- Antenna Wi-Fi
 - Interrutori ("switch")
 - Resistenze, Condensatori
-- Componenti di alimentazione
+- Regolatore di alimentazione
 - Ingressi/Uscite del controllore (GPIO)
 - Bus (USB x PC, SPI x LCD)
 - Pulsanti (RESET, GPIO0)
@@ -263,18 +287,6 @@ Pin(10).off()
 
 Note:
 - Porta seriale varia da computer
-
-[comment]: # (!!!)
-
-## Librerie Python e Micropython
-
-E' molto importante riusare codice già testato (librerie)
-
-Micropython dà librerie utili
-
-- Librerie machine [Link](https://docs.micropython.org/en/v1.20.0/library/machine.html)
-- Librerie dispositivi (NeoPixel, Bluetooth...) [Link](https://docs.micropython.org/en/v1.20.0/library/neopixel.html)
-- Librerie Python (random, time, ecc..) [Link](https://docs.micropython.org/en/v1.20.0/library/random.html)
 
 [comment]: # (!!!)
 
@@ -378,4 +390,14 @@ Note:
 - Premio potrebbe essere un LED? Il pallone di elio?
 
 [comment]: # (!!!)
+
+## Librerie Python e Micropython
+
+E' molto importante riusare codice già testato (librerie)
+
+Micropython dà librerie utili
+
+- Librerie machine [Link](https://docs.micropython.org/en/v1.20.0/library/machine.html)
+- Librerie dispositivi (NeoPixel, Bluetooth...) [Link](https://docs.micropython.org/en/v1.20.0/library/neopixel.html)
+- Librerie Python (random, time, ecc..) [Link](https://docs.micropython.org/en/v1.20.0/library/random.html)
 
