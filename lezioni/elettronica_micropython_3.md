@@ -77,6 +77,22 @@ _V era il simbolo della tensione, come U, ricordate?_
 
 [comment]: # (!!!)
 
+### Interruttore
+
+![Interrutore luce](media/interruttore.png)
+
+Simbolo
+
+![Interrutore simbolo](media/interruttore-simbolo.jpg)
+
+A cosa serve?
+
+Note:
+- Imparare i simboli è come riconoscere i mattoncini di Lego
+- Poi si assemblano i componenti per fare circuiti più o meno complessi
+
+[comment]: # (!!!)
+
 ### Condensatori
 
 Condensatori, sono "serbatoio di tensione"

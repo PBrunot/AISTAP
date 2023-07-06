@@ -952,30 +952,6 @@ Note:
 
 [comment]: # (!!!)
 
-### Legge di Ohm 1/2
-
-Le cariche elettriche che passano attraverso una resistenza seguono la *legge di Ohm*
-
-$$ U = R \times I $$
-
-Tensione = Corrente x Resistenza
-
-Note:
-- Spiegare il concetto di legge fisica ? 
-- Sarà l'unica formula che vedremo durante il corso ma è la più importante
-- Si possono manipolare i termini dell'equazione U/R=I, I=U/R
-
-[comment]: # (!!!)
-
-### Legge di Ohm 2/2
-
-Un triangolo per ricordare la legge di Ohm
-
-![VRI](media/ohm-law.jpg)
-
-_V era il simbolo della tensione, come U, ricordate?_
-
-[comment]: # (!!!)
 
 ### Pausa Python 3/3
 
@@ -995,81 +971,6 @@ print(ohm_u(200, 0.1))
 Note:
 - Risultato 20 V
 - Esercizi extra possibili
-
-[comment]: # (!!!)
-
-### Altri componenti : interruttore
-
-![Interrutore luce](media/interruttore.png)
-
-Simbolo
-
-![Interrutore simbolo](media/interruttore-simbolo.jpg)
-
-A cosa serve?
-
-Note:
-- Imparare i simboli è come riconoscere i mattoncini di Lego
-- Poi si assemblano i componenti per fare circuiti più o meno complessi
-
-[comment]: # (!!!)
-
-### Altri componenti : Condensatori
-
-Condensatori, sono "serbatoio di tensione"
-
-![Condensatori](media/condensatori%20foto.png)
-
-Abbreviazione (C), Simbolo, Unità (F)
-
-![Condensatori](media/capacit%C3%A0.jpg)
-
-Note:
-- Usano un campo elettrico per immaganizzare energia, scoperti nel 1745
-- Si misurano in Farad ma è un'unità enorme, si usa di solito il micro-farad o addirittura il pico-farad (10^-12)
-- Il nome arriva dall'inglese Michael Faraday. E' uno dei scienzati più importanti al mondo, Einstein aveva il suo ritratto sulla scrivania.
-- Costruisse lui la prima dinamo
-- Molto utili per regolare una tensione, fanno dà serbatorio per eliminare variazioni
-
-[comment]: # (!!!)
-
-### Altri componenti : Induttori
-
-Bobina (induttore), sono "serbatoio di corrente"
-
-![Induttore](media/induttori.png)
-
-Abbreviazione (L), Simbolo, Unità (Farad)
-
-![Simbolo](media/induttore.jpg)
-
-Note:
-- Usano un campo magnetico per immaganizzare energia, scoperti attorno al 1830
-- Molto utili per filtrare parasiti, si oppongono alle variazioni veloci
-- Perché si usa L ? Per Lenz, un fisico russo che scoprì il rapporto fra la corrente e la tensione.
-- E' stato dato il suo nome ad un cratere sulla Luna
-- Si misurano in Henry, ma è un'unità enorme, si usa spesso il milli-Henry. Il suo nome è stato dato ad una montagna negli USA.
-
-[comment]: # (!!!)
-
-### Schema elettrico
-
-Conclusione : leggiamo uno schema elettrico assieme
-
-![Radio](media/schema-radio.jpg)
-
-Che simboli riconoscete?
-
-Provate a indovinare cosa fa?
-
-Note:
-- Resistenze, Condensatori, Induttori (bobine), Diodo
-- E' una radio AM
-- Non lo costruiamo perché dobbiamo imparare a programmare l'elettronica nelle prossime lezioni
-- Transistor al centro, è un componente a tre zampe semiconduttore
-- Invece guarderemo da vicino i DIODI
-
-[comment]: # (!!!)
 
 ### FINE TEORIA
 
@@ -1235,6 +1136,8 @@ Note:
 | -- | -- | -- | -- |
 | 1  | ..... Ω | ..... Ω | ..... % |
 
+[comment]: # (!!!)
+
 ## Elettronica con Micropython
 
 ![Micropython logo](media/micropython-logo.svg) <!-- .element: style="height:250px; max-width:200vw; image-rendering: crisp-edges;" -->
@@ -1282,6 +1185,22 @@ Un triangolo per ricordare la legge di Ohm
 ![VRI](media/ohm-law.jpg)
 
 _V era il simbolo della tensione, come U, ricordate?_
+
+[comment]: # (!!!)
+
+### Interruttore
+
+![Interrutore luce](media/interruttore.png)
+
+Simbolo
+
+![Interrutore simbolo](media/interruttore-simbolo.jpg)
+
+A cosa serve?
+
+Note:
+- Imparare i simboli è come riconoscere i mattoncini di Lego
+- Poi si assemblano i componenti per fare circuiti più o meno complessi
 
 [comment]: # (!!!)
 
