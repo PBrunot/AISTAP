@@ -59,31 +59,6 @@ Note:
 
 [comment]: # (!!!)
 
-## Micropython 
-
-Come programmare senza board collegata?
-
-[WOKWI](https://wokwi.com/projects/305568836183130690)
-
-Note:
-- Quelli che hanno un computer e rete wifi si possono collegare a www.wokwi.com e selezionare "ESP32 with Micropython"
-
-[comment]: # (!!!)
-
-## Micropython: Sequenza di boot
-
-Quando si accende il computer, parte il sistema operativo
-
-Con Micropython al "power-on" o pulstane "reset"
-
-- Esegue il file boot.py *non lo toccate*
-- Esegue il file main.py *noi lavoremo qua*
-
-Note:
-- Nel file boot.py ho preparato gli import e le funzioni utili per il resto del corso
-
-[comment]: # (!!!)
-
 ## Librerie Python e Micropython
 
 E' molto importante riusare codice già testato (librerie)
@@ -92,13 +67,13 @@ Micropython dà librerie utili
 
 - Librerie machine [Link](https://docs.micropython.org/en/v1.20.0/library/machine.html)
 - Librerie dispositivi (NeoPixel, Bluetooth...) [Link](https://docs.micropython.org/en/v1.20.0/library/neopixel.html)
-- Librerie Python (random, math, time, ecc..) [Link](https://docs.micropython.org/en/v1.20.0/library/random.html)
+- Librerie Python (random, time, ecc..) [Link](https://docs.micropython.org/en/v1.20.0/library/random.html)
 
 [comment]: # (!!!)
 
-## Pratica BOARD
+## Blink led integrato (lezione3-1.py)
 
-&#x1F6B8; Caricare un file PY in Thonny
+&#x1F6B8; Aprire un file PY in Thonny
 
 ```python
 while True:
@@ -107,8 +82,6 @@ while True:
     Pin(10).off()
     sleep_ms(1000)
 ```
-
-&#x1F6B8; Caricare il file PY sul controllore come main.py
 
 &#x1F6B8; Premere RESET
 
@@ -430,3 +403,31 @@ np.write()
 &#x1F6B8; Esecuzione programma sulla board
 
 [comment]: # (!!!)
+
+## Slide aggiuntive
+
+## Micropython: Sequenza di boot
+
+Quando si accende il computer, parte il sistema operativo
+
+Con Micropython al "power-on" o pulstane "reset"
+
+- Esegue il file boot.py *non lo toccate*
+- Esegue il file main.py *noi lavoremo qua*
+
+Note:
+- Nel file boot.py ho preparato gli import e le funzioni utili per il resto del corso
+
+[comment]: # (!!!)
+
+## Micropython 
+
+Come programmare senza board collegata?
+
+[WOKWI](https://wokwi.com/projects/305568836183130690)
+
+Note:
+- Quelli che hanno un computer e rete wifi si possono collegare a www.wokwi.com e selezionare "ESP32 with Micropython"
+
+[comment]: # (!!!)
+

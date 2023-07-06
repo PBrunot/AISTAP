@@ -1244,9 +1244,23 @@ Pascal Brunot | AISTAP | Luglio 2023
 Lezione 3 : semi-conduttori, diodi, board ESP32
 
 [comment]: # (!!! data-background-color="aqua")
+
+## Ripasso ultima lezione
+
+* Misure di tensione
+* La resistenza
+* Motore elettrico
+* Thonny (REPL, Programma)
+* Non abbiamo fatto la legge di Ohm
+
+Note:
+- Cos'è la corrente elettrica?
+- Cosa ha scoperto Orsted ? Come è stato verificato ?
+- Come funziona il motore elettrico di ieri ?
+
 [comment]: # (!!!)
 
-### Altri componenti : Condensatori
+### Condensatori
 
 Condensatori, sono "serbatoio di tensione"
 
@@ -1265,13 +1279,13 @@ Note:
 
 [comment]: # (!!!)
 
-### Altri componenti : Induttori
+### Induttori
 
 Bobina (induttore), sono "serbatoio di corrente"
 
 ![Induttore](media/induttori.png)
 
-Abbreviazione (L), Simbolo, Unità (Farad)
+Abbreviazione (L), Simbolo, Unità (Henry)
 
 ![Simbolo](media/induttore.jpg)
 
@@ -1312,7 +1326,7 @@ Alcuni materiali possono essere sia isolanti che conduttori a secondo delle cond
 Li chiamiamo semi-conduttori
 
 Note:
-- Lineari perché per resistenze U = R x I, Induttanze U = L x dV/dt, Capacità I =C x dV/dt
+- Lineari perché per resistenze U = R x I, Induttanze U = L x dI/dt, Capacità I =C x dV/dt
 - Esempi : diodi, transistori, celle fotovoltaiche
 - Ricordate perché alcuni materiali lasciano passare la corrente elettrica? (gli elettroni stretti o meno)
 
@@ -1411,7 +1425,7 @@ Note:
 
 ## Unità di misura : memorie
 
-*Memoria volatile* (RAM)
+*Memoria volatile* (PSRAM)
 - Circa 2 millioni di bytes (2 Mb)
 - Viene persa quando perde la corrente
 
@@ -1457,6 +1471,44 @@ Pin(10).off()
 
 Note:
 - Porta seriale varia da computer
+
+[comment]: # (!!!)
+
+## Librerie Python e Micropython
+
+E' molto importante riusare codice già testato (librerie)
+
+Micropython dà librerie utili
+
+- Librerie machine [Link](https://docs.micropython.org/en/v1.20.0/library/machine.html)
+- Librerie dispositivi (NeoPixel, Bluetooth...) [Link](https://docs.micropython.org/en/v1.20.0/library/neopixel.html)
+- Librerie Python (random, time, ecc..) [Link](https://docs.micropython.org/en/v1.20.0/library/random.html)
+
+[comment]: # (!!!)
+
+## Blink led integrato (lezione3-1.py)
+
+&#x1F6B8; Ciclo WHILE infinito
+
+```python
+while True:
+    Pin(10).on()
+    sleep_ms(1000)
+    Pin(10).off()
+    sleep_ms(1000)
+```
+
+[comment]: # (!!!)
+
+## LED esterno
+
+Circuito da realizzare
+
+[WOKWI](https://wokwi.com/projects/366723277993554945)
+
+![Wokwi](media/wokwi-1.jpg)
+
+&#x1F6B8; Realizzatelo sulla board
 
 [comment]: # (!!!)
 
@@ -1568,31 +1620,6 @@ Note:
 
 [comment]: # (!!!)
 
-## Micropython 
-
-Come programmare senza board collegata?
-
-[WOKWI](https://wokwi.com/projects/305568836183130690)
-
-Note:
-- Quelli che hanno un computer e rete wifi si possono collegare a www.wokwi.com e selezionare "ESP32 with Micropython"
-
-[comment]: # (!!!)
-
-## Micropython: Sequenza di boot
-
-Quando si accende il computer, parte il sistema operativo
-
-Con Micropython al "power-on" o pulstane "reset"
-
-- Esegue il file boot.py *non lo toccate*
-- Esegue il file main.py *noi lavoremo qua*
-
-Note:
-- Nel file boot.py ho preparato gli import e le funzioni utili per il resto del corso
-
-[comment]: # (!!!)
-
 ## Librerie Python e Micropython
 
 E' molto importante riusare codice già testato (librerie)
@@ -1601,13 +1628,13 @@ Micropython dà librerie utili
 
 - Librerie machine [Link](https://docs.micropython.org/en/v1.20.0/library/machine.html)
 - Librerie dispositivi (NeoPixel, Bluetooth...) [Link](https://docs.micropython.org/en/v1.20.0/library/neopixel.html)
-- Librerie Python (random, math, time, ecc..) [Link](https://docs.micropython.org/en/v1.20.0/library/random.html)
+- Librerie Python (random, time, ecc..) [Link](https://docs.micropython.org/en/v1.20.0/library/random.html)
 
 [comment]: # (!!!)
 
-## Pratica BOARD
+## Blink led integrato (lezione3-1.py)
 
-&#x1F6B8; Caricare un file PY in Thonny
+&#x1F6B8; Aprire un file PY in Thonny
 
 ```python
 while True:
@@ -1616,8 +1643,6 @@ while True:
     Pin(10).off()
     sleep_ms(1000)
 ```
-
-&#x1F6B8; Caricare il file PY sul controllore come main.py
 
 &#x1F6B8; Premere RESET
 
@@ -1939,6 +1964,34 @@ np.write()
 &#x1F6B8; Esecuzione programma sulla board
 
 [comment]: # (!!!)
+
+## Slide aggiuntive
+
+## Micropython: Sequenza di boot
+
+Quando si accende il computer, parte il sistema operativo
+
+Con Micropython al "power-on" o pulstane "reset"
+
+- Esegue il file boot.py *non lo toccate*
+- Esegue il file main.py *noi lavoremo qua*
+
+Note:
+- Nel file boot.py ho preparato gli import e le funzioni utili per il resto del corso
+
+[comment]: # (!!!)
+
+## Micropython 
+
+Come programmare senza board collegata?
+
+[WOKWI](https://wokwi.com/projects/305568836183130690)
+
+Note:
+- Quelli che hanno un computer e rete wifi si possono collegare a www.wokwi.com e selezionare "ESP32 with Micropython"
+
+[comment]: # (!!!)
+
 
 ## Elettronica con Micropython
 
