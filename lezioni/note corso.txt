@@ -15,6 +15,19 @@ Lezione2:
 - Disporre prima i tavoli a gruppi per evitare il caos
 - Il motore elettrico funziona e trovano la soluzione (cambiare verso del magnete, polarità)
 - 1h30 difficile. Probabilmen funzionerebbe meglio con prima parte teorica - Thonny, Pausa e seconda parte esperimentale
+- Non c'è stato tempo di fare esperimento 3
 
 Lezione 3:
 - Tagliata la teoria fisica della giunzione P-N
+- Misure OK
+
+Lezione 4:
+- Fatta legge di Ohm in introduzione
+- Non c'è stato tempo di fare NeoPixel
+
+Lezione 5:
+- Ha funzionato bene con il supporto scritto 
+- Tutti i gruppi hanno fatto il dado
+
+Lezione bonus:
+- asyncio
