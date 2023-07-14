@@ -36,8 +36,10 @@ Note:
 
 Pascal Brunot | AISTAP | Luglio 2023
 
-Lezione 1 : Elettricità
+https://aistap-micropython.pages.dev/
+https://github.com/PBrunot/AISTAP
 
+Lezione 1 : Elettricità
 
 Note:
 - Capire il concetto di carica (con elettricità statica)
