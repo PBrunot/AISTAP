@@ -1,7 +1,7 @@
 from machine import Pin, TouchPad
+from neopixel import NeoPixel
+import apa106
 import random
-import time
-
 def disegna_dado(display, value, pos = 0):
     WIDTH = 32
     RADIUS = 4
@@ -22,18 +22,22 @@ def disegna_dado(display, value, pos = 0):
         display.ellipse(xmin + center[0], center[1], RADIUS, RADIUS, 0, True)
     
     display.show()
-    
-cpt = 0
-led = Pin(10, Pin.OUT)
-touch = TouchPad(Pin(4))
 
-NUM_DADI = 3
-while True:
-    if touch.read() > 10000:
-        display.fill(0)
-        led.value(not led.value())
-        for num_dado in range(0, NUM_DADI):
-            disegna_dado(display, random.randint(1, 6), num_dado)
+def lcd_main():
+    cpt = 0
+    led = Pin(10, Pin.OUT)
+    touch = TouchPad(Pin(4))
 
-    time.sleep_ms(250)
-    cpt += 1
+    NUM_DADI = 1
+
+    while True:
+        if touch.read() > 10000:
+            print("Tiro il dado")
+            display.fill(0)
+            led.value(not led.value())
+            for num_dado in range(0, NUM_DADI):
+                disegna_dado(display, random.randint(1, 6), num_dado)
+        time.sleep_ms(1000)
+        cpt += 1
+
+lcd_main()
