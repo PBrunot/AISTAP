@@ -2,8 +2,7 @@
 
 Elettronica con Micropython, corso per associazione
 
-!(Versione online)[https://aistap-micropython.pages.dev/]
-
+[Versione online](https://aistap-micropython.pages.dev/)
 
 Contenuti
 - Lezione 1: elettricità, U, I, R, misure con multimetro (1h30)
@@ -25,7 +24,7 @@ Trasformare codice MD in pagina html
 
 ```ps
 mdslides .\elettronica_micropython_1.md --include media --output_dir ..\html\lezione1
-```ps
+```
 
 Trasformare tutte le lezioni in una pagine HTML unica (richiede PowerShell 7.0+)
 
