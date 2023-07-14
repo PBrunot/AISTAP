@@ -1546,73 +1546,6 @@ Note:
 
 [comment]: # (!!! data-background-color="aqua")
 
-## Micropython
-
-Micropython e Python
-
-[micropython.org](https://micropython.org/)
-
-Librerie (<code>import X / from X import A</code>)
-
-Note:
-- Storia di Micropython, creato da un fisico teorico australiano
-- Kickstarter per finanziare il progetto, è stato poi usato a bordo di satelliti
-- E' un Python più leggero per microprocessori, bastano KB invece di MB di RAM
-
-[comment]: # (!!!)
-
-## Librerie Python e Micropython
-
-E' molto importante riusare codice già testato (librerie)
-
-Micropython dà librerie utili
-
-- Librerie machine [Link](https://docs.micropython.org/en/v1.20.0/library/machine.html)
-- Librerie dispositivi (NeoPixel, Bluetooth...) [Link](https://docs.micropython.org/en/v1.20.0/library/neopixel.html)
-- Librerie Python (random, time, ecc..) [Link](https://docs.micropython.org/en/v1.20.0/library/random.html)
-
-[comment]: # (!!!)
-
-## Blink led integrato (lezione3-1.py)
-
-&#x1F6B8; Aprire un file PY in Thonny
-
-```python
-while True:
-    Pin(10).on()
-    sleep_ms(1000)
-    Pin(10).off()
-    sleep_ms(1000)
-```
-
-&#x1F6B8; Premere RESET
-
-[comment]: # (!!!)
-
-## Breadboard e LED esterno
-
-Fare lampeggiare LED esterno con una resistenza
-
-Note:
-- Dare Pin-out delle board usata, ripassare GPIO / Bus
-- Proiettare CIRCUITO DA REALIZZARE con simboli standard
-- Realizzare un circuito con board su scheda a connessione senza fili
-- Modificare script fornito per fare lampeggiare il LED
-- Ripasso diodo (verso giusto)
-
-[comment]: # (!!!)
-
-## LED esterno
-
-Circuito da realizzare
-
-[WOKWI](https://wokwi.com/projects/366723277993554945)
-
-![Wokwi](media/wokwi-1.jpg)
-
-&#x1F6B8; Realizzatelo sulla board o con WOKWI
-
-[comment]: # (!!!)
 
 ## Schermo LCD 1/2
 
@@ -1657,10 +1590,11 @@ display.show()
 &#x1F6B8;  Fare lampeggiare il led integrato con ciclo while True
 
 ```python
+Pin(10, Pin.OUT)
 while True:
-    Pin(10).on()
+    Pin(10).off() # E' scambiato
     sleep(1)
-    Pin(10).off()
+    Pin(10).on()
     sleep(1)
 ```
 
@@ -1681,6 +1615,8 @@ while True:
     sleep_ms(250)
 ```
 
+Osservare il plotter
+
 Note:
 - Funziona perché il nostro corpo conduce un po' l'elettricità e perturba un oscillatore
 - Aggiungere in boot.py gli import (from machine import TouchPad, from time import sleep_ms)
@@ -1693,25 +1629,29 @@ Accendiamo il LED quando rileviamo il tocco
 
 ```python
 tp = TouchPad(Pin(4))
-SOGLIA = ...
+led = Pin(10, Pin.OUT)
+SOGLIA = ... # Completare
 while True:
-    if tp.read() > SOGLIA:
-        Pin(10).on()
+    val = tp.read()
+    if val > SOGLIA:
+        led.off()
     else:
-        Pin(10).off()
+        led.on()
+    print(val)
     sleep_ms(250)
 ```
 
 ```python
 tp = TouchPad(Pin(4))
-SOGLIA = ...
+led = Pin(10, Pin.OUT)
+SOGLIA = ... # Completare
 while True:
     if tp.read() > SOGLIA:
-        Pin(10).on()
+        Pin(10).off()
         display.text('Ciao!', 40, 12, 1)
         display.show()
     else:
-        Pin(10).off()
+        Pin(10).on()
         display.text('Arrivederci!', 40, 12, 1)
         display.show()
     sleep_ms(250)
