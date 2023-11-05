@@ -1,9 +1,10 @@
 Lezione1:
 - aggiungere volt e corrente
 - tagliare contesto dell'energia
-- desta interesse la storia
-- la corda funziona più o meno
+- desta interesse la storia dei scienzati
+- la corda funziona più o meno, andrebbe fatto all'aperto e non in classe.
 - Tempi >> 1.45
+- pallone di plastica appeso a pallone di elio funziona bene per conservazione carica elettrica con guanto di lana + tubo di plastica (stile elettrico)
 
 Fare i gruppi e la loro disposizione
 I palloni piacciono ma distraggono
@@ -15,6 +16,23 @@ Lezione2:
 - Disporre prima i tavoli a gruppi per evitare il caos
 - Il motore elettrico funziona e trovano la soluzione (cambiare verso del magnete, polarità)
 - 1h30 difficile. Probabilmen funzionerebbe meglio con prima parte teorica - Thonny, Pausa e seconda parte esperimentale
+- Non c'è stato tempo di fare esperimento 3
 
 Lezione 3:
 - Tagliata la teoria fisica della giunzione P-N
+- Misure OK
+
+Lezione 4:
+- Fatta legge di Ohm in introduzione
+- Non c'è stato tempo di fare NeoPixel
+
+Lezione 5:
+- Ha funzionato bene con il supporto scritto 
+- Tutti i gruppi hanno fatto il dado
+
+Lezione bonus:
+- asyncio
+
+TODO:
+- stato Pin(10) è scambiato su Pico S2 (.on() spegne , .off() accende) ; non tutti gli esempi sono stati corretti
+- la board PICO S2 è difficile da infilare sulle board. Va fatto prima o durante la lezione si rompe lo schermo premendo troppo
